@@ -160,6 +160,7 @@ namespace NBAapi.Controllers
                         Console.WriteLine($"DELETE:  {reader}");
                         var name = reader;
                         table.Load(name);
+
                     }
                 }
             }
