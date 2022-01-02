@@ -13,7 +13,7 @@ readonly PhotoUrl = "http://localhost:53535/Photos/";
   constructor(private http:HttpClient) { }
 
   getTeamList():Observable<any[]>{
-    return this.http.get<any>(this.APIUrl+'/team');
+    return this.http.get<any>(this.APIUrl+'/Team');
   }
 
   addTeam(val:any){

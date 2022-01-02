@@ -12,8 +12,8 @@
         <div class="col-sm-10">
            <select class="form-control" [(ngModel)]="Team">
                <option>--Select--</option>
-               <option *ngFor="let teamName of teamsList">
-                   {{teamName.Name}}
+               <option *ngFor="let team of teamList">
+                   {{team.Name}}
                </option>
            </select>
         </div>

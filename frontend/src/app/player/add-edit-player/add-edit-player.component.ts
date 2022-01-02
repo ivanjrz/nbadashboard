@@ -17,7 +17,7 @@ export class AddEditPlayerComponent implements OnInit {
   Joined:string;
   PhotoPath:string;
 
-  teamsList:any=[];
+  teamList:any=[];
 
   ngOnInit(): void {
     this.loadTeamsList();
@@ -25,8 +25,7 @@ export class AddEditPlayerComponent implements OnInit {
 
   loadTeamsList(){
     this.service.getAllTeamNames().subscribe((data:any)=>{
-      this.teamsList=data;
-
+      this.teamList=data;
       this.PlayerId=this.player.PlayerId;
       this.Name=this.player.Name;
       this.Team=this.player.Team;

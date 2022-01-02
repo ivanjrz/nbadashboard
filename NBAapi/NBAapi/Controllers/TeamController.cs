@@ -113,29 +113,57 @@ namespace NBAapi.Controllers
         }
 
 
+        //[HttpDelete("{id}")]
+        //public JsonResult Delete(int id)
+        //{
+        //    string query = @"
+        //            delete from dbo.Team
+        //            where TeamId = " + id + @" 
+        //            ";
+        //    DataTable table = new DataTable();
+        //    string sqlDataSource = _configuration.GetConnectionString("DefaultConnection");
+        //    SqlDataReader myReader;
+        //    using (SqlConnection myCon = new SqlConnection(sqlDataSource))
+        //    {
+        //        myCon.Open();
+        //        using (SqlCommand myCommand = new SqlCommand(query, myCon))
+        //        {
+        //            myReader = myCommand.ExecuteReader();
+        //            table.Load(myReader); ;
+
+        //            myReader.Close();
+        //            myCon.Close();
+        //        }
+        //    }
+
+        //    return new JsonResult("Deleted Successfully");
+        //}
+
         [HttpDelete("{id}")]
         public JsonResult Delete(int id)
         {
-            string query = @"
-                    delete from dbo.Team
-                    where TeamId = " + id + @" 
-                    ";
             DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("DefaultConnection");
-            SqlDataReader myReader;
-            using (SqlConnection myCon = new SqlConnection(sqlDataSource))
+            using (var connection = new SqliteConnection(_configuration.GetConnectionString("DefaultConnection")))
             {
-                myCon.Open();
-                using (SqlCommand myCommand = new SqlCommand(query, myCon))
-                {
-                    myReader = myCommand.ExecuteReader();
-                    table.Load(myReader); ;
+                connection.Open();
 
-                    myReader.Close();
-                    myCon.Close();
+                var command = connection.CreateCommand();
+                command.CommandText = @"
+                    DELETE FROM Team WHERE TeamId =
+                    " + id + @"
+                    ";
+
+                using (var reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Console.WriteLine($"DELETE:  {reader}");
+                        var name = reader;
+                        table.Load(name);
+
+                    }
                 }
             }
-
             return new JsonResult("Deleted Successfully");
         }
     }
