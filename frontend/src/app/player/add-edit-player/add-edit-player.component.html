@@ -1,0 +1,41 @@
+<div class="d-flex flex-row bd-highlight mb-3">
+
+    <div class="form-froup row" style="width: 60%;">
+    
+        <label class="col-sm-2 col-form-label">Player Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" [(ngModel)]="Name"
+            placeholder="Enter Player Name">
+        </div>
+    
+        <label class="col-sm-2 col-form-label">Team</label>
+        <div class="col-sm-10">
+           <select class="form-control" [(ngModel)]="Team">
+               <option>--Select--</option>
+               <option *ngFor="let teamName of teamsList">
+                   {{teamName.Name}}
+               </option>
+           </select>
+        </div>
+    
+        <label class="col-sm-2 col-form-label">Joined</label>
+        <div class="col-sm-10">
+            <input type="date"  [(ngModel)]="Joined">
+        </div>
+    
+    </div>
+    <div class="ml-3 bd-highlight" style="width: 40%;">
+    <img [src]=PhotoPath height="250px;" width="200px;">
+    <input type="file" (change)="uploadPhoto($event)" class="mt-2"/>
+    </div>
+    </div>
+    
+    
+    <button (click)="addPlayer()" *ngIf="player.PlayerId==0" class="btn btn-primary">
+        Add
+    </button>
+    
+    <button (click)="updatePlayer()" *ngIf="player.PlayerId!=0" class="btn btn-primary">
+        Update
+    </button>
+    
