@@ -93,34 +93,58 @@ namespace NBAapi.Controllers
         [HttpPost]
         public JsonResult Post(Player play)
         {
-            string query = @"
-                    insert into dbo.Player 
-                    (Name,Team,Joined,PhotoPath)
-                    values 
-                    (
-                    '" + play.Name + @"'
-                    ,'" + play.Team + @"'
-                    ,'" + play.Joined + @"'
-                    ,'" + play.PhotoPath + @"'
-                    )
-                    ";
             DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("DefaultConnection");
-            SqlDataReader myReader;
-            using (SqlConnection myCon = new SqlConnection(sqlDataSource))
+            using (var connection = new SqliteConnection(_configuration.GetConnectionString("DefaultConnection")))
             {
-                myCon.Open();
-                using (SqlCommand myCommand = new SqlCommand(query, myCon))
+                connection.Open();
+
+                var command = connection.CreateCommand();
+                command.CommandText = @"
+                    INSERT INTO Player (Name, Team, Joined, PhotoPath) values 
+                    ('" + play.Name + "','" + play.Team + "', '" + play.Joined + "', '" + play.PhotoPath + @"')
+                    ";
+
+                using (var reader = command.ExecuteReader())
                 {
-                    myReader = myCommand.ExecuteReader();
-                    table.Load(myReader); ;
+                    while (reader.Read())
+                    {
+                        Console.WriteLine($"POST:  {reader}");
+                        var name = reader;
+                        table.Load(name);
 
-                    myReader.Close();
-                    myCon.Close();
+                    }
                 }
-            }
 
+            }
             return new JsonResult("Added Successfully");
+            //string query = @"
+            //        insert into dbo.Player 
+            //        (Name,Team,Joined,PhotoPath)
+            //        values 
+            //        (
+            //        '" + play.Name + @"'
+            //        ,'" + play.Team + @"'
+            //        ,'" + play.Joined + @"'
+            //        ,'" + play.PhotoPath + @"'
+            //        )
+            //        ";
+            //DataTable table = new DataTable();
+            //string sqlDataSource = _configuration.GetConnectionString("DefaultConnection");
+            //SqlDataReader myReader;
+            //using (SqlConnection myCon = new SqlConnection(sqlDataSource))
+            //{
+            //    myCon.Open();
+            //    using (SqlCommand myCommand = new SqlCommand(query, myCon))
+            //    {
+            //        myReader = myCommand.ExecuteReader();
+            //        table.Load(myReader); ;
+
+            //        myReader.Close();
+            //        myCon.Close();
+            //    }
+            //}
+
+            //return new JsonResult("Added Successfully");
         }
 
 
@@ -207,29 +231,60 @@ namespace NBAapi.Controllers
         }
 
 
+        //[Route("GetAllTeamNames")]
+        //public JsonResult GetAllTeamNames()
+        //{
+        //    string query = @"
+        //            select Name from dbo.Team
+        //            ";
+        //    DataTable table = new DataTable();
+        //    string sqlDataSource = _configuration.GetConnectionString("DefaultConnection");
+        //    SqlDataReader myReader;
+        //    using (SqlConnection myCon = new SqlConnection(sqlDataSource))
+        //    {
+        //        myCon.Open();
+        //        using (SqlCommand myCommand = new SqlCommand(query, myCon))
+        //        {
+        //            myReader = myCommand.ExecuteReader();
+        //            table.Load(myReader); ;
+
+        //            myReader.Close();
+        //            myCon.Close();
+        //        }
+        //    }
+
+        //    return new JsonResult(table);
+        //}
+
         [Route("GetAllTeamNames")]
         public JsonResult GetAllTeamNames()
         {
-            string query = @"
-                    select Name from dbo.Team
-                    ";
             DataTable table = new DataTable();
-            string sqlDataSource = _configuration.GetConnectionString("DefaultConnection");
-            SqlDataReader myReader;
-            using (SqlConnection myCon = new SqlConnection(sqlDataSource))
+            table.Columns.Add("TeamId", typeof(string));
+            table.Columns.Add("Name", typeof(string));
+            table.Columns.Add("City", typeof(string));
+            //List<string> tableResults = new List<string>();
+            DataRow myDataRow;
+            using (var connection = new SqliteConnection(_configuration.GetConnectionString("DefaultConnection")))
             {
-                myCon.Open();
-                using (SqlCommand myCommand = new SqlCommand(query, myCon))
+                connection.Open();
+                var command = connection.CreateCommand();
+                command.CommandText = @"SELECT TeamId, Name, City FROM Team";
+                using (var reader = command.ExecuteReader())
                 {
-                    myReader = myCommand.ExecuteReader();
-                    table.Load(myReader); ;
-
-                    myReader.Close();
-                    myCon.Close();
+                    while (reader.Read())
+                    {
+                        //var name = reader.GetString();
+                        myDataRow = table.NewRow();
+                        myDataRow["TeamId"] = Convert.ToInt32(reader["TeamId"]);
+                        myDataRow["Name"] = Convert.ToString(reader["Name"]);
+                        myDataRow["City"] = Convert.ToString(reader["City"]);
+                        table.Rows.Add(myDataRow);
+                    }
                 }
             }
-
             return new JsonResult(table);
+
         }
 
 
