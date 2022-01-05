@@ -1,10 +1,9 @@
 ﻿using System;
 namespace Domain.Exceptions
 {
-    public class PlayerNotFoundException
+    public class PlayerNotFoundException : NotFoundException
     {
-        public PlayerNotFoundException()
-        {
-        }
+        public PlayerNotFoundException(int id) : base($"The player with id: {id} was not found")
+        { }
     }
 }

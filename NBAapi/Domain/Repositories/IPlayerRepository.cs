@@ -8,11 +8,11 @@ namespace Domain.Repositories
 {
     public interface IPlayerRepository
     {
-        Task<IEnumerable<Player>> GetAllAsync(CancellationToken cancellationToken = default);
-        Task<Player> GetByIdAsync(int teamId, CancellationToken cancellationToken = default);
+        Task<IEnumerable<Player>> GetAllByTeamIdAsync(int teamId, CancellationToken cancellationToken = default);
+        Task<Player> GetByIdAsync(int playerId, CancellationToken cancellationToken = default);
 
-        void Insert(Player team);
-        void Update(Player team);
-        void Remove(Player team);
+        void Insert(Player play);
+        void Update(Player play);
+        void Remove(Player play);
     }
 }
