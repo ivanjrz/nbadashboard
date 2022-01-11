@@ -12,7 +12,7 @@ namespace Domain.Repositories
         Task<Team> GetByIdAsync(int teamId, CancellationToken cancellationToken = default);
 
         void Insert(Team team);
-        void Update(Team team);
+        //void Update(Team team);
         void Remove(Team team);
     }
 }

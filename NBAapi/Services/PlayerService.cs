@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Domain.Entities;
 using Domain.Exceptions;
 using Domain.Repositories;
+using Contracts;
+using Mapster;
 
 namespace Services
 {
@@ -13,9 +15,9 @@ namespace Services
     {
         private readonly IRepositoryManager _repositoryManager;
         public PlayerService(IRepositoryManager repositoryManager) => _repositoryManager = repositoryManager;
-        public async Task<IEnumerable<PlayerDto>> GetAllByTeamIdAsync(int teamId, CancellationToken cancellationToken = default)
+        public async Task<IEnumerable<PlayerDto>> GetAllByTeamIdAsync(string team, CancellationToken cancellationToken = default)
         {
-            var players = await _repositoryManager.PlayerRepository.GetAllByTeamIdAsync(teamId, cancellationToken);
+            var players = await _repositoryManager.PlayerRepository.GetAllByTeamIdAsync(team, cancellationToken);
             var playersDto = players.Adapt<IEnumerable<PlayerDto>>();
             return playersDto;
         }
@@ -38,7 +40,7 @@ namespace Services
             var playerDto = player.Adapt<PlayerDto>();
             return playerDto;
         }
-        public async Task<PlayerDto> CreateAsync(int teamId, PlayerForCreationDto PlayerForCreationDto, CancellationToken cancellationToken = default)
+        public async Task<PlayerDto> CreateAsync(int teamId, CreatePlayerDto PlayerForCreationDto, CancellationToken cancellationToken = default)
         {
             var team = await _repositoryManager.TeamRepository.GetByIdAsync(teamId, cancellationToken);
             if (team is null)
@@ -69,6 +71,13 @@ namespace Services
             //}
             _repositoryManager.PlayerRepository.Remove(player);
             await _repositoryManager.UnitOfWork.SaveChangesAsync(cancellationToken);
+        }
+
+        public async Task<IEnumerable<PlayerDto>> GetAllAsync(CancellationToken cancellationToken = default)
+        {
+            var players = await _repositoryManager.PlayerRepository.GetAllAsync(cancellationToken);
+            var playerDto = players.Adapt<IEnumerable<PlayerDto>>();
+            return playerDto;
         }
     }
 }
