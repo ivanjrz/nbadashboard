@@ -1,7 +1,8 @@
 ﻿using System;
+using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace NBAapi.Models
+namespace Persistence
 {
     public class ApplicationDbContext : DbContext
     {
@@ -18,10 +19,6 @@ namespace NBAapi.Models
                 Database.EnsureDeleted();
                 Database.EnsureCreated();
             }
-        }
-
-        public ApplicationDbContext() : base()
-        {
         }
 
         #region Required
