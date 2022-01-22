@@ -31,4 +31,4 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 
 ## License
-[Apache](ttp://www.apache.org/licenses/)
+[Apache](https://apache.org/licenses/LICENSE-2.0)
