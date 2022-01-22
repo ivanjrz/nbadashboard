@@ -1,4 +1,4 @@
-# Foobar
+# NBA Dashboard
 
 NBA Dashboard is a game predictor based on papers found in [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S2210832717301485) and [IJERT](https://www.ijert.org/prediction-of-winning-team-using-machine-learning)
 
