@@ -10,11 +10,28 @@ namespace Persistence.Configurations
         {
             builder.ToTable(nameof(TeamHistory));
             builder.HasKey(team => team.TeamHistoryId);
-            
-            builder.HasMany(team => team.Team)
-                .WithOne()
-                .HasForeignKey(player => player.Team)
-                .OnDelete(DeleteBehavior.Cascade);
-        }
+
+            builder.Property(account => account.TeamHistoryId).ValueGeneratedOnAdd();
+            builder.Property(account => account.Team).IsRequired().HasMaxLength(50);
+            builder.Property(account => account.Season).IsRequired().HasMaxLength(50);
+
+            builder.Property(account => account.WinRecord).IsRequired();
+            builder.Property(account => account.LossRecord).IsRequired();
+            builder.Property(account => account.DrawRecord).IsRequired();
+
+            builder.Property(account => account.MOV).IsRequired();
+            builder.Property(account => account.AverageAge).IsRequired();
+            builder.Property(account => account.SOS).IsRequired();
+            builder.Property(account => account.ORTg).IsRequired();
+            builder.Property(account => account.DRTg).IsRequired();
+            builder.Property(account => account.NRTg).IsRequired();
+            builder.Property(account => account.FTr).IsRequired();
+            builder.Property(account => account.ThreePAr).IsRequired();
+            builder.Property(account => account.TrueShootPct).IsRequired();
+            builder.Property(account => account.OEFGPct).IsRequired();
+            builder.Property(account => account.DEFGPct).IsRequired();
+            builder.Property(account => account.ORTg).IsRequired();
+            builder.Property(account => account.DRB).IsRequired();
+    }
     }
 }

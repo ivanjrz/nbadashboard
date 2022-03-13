@@ -13,7 +13,7 @@ namespace Domain.Repositories
         Task<Player> GetByIdAsync(int playerId, CancellationToken cancellationToken = default);
 
         void Insert(Player play);
-        //void Update(Player play);
+        void Update(Player play);
         void Remove(Player play);
     }
 }

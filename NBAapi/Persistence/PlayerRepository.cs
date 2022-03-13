@@ -26,6 +26,8 @@ namespace Persistence
 
         public void Insert(Player account) => _dbContext.Player.Add(account);
 
+        public void Update(Player account) => _dbContext.Player.Update(account);
+
         public void Remove(Player account) => _dbContext.Player.Remove(account);
 
     }

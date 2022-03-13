@@ -4,7 +4,6 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
-  <PropertyGroup Condition=" '$(RunConfiguration)' == 'NBAapi' " />
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'WebAPI' " />
   <ItemGroup>
     <PackageReference Include="EntityFramework" Version="6.4.4" />
@@ -41,5 +40,7 @@
     <Compile Remove="Controllers\PlayerController.cs" />
     <Compile Remove="Controllers\WeatherForecastController.cs" />
     <Compile Remove="Controllers\TeamController.cs" />
+    <Compile Remove="Models\Player.cs" />
+    <Compile Remove="Models\Team.cs" />
   </ItemGroup>
 </Project>

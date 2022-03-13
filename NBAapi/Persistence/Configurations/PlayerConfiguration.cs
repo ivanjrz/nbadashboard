@@ -11,16 +11,11 @@ namespace Persistence.Configurations
             builder.ToTable(nameof(Player));
 
             builder.HasKey(account => account.PlayerId);
-
             builder.Property(account => account.PlayerId).ValueGeneratedOnAdd();
-
-            builder.Property(account => account.Name).HasMaxLength(50);
-
-            builder.Property(account => account.Team).HasMaxLength(50);
-
+            builder.Property(account => account.Name).IsRequired().HasMaxLength(50);
+            builder.Property(account => account.Team).IsRequired().HasMaxLength(50);
             builder.Property(account => account.Joined).IsRequired();
-
-            builder.Property(account => account.PhotoPath).HasMaxLength(150);
+            builder.Property(account => account.PhotoPath).HasMaxLength(250);
         }
     }
 }

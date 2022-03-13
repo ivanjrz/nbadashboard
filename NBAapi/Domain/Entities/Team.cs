@@ -8,8 +8,10 @@ namespace Domain.Entities
         public int TeamId { get; set; }
         public string Name { get; set; }
         public string City { get; set; }
+        public string Arena { get; set; }
         public DateTime DateFounded { get; set; }
         public string PhotoPath { get; set; }
         public ICollection<Player> Players { get; set; }
+        public ICollection<TeamHistory> TeamHistories { get; set; }
     }
 }
