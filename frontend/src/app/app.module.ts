@@ -11,12 +11,11 @@ import { SharedService } from './shared.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { PlayerComponent } from './player/player.component';
-import { GameComponent } from './game/game.component';
+import { TeamHistoryComponent } from './teamhistory/teamhistory.component';
 import { ShowPlayerComponent } from './player/show-player/show-player.component';
 import { AddEditPlayerComponent } from './player/add-edit-player/add-edit-player.component';
-import { ShowGameComponent } from './game/show-game/show-game.component';
-import { AddEditGameComponent } from './game/add-edit-game/add-edit-game.component';
-
+import { ShowTeamHistoryComponent } from './teamhistory/show-teamhistory/show-teamhistory.component';
+import { AddEditTeamHistoryComponent } from './teamhistory/add-edit-teamhistory/add-edit-teamhistory.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,11 +23,11 @@ import { AddEditGameComponent } from './game/add-edit-game/add-edit-game.compone
     ShowTeamComponent,
     AddEditTeamComponent,
     PlayerComponent,
-    GameComponent,
     ShowPlayerComponent,
     AddEditPlayerComponent,
-    ShowGameComponent,
-    AddEditGameComponent
+    TeamHistoryComponent,
+    ShowTeamHistoryComponent,
+    AddEditTeamHistoryComponent
   ],
   imports: [
     BrowserModule,
