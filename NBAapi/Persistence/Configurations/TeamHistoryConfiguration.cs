@@ -17,17 +17,14 @@ namespace Persistence.Configurations
 
             builder.Property(account => account.WinRecord).IsRequired();
             builder.Property(account => account.LossRecord).IsRequired();
-            builder.Property(account => account.DrawRecord).IsRequired();
 
             builder.Property(account => account.MOV).IsRequired();
-            builder.Property(account => account.AverageAge).IsRequired();
             builder.Property(account => account.SOS).IsRequired();
             builder.Property(account => account.ORTg).IsRequired();
             builder.Property(account => account.DRTg).IsRequired();
             builder.Property(account => account.NRTg).IsRequired();
             builder.Property(account => account.FTr).IsRequired();
             builder.Property(account => account.ThreePAr).IsRequired();
-            builder.Property(account => account.TrueShootPct).IsRequired();
             builder.Property(account => account.OEFGPct).IsRequired();
             builder.Property(account => account.DEFGPct).IsRequired();
             builder.Property(account => account.ORTg).IsRequired();

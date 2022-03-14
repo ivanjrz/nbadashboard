@@ -29,12 +29,12 @@ namespace Presentation.Controllers
         [HttpGet("{team}")]
         public async Task<IActionResult> GetTeams(string team, CancellationToken cancellationToken)
         {
-            var playersDto = await _serviceManager.PlayerService.GetAllByTeamIdAsync(team, cancellationToken);
+            var teamHistoriesDto = await _serviceManager.PlayerService.GetAllByTeamIdAsync(team, cancellationToken);
 
-            return Ok(playersDto);
+            return Ok(teamHistoriesDto);
         }
 
-        [HttpGet("{playerId:int}")]
+        [HttpGet("{teamhistory:int}")]
         public async Task<IActionResult> GetPlayerById(int teamId, int playerId, CancellationToken cancellationToken)
         {
             var playDto = await _serviceManager.PlayerService.GetByIdAsync(teamId, playerId, cancellationToken);
@@ -43,17 +43,17 @@ namespace Presentation.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreatePlayer(int team, [FromBody] CreatePlayerDto playerForCreationDto, CancellationToken cancellationToken)
+        public async Task<IActionResult> CreateTeamHistory(int team, [FromBody] CreateTeamHistoryDto playerForCreationDto, CancellationToken cancellationToken)
         {
-            var response = await _serviceManager.PlayerService.CreateAsync(team, playerForCreationDto, cancellationToken);
+            var response = await _serviceManager.TeamHistoryService.CreateAsync(team, playerForCreationDto, cancellationToken);
 
-            return CreatedAtAction(nameof(GetPlayerById), new { ownerId = response.Team, playerId = response.PlayerId}, response);
+            return CreatedAtAction(nameof(GetPlayerById), new { ownerId = response.Team, playerId = response.TeamHistoryId}, response);
         }
 
-        [HttpDelete("{player:int}")]
-        public async Task<IActionResult> DeletePlayer(int teamId, int playerId, CancellationToken cancellationToken)
+        [HttpDelete("{teamhistory:int}")]
+        public async Task<IActionResult> DeleteTeamHistory(int teamId, int teamHistoryId, CancellationToken cancellationToken)
         {
-            await _serviceManager.PlayerService.DeleteAsync(teamId, playerId, cancellationToken);
+            await _serviceManager.TeamHistoryService.DeleteAsync(teamId, teamHistoryId, cancellationToken);
 
             return NoContent();
         }

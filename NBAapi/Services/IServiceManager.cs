@@ -6,5 +6,7 @@ namespace Services
         ITeamService TeamService { get; }
 
         IPlayerService PlayerService { get; }
+
+        ITeamHistoryService TeamHistoryService { get; }
     }
 }

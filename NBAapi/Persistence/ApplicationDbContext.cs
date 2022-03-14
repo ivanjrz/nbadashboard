@@ -145,10 +145,48 @@ namespace Persistence
                     Joined = DateTime.Now,
                     PhotoPath = "/Photos/nba_anonymous.jpg"
                 }
-
                 );
+
+            modelBuilder.Entity<TeamHistory>()
+                .HasData(
+                new TeamHistory
+                {
+                    TeamHistoryId = 1,
+                    Team = "Lakers",
+                    Season = "2019-2020",
+                    WinRecord = 52,
+                    LossRecord = 19,
+                    MOV = 5.79,
+                    SOS = 0.49,
+                    ORTg = 112,
+                    DRTg = 106.3,
+                    FTr = 0.276,
+                    ThreePAr = 0.358,
+                    OEFGPct = 0.542,
+                    DEFGPct = 0.515,
+                    ORB = 24.5,
+                    DRB = 78.8
+                },
+                new TeamHistory
+                {
+                    TeamHistoryId = 2,
+                    Team = "Heat",
+                    Season = "2019-2020",
+                    WinRecord = 44,
+                    LossRecord = 29,
+                    MOV = 2.95,
+                    SOS = 0.35,
+                    ORTg = 112.5,
+                    DRTg = 109.5,
+                    FTr = 0.299,
+                    ThreePAr = 0.419,
+                    OEFGPct = 0.547,
+                    DEFGPct = 0.523,
+                    ORB = 20.3,
+                    DRB = 79.5
+                }
+                );
+            #endregion
         }
-        #endregion
-        
     }
 }

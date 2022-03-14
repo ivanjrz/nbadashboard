@@ -4,12 +4,12 @@ using Contracts;
 
 namespace Services
 {
-    public interface IPlayerService
+    public interface ITeamHistoryService
     {
-        Task<PlayerDto> CreateAsync(int teamId, CreatePlayerDto PlayerForCreationDto, CancellationToken cancellationToken = default);
-        Task DeleteAsync(int teamId, int playerId, CancellationToken cancellationToken = default);
-        Task<System.Collections.Generic.IEnumerable<PlayerDto>> GetAllByTeamIdAsync(string team, CancellationToken cancellationToken = default);
-        Task<PlayerDto> GetByIdAsync(int teamId, int playerId, CancellationToken cancellationToken);
-        Task<System.Collections.Generic.IEnumerable<PlayerDto>> GetAllAsync(CancellationToken cancellationToken);
+        Task<TeamHistoryDto> CreateAsync(int teamId, CreateTeamHistoryDto TeamHistoryForCreationDto, CancellationToken cancellationToken = default);
+        Task DeleteAsync(int teamId, int teamHistoryId, CancellationToken cancellationToken = default);
+        Task<System.Collections.Generic.IEnumerable<TeamHistoryDto>> GetAllByTeamIdAsync(string team, CancellationToken cancellationToken = default);
+        Task<TeamHistoryDto> GetByIdAsync(int teamId, int playerId, CancellationToken cancellationToken);
+        Task<System.Collections.Generic.IEnumerable<TeamHistoryDto>> GetAllAsync(CancellationToken cancellationToken);
     }
 }

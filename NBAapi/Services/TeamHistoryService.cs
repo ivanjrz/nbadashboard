@@ -10,17 +10,17 @@ using Mapster;
 
 namespace Services
 {
-    internal sealed class TeamHistoryService : IPlayerService
+    internal sealed class TeamHistoryService : ITeamHistoryService
     {
         private readonly IRepositoryManager _repositoryManager;
         public TeamHistoryService(IRepositoryManager repositoryManager) => _repositoryManager = repositoryManager;
-        public async Task<IEnumerable<PlayerDto>> GetAllByTeamIdAsync(string team, CancellationToken cancellationToken = default)
+        public async Task<IEnumerable<TeamHistoryDto>> GetAllByTeamIdAsync(string team, CancellationToken cancellationToken = default)
         {
             var players = await _repositoryManager.PlayerRepository.GetAllByTeamIdAsync(team, cancellationToken);
-            var playersDto = players.Adapt<IEnumerable<PlayerDto>>();
+            var playersDto = players.Adapt<IEnumerable<TeamHistoryDto>>();
             return playersDto;
         }
-        public async Task<PlayerDto> GetByIdAsync(int teamId, int playerId, CancellationToken cancellationToken)
+        public async Task<TeamHistoryDto> GetByIdAsync(int teamId, int playerId, CancellationToken cancellationToken)
         {
             var team = await _repositoryManager.TeamRepository.GetByIdAsync(teamId, cancellationToken);
             if (team is null)
@@ -36,10 +36,10 @@ namespace Services
             //{
             //    //throw new PlayerDoesNotBelongToOwnerException(team.Id, player.Id);
             //}
-            var playerDto = player.Adapt<PlayerDto>();
+            var playerDto = player.Adapt<TeamHistoryDto>();
             return playerDto;
         }
-        public async Task<PlayerDto> CreateAsync(int teamId, CreatePlayerDto PlayerForCreationDto, CancellationToken cancellationToken = default)
+        public async Task<TeamHistoryDto> CreateAsync(int teamId, CreateTeamHistoryDto PlayerForCreationDto, CancellationToken cancellationToken = default)
         {
             var team = await _repositoryManager.TeamRepository.GetByIdAsync(teamId, cancellationToken);
             if (team is null)
@@ -50,7 +50,7 @@ namespace Services
             player.PlayerId = team.TeamId;
             _repositoryManager.PlayerRepository.Insert(player);
             await _repositoryManager.UnitOfWork.SaveChangesAsync(cancellationToken);
-            return player.Adapt<PlayerDto>();
+            return player.Adapt<TeamHistoryDto>();
         }
         public async Task DeleteAsync(int teamId, int playerId, CancellationToken cancellationToken = default)
         {
@@ -72,10 +72,10 @@ namespace Services
             await _repositoryManager.UnitOfWork.SaveChangesAsync(cancellationToken);
         }
 
-        public async Task<IEnumerable<PlayerDto>> GetAllAsync(CancellationToken cancellationToken = default)
+        public async Task<IEnumerable<TeamHistoryDto>> GetAllAsync(CancellationToken cancellationToken = default)
         {
             var players = await _repositoryManager.PlayerRepository.GetAllAsync(cancellationToken);
-            var playerDto = players.Adapt<IEnumerable<PlayerDto>>();
+            var playerDto = players.Adapt<IEnumerable<TeamHistoryDto>>();
             return playerDto;
         }
     }
