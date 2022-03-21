@@ -16,10 +16,8 @@ namespace NBAapiTests
 {
     public class PlayerServiceTests
     {
-        //private readonly PlayerService _sut;
-        private readonly ServiceManager _ssm;
+        private readonly ServiceManager _sut;
         private readonly Mock<IRepositoryManager> _repoManagerMock = new Mock<IRepositoryManager>();
-        private readonly Mock<IPlayerRepository> _playerRepoMock = new Mock<IPlayerRepository>();
 
         //private readonly Mock<ITeamService> _teamServiceMock = new Mock<ITeamService>();
         //private readonly Mock<ITeamHistoryService> _teamHistoryServiceMock = new Mock<ITeamHistoryService>();
@@ -27,9 +25,7 @@ namespace NBAapiTests
 
         public PlayerServiceTests()
         {
-            //_sut = new PlayerService(_repoManagerMock.Object);
-            _ssm = new ServiceManager(_repoManagerMock.Object);
-
+            _sut = new ServiceManager(_repoManagerMock.Object);
         }
 
         private static T CreateInstance<T>(BindingFlags bindingFlags, Type[] types, object[] ctorParams)
@@ -44,9 +40,21 @@ namespace NBAapiTests
             return (T)constructor.Invoke(ctorParams);
         }
 
-        private static Task<PlayerDto> MockSingle()
+        private static Task<Team> TeamMock()
         {
-            return Task.FromResult(new PlayerDto()
+            return Task.FromResult( new Team
+            {
+                TeamId = 14,
+                Name = "Lakers",
+                City = "Los Angeles",
+                DateFounded = DateTime.Now,
+                PhotoPath = "/Photos/nba_anonymous.jpg"
+            });
+        }
+
+        private static Task<Player> PlayerMock()
+        {
+            return Task.FromResult(new Player()
             {
                 PlayerId = 6,
                 Name = "LeBron James",
@@ -56,35 +64,21 @@ namespace NBAapiTests
             });
         }
 
-        private static Task<IEnumerable<PlayerDto>> MockList()
-        {
-            var r = new List<PlayerDto>();
-            r.Add(new PlayerDto()
-            {
-                PlayerId = 6,
-                Name = "LeBron James",
-                Team = "Lakers",
-                Joined = DateTime.Now,
-                PhotoPath = "/Photos/nba_anonymous.jpg"
-            });
-            r.Add(new PlayerDto()
-            {
-                PlayerId = 7,
-                Name = "Anthony Davis",
-                Team = "Lakers",
-                Joined = DateTime.Now,
-                PhotoPath = "/Photos/nba_anonymous.jpg"
-            });
-            return Task.FromResult((IEnumerable<PlayerDto>)r);
-        }
-
-        private static Task<IEnumerable<Player>> MockPlayerList()
+        private static Task<IEnumerable<Player>> PlayerListMock()
         {
             var r = new List<Player>();
             r.Add(new Player()
             {
                 PlayerId = 6,
                 Name = "LeBron James",
+                Team = "Lakers",
+                Joined = DateTime.Now,
+                PhotoPath = "/Photos/nba_anonymous.jpg"
+            });
+            r.Add(new Player()
+            {
+                PlayerId = 7,
+                Name = "Anthony Davis",
                 Team = "Lakers",
                 Joined = DateTime.Now,
                 PhotoPath = "/Photos/nba_anonymous.jpg"
@@ -100,14 +94,37 @@ namespace NBAapiTests
             string teamName = "Lakers";
             int playerCountFromService = 0;
             _repoManagerMock.Setup(x => x.PlayerRepository.GetAllByTeamNameAsync(teamName, CancellationToken.None))
-                .Returns(MockPlayerList());
+                .Returns(PlayerListMock());
 
             //Act
-            var players = await _ssm.PlayerService.GetAllByTeamNameAsync(teamName, CancellationToken.None);
+            var players = await _sut.PlayerService.GetAllByTeamNameAsync(teamName, CancellationToken.None);
             playerCountFromService = players.Count();
 
             //Assert
             Assert.Equal(totalPlayers, playerCountFromService);
+
+        }
+
+        [Fact]
+        public async Task GetByIdAsync_ShouldReturnPlayer_WhenPlayerIsValidAsync()
+        {
+            //Arrange
+            int playerId = 6;
+            int teamId = 14;
+            string teamName = "Lakers";
+            string playerName = "LeBron James";
+            _repoManagerMock.Setup(x => x.TeamRepository.GetByIdAsync(teamId, CancellationToken.None))
+                .Returns(TeamMock());
+            _repoManagerMock.Setup(x => x.PlayerRepository.GetByIdAsync(playerId, CancellationToken.None))
+                .Returns(PlayerMock());
+
+            //Act
+            var players = await _sut.PlayerService.GetByIdAsync(teamId, playerId, CancellationToken.None);
+
+            //Assert
+            Assert.Equal(playerId, players.PlayerId);
+            Assert.Equal(playerName, players.Name);
+            Assert.Equal(teamName, players.Team);
 
         }
     }
