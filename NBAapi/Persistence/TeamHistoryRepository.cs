@@ -18,7 +18,7 @@ namespace Persistence
         public async Task<IEnumerable<TeamHistory>> GetAllAsync(CancellationToken cancellationToken = default) =>
             await _dbContext.TeamHistory.ToListAsync(cancellationToken);
 
-        public async Task<IEnumerable<TeamHistory>> GetAllByTeamIdAsync(string team, CancellationToken cancellationToken = default) =>
+        public async Task<IEnumerable<TeamHistory>> GetAllByTeamNameAsync(string team, CancellationToken cancellationToken = default) =>
             await _dbContext.TeamHistory.Where(x => x.Team == team).ToListAsync(cancellationToken);
 
         public async Task<TeamHistory> GetByIdAsync(int teamHistoryId, CancellationToken cancellationToken = default) =>

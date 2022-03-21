@@ -14,9 +14,9 @@ namespace Services
     {
         private readonly IRepositoryManager _repositoryManager;
         public TeamHistoryService(IRepositoryManager repositoryManager) => _repositoryManager = repositoryManager;
-        public async Task<IEnumerable<TeamHistoryDto>> GetAllByTeamIdAsync(string team, CancellationToken cancellationToken = default)
+        public async Task<IEnumerable<TeamHistoryDto>> GetAllByTeamNameAsync(string team, CancellationToken cancellationToken = default)
         {
-            var players = await _repositoryManager.PlayerRepository.GetAllByTeamIdAsync(team, cancellationToken);
+            var players = await _repositoryManager.TeamHistoryRepository.GetAllByTeamNameAsync(team, cancellationToken);
             var playersDto = players.Adapt<IEnumerable<TeamHistoryDto>>();
             return playersDto;
         }
@@ -27,7 +27,7 @@ namespace Services
             {
                 throw new TeamNotFoundException(teamId);
             }
-            var player = await _repositoryManager.PlayerRepository.GetByIdAsync(playerId, cancellationToken);
+            var player = await _repositoryManager.TeamHistoryRepository.GetByIdAsync(playerId, cancellationToken);
             if (player is null)
             {
                 throw new PlayerNotFoundException(playerId);
@@ -46,9 +46,9 @@ namespace Services
             {
                 throw new TeamNotFoundException(teamId);
             }
-            var player = PlayerForCreationDto.Adapt<Player>();
-            player.PlayerId = team.TeamId;
-            _repositoryManager.PlayerRepository.Insert(player);
+            var player = PlayerForCreationDto.Adapt<TeamHistory>();
+            player.Team = team.Name;
+            _repositoryManager.TeamHistoryRepository.Insert(player);
             await _repositoryManager.UnitOfWork.SaveChangesAsync(cancellationToken);
             return player.Adapt<TeamHistoryDto>();
         }
@@ -59,7 +59,7 @@ namespace Services
             {
                 throw new TeamNotFoundException(teamId);
             }
-            var player = await _repositoryManager.PlayerRepository.GetByIdAsync(playerId, cancellationToken);
+            var player = await _repositoryManager.TeamHistoryRepository.GetByIdAsync(playerId, cancellationToken);
             if (player is null)
             {
                 throw new PlayerNotFoundException(playerId);
@@ -68,13 +68,13 @@ namespace Services
             //{
             //    throw new PlayerDoesNotBelongToOwnerException(team.TeamId, player.PlayerId);
             //}
-            _repositoryManager.PlayerRepository.Remove(player);
+            _repositoryManager.TeamHistoryRepository.Remove(player);
             await _repositoryManager.UnitOfWork.SaveChangesAsync(cancellationToken);
         }
 
         public async Task<IEnumerable<TeamHistoryDto>> GetAllAsync(CancellationToken cancellationToken = default)
         {
-            var players = await _repositoryManager.PlayerRepository.GetAllAsync(cancellationToken);
+            var players = await _repositoryManager.TeamHistoryRepository.GetAllAsync(cancellationToken);
             var playerDto = players.Adapt<IEnumerable<TeamHistoryDto>>();
             return playerDto;
         }

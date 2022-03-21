@@ -29,7 +29,7 @@ namespace Presentation.Controllers
         [HttpGet("{team}")]
         public async Task<IActionResult> GetTeams(string team, CancellationToken cancellationToken)
         {
-            var teamHistoriesDto = await _serviceManager.PlayerService.GetAllByTeamIdAsync(team, cancellationToken);
+            var teamHistoriesDto = await _serviceManager.TeamHistoryService.GetAllByTeamNameAsync(team, cancellationToken);
 
             return Ok(teamHistoriesDto);
         }

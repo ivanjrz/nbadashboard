@@ -15,9 +15,9 @@ namespace Services
     {
         private readonly IRepositoryManager _repositoryManager;
         public PlayerService(IRepositoryManager repositoryManager) => _repositoryManager = repositoryManager;
-        public async Task<IEnumerable<PlayerDto>> GetAllByTeamIdAsync(string team, CancellationToken cancellationToken = default)
+        public async Task<IEnumerable<PlayerDto>> GetAllByTeamNameAsync(string team, CancellationToken cancellationToken = default)
         {
-            var players = await _repositoryManager.PlayerRepository.GetAllByTeamIdAsync(team, cancellationToken);
+            var players = await _repositoryManager.PlayerRepository.GetAllByTeamNameAsync(team, cancellationToken);
             var playersDto = players.Adapt<IEnumerable<PlayerDto>>();
             return playersDto;
         }

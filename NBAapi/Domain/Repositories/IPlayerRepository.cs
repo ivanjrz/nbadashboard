@@ -8,7 +8,7 @@ namespace Domain.Repositories
 {
     public interface IPlayerRepository
     {
-        Task<IEnumerable<Player>> GetAllByTeamIdAsync(string team, CancellationToken cancellationToken = default);
+        Task<IEnumerable<Player>> GetAllByTeamNameAsync(string team, CancellationToken cancellationToken = default);
         Task<IEnumerable<Player>> GetAllAsync(CancellationToken cancellationToken = default);
         Task<Player> GetByIdAsync(int playerId, CancellationToken cancellationToken = default);
 
