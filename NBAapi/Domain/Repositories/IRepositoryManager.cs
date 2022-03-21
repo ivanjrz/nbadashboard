@@ -7,6 +7,8 @@ namespace Domain.Repositories
 
         IPlayerRepository PlayerRepository { get; }
 
+        ITeamHistoryRepository TeamHistoryRepository { get; }
+
         IUnitOfWork UnitOfWork { get; }
     }
 }
