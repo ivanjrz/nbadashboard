@@ -20,8 +20,8 @@ namespace Persistence
         public async Task<Team> GetByIdAsync(int teamId, CancellationToken cancellationToken = default) =>
             await _dbContext.Team.Include(x => x.Players).FirstOrDefaultAsync(x => x.TeamId == teamId, cancellationToken);
 
-        public void Insert(Team owner) => _dbContext.Team.Add(owner);
+        public void Insert(Team team) => _dbContext.Team.Add(team);
 
-        public void Remove(Team owner) => _dbContext.Team.Remove(owner);
+        public void Remove(Team team) => _dbContext.Team.Remove(team);
     }
 }

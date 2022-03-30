@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Linq;
 using System.Reflection;
 using Domain.Entities;
+using Domain.Exceptions;
 
 namespace NBAapiTests
 {
@@ -52,19 +53,7 @@ namespace NBAapiTests
             });
         }
 
-        private static Task<Player> PlayerMock()
-        {
-            return Task.FromResult(new Player()
-            {
-                PlayerId = 6,
-                Name = "LeBron James",
-                Team = "Lakers",
-                Joined = DateTime.Now,
-                PhotoPath = "/Photos/nba_anonymous.jpg"
-            });
-        }
-
-        private static Task<IEnumerable<Player>> PlayerListMock()
+        public static Task<IEnumerable<Player>> PlayerListMock()
         {
             var r = new List<Player>();
             r.Add(new Player()
@@ -86,6 +75,28 @@ namespace NBAapiTests
             return Task.FromResult((IEnumerable<Player>)r);
         }
 
+        public static Task<Player> GetPlayerFromListById(int id)
+        {
+            var r = new List<Player>();
+            r.Add(new Player()
+            {
+                PlayerId = 6,
+                Name = "LeBron James",
+                Team = "Lakers",
+                Joined = DateTime.Now,
+                PhotoPath = "/Photos/nba_anonymous.jpg"
+            });
+            r.Add(new Player()
+            {
+                PlayerId = 7,
+                Name = "Anthony Davis",
+                Team = "Lakers",
+                Joined = DateTime.Now,
+                PhotoPath = "/Photos/nba_anonymous.jpg"
+            });
+            return Task.FromResult(r.FirstOrDefault(x => x.PlayerId == id));
+        }
+
         [Fact]
         public async Task GetAllByTeamNameAsync_ShouldReturnTotalPlayers_WhenTeamIsValidAsync()
         {
@@ -105,27 +116,44 @@ namespace NBAapiTests
 
         }
 
-        [Fact]
-        public async Task GetByIdAsync_ShouldReturnPlayer_WhenPlayerIsValidAsync()
+        [Theory]
+        [InlineData(6, 14)]
+        [InlineData(7, 14)]
+        public async Task GetByIdAsync_ShouldReturnPlayer_WhenPlayerIdAndTeamIdIsValidAsync(int playerId, int teamId)
         {
             //Arrange
-            int playerId = 6;
-            int teamId = 14;
-            string teamName = "Lakers";
-            string playerName = "LeBron James";
             _repoManagerMock.Setup(x => x.TeamRepository.GetByIdAsync(teamId, CancellationToken.None))
                 .Returns(TeamMock());
             _repoManagerMock.Setup(x => x.PlayerRepository.GetByIdAsync(playerId, CancellationToken.None))
-                .Returns(PlayerMock());
+                .Returns(GetPlayerFromListById(playerId));
 
             //Act
             var players = await _sut.PlayerService.GetByIdAsync(teamId, playerId, CancellationToken.None);
 
             //Assert
             Assert.Equal(playerId, players.PlayerId);
-            Assert.Equal(playerName, players.Name);
-            Assert.Equal(teamName, players.Team);
 
         }
+
+        [Theory]
+        [InlineData(99, 14)]
+        public async Task GetByIdAsync_ShouldNotReturnPlayer_WhenPlayerIdAndTeamIdDoesNotExistAsync(int playerId, int teamId)
+        {
+            //Arrange
+            _repoManagerMock.Setup(x => x.TeamRepository.GetByIdAsync(teamId, CancellationToken.None))
+                .Returns(TeamMock());
+            _repoManagerMock.Setup(x => x.PlayerRepository.GetByIdAsync(playerId, CancellationToken.None))
+                .Returns(GetPlayerFromListById(playerId));
+
+            //Act
+            //var players = await _sut.PlayerService.GetByIdAsync(teamId, playerId, CancellationToken.None);
+            //Assert
+            //Assert.Null(players);
+            //Act & Assert
+            await Assert.ThrowsAsync<PlayerNotFoundException>(() => _sut.PlayerService.GetByIdAsync(teamId,playerId, CancellationToken.None));
+
+        }
+
+
     }
 }
