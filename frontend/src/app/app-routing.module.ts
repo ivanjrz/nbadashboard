@@ -4,11 +4,13 @@ import { Routes, RouterModule } from '@angular/router';
 import {PlayerComponent} from './player/player.component';
 import {TeamComponent} from './team/team.component';
 import {TeamHistoryComponent} from './teamhistory/teamhistory.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
 {path:'player',component:PlayerComponent},
 {path:'team',component:TeamComponent},
-{path:'teamhistory', component:TeamHistoryComponent}
+{path:'teamhistory', component:TeamHistoryComponent},
+{path:'', component:DashboardComponent}
 
 ];
 

@@ -67,10 +67,10 @@ export class ShowTeamComponent implements OnInit {
     var NameFilter = this.NameFilter;
 
     this.TeamList = this.TeamListWithoutFilter.filter(function (el){
-        return el.TeamId.toString().toLowerCase().includes(
+        return el.Name.toString().toLowerCase().includes(
           TeamIdFilter.toString().trim().toLowerCase()
         )&&
-        el.Name.toString().toLowerCase().includes(
+        el.City.toString().toLowerCase().includes(
           NameFilter.toString().trim().toLowerCase()
         )
     });

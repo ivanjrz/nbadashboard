@@ -10,18 +10,25 @@ import { SharedService } from './shared.service';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { PlayerComponent } from './player/player.component';
 import { TeamHistoryComponent } from './teamhistory/teamhistory.component';
 import { ShowPlayerComponent } from './player/show-player/show-player.component';
 import { AddEditPlayerComponent } from './player/add-edit-player/add-edit-player.component';
 import { ShowTeamHistoryComponent } from './teamhistory/show-teamhistory/show-teamhistory.component';
 import { AddEditTeamHistoryComponent } from './teamhistory/add-edit-teamhistory/add-edit-teamhistory.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+// import { MatCard } from '@angular/material/card';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatCardModule } from '@angular/material/card';
+
 @NgModule({
   declarations: [
     AppComponent,
     TeamComponent,
     ShowTeamComponent,
     AddEditTeamComponent,
+    DashboardComponent,
     PlayerComponent,
     ShowPlayerComponent,
     AddEditPlayerComponent,
@@ -34,7 +41,10 @@ import { AddEditTeamHistoryComponent } from './teamhistory/add-edit-teamhistory/
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NoopAnimationsModule,
+    MatSliderModule,
+    MatCardModule
   ],
   providers: [SharedService],
   bootstrap: [AppComponent]

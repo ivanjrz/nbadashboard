@@ -53,4 +53,8 @@ readonly PhotoUrl = "http://localhost:53535/Photos/";
     return this.http.get<any[]>(this.APIUrl+'/Player/GetAllTeamNames');
   }
 
+  getHistoryList():Observable<any[]>{
+    return this.http.get<any>(this.APIUrl+'/TeamHistory');
+  }
+
 }

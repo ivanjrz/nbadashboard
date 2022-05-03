@@ -1,25 +1,27 @@
 <div class="container">
 
-    <h3 class="d-flex justify-content-center">NBA Dashboard </h3>
-    <!-- <h5 class="d-flex justify-content-center">Basic Team/Player management</h5> -->
-
+    <h3 class="d-flex justify-content-center gap-2"><button 
+        routerLink="" class="m-1 btn btn-link">NBA Dashboard
+    </button></h3>
     <nav class="navbar navbar-expand-sm bg-light navbar-dark">
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <button routerLink="team"
-            class="m-1 btn btn-light btn-outline-primary" Button>Teams</button>
-        </li>
-        <li class="nav-item">
-            <button routerLink="player"
-            class="m-1 btn btn-light btn-outline-primary" Button>Players</button>
-        </li>
-        <li class="nav-item">
-            <button routerLink="teamhistory"
-            class="m-1 btn btn-light btn-outline-primary" Button>Season history</button>
-        </li>
-    </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <button routerLink="team" class="m-1 btn btn-light btn-outline-primary" Button>Teams</button>
+            </li>
+            <li class="nav-item">
+                <button routerLink="player" class="m-1 btn btn-light btn-outline-primary" Button>Players</button>
+            </li>
+            <li class="nav-item">
+                <button routerLink="teamhistory" class="m-1 btn btn-light btn-outline-primary" Button>Season</button>
+            </li>
+        </ul>
     </nav>
-
-<router-outlet></router-outlet>
-
+    <router-outlet></router-outlet>
+    <mat-card>
+        <h5>All advanced stats are taken from <a href="www.basketball-reference.com/">basketball-reference</a></h5>
+        <h5>Please also visit cited references</h5>
+        <h6><a href="https://scholars.unh.edu/cgi/viewcontent.cgi?article=1472&context=honors">Bouzianis, Stephen,
+                "Predicting the Outcome of NFL Games Using Logistic Regression" (2019). Honors Theses and Capstones.
+                474.</a></h6>
+    </mat-card>
 </div>
