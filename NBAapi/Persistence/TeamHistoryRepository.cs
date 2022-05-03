@@ -16,7 +16,7 @@ namespace Persistence
         public TeamHistoryRepository(ApplicationDbContext dbContext) => _dbContext = dbContext;
 
         public async Task<IEnumerable<TeamHistory>> GetAllAsync(CancellationToken cancellationToken = default) =>
-            await _dbContext.TeamHistory.ToListAsync(cancellationToken);
+            await _dbContext.TeamHistory.OrderBy(x => x.Team).ThenByDescending(x => x.TeamHistoryId).ToListAsync(cancellationToken);
 
         public async Task<IEnumerable<TeamHistory>> GetAllByTeamNameAsync(string team, CancellationToken cancellationToken = default) =>
             await _dbContext.TeamHistory.Where(x => x.Team == team).ToListAsync(cancellationToken);

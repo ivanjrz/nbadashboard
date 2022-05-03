@@ -1,6 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 
 namespace Persistence
 {
@@ -343,49 +346,26 @@ namespace Persistence
                 );
             #endregion Player Initializer
 
-            #region Team history intializer
-            modelBuilder.Entity<TeamHistory>()
-                .HasData(
-                new TeamHistory
-                {
-                    TeamHistoryId = 1,
-                    Team = "Lakers",
-                    Season = "2019-2020",
-                    WinRecord = 52,
-                    LossRecord = 19,
-                    MOV = 5.79,
-                    SOS = 0.49,
-                    ORTg = 112,
-                    DRTg = 106.3,
-                    FTr = 0.276,
-                    ThreePAr = 0.358,
-                    OEFGPct = 0.542,
-                    DEFGPct = 0.515,
-                    ORB = 24.5,
-                    DRB = 78.8
-                },
-                new TeamHistory
-                {
-                    TeamHistoryId = 2,
-                    Team = "Heat",
-                    Season = "2019-2020",
-                    WinRecord = 44,
-                    LossRecord = 29,
-                    MOV = 2.95,
-                    SOS = 0.35,
-                    ORTg = 112.5,
-                    DRTg = 109.5,
-                    FTr = 0.299,
-                    ThreePAr = 0.419,
-                    OEFGPct = 0.547,
-                    DEFGPct = 0.523,
-                    ORB = 20.3,
-                    DRB = 79.5
-                }
-                );
-            #endregion Team history intializer
+            //Team history intializer
+            modelBuilder.Entity<TeamHistory>().HasData(JsonSeasonHistory());
 
+            
         }
+        /// <summary>
+        /// Returns list of TeamHistory entities for initial data seeding
+        /// </summary>
+        /// <returns></returns>
+        public List<TeamHistory> JsonSeasonHistory()
+        {
+            var values = new List<TeamHistory>();
+            using (StreamReader r = new StreamReader(@"../Persistence/team_season_histories.json"))
+            {
+                string json = r.ReadToEnd();
+                values = JsonConvert.DeserializeObject<List<TeamHistory>>(json);
+            }
+            return values;
+        }
+
         #endregion Model initializers
     }
 }

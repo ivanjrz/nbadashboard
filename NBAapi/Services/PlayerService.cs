@@ -48,7 +48,7 @@ namespace Services
                 throw new TeamNotFoundException(teamId);
             }
             var player = PlayerForCreationDto.Adapt<Player>();
-            player.PlayerId = team.TeamId;
+            player.Team = team.Name;
             _repositoryManager.PlayerRepository.Insert(player);
             await _repositoryManager.UnitOfWork.SaveChangesAsync(cancellationToken);
             return player.Adapt<PlayerDto>();
@@ -65,10 +65,10 @@ namespace Services
             {
                 throw new PlayerNotFoundException(playerId);
             }
-            //if (player.TeamId != team.TeamId)
-            //{
-            //    throw new PlayerDoesNotBelongToOwnerException(team.TeamId, player.PlayerId);
-            //}
+            if (player.Team != team.Name)
+            {
+                throw new PlayerDoesNotBelongToTeamException(team.TeamId, player.PlayerId);
+            }
             _repositoryManager.PlayerRepository.Remove(player);
             await _repositoryManager.UnitOfWork.SaveChangesAsync(cancellationToken);
         }

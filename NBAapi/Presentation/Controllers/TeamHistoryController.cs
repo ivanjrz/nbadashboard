@@ -35,19 +35,19 @@ namespace Presentation.Controllers
         }
 
         [HttpGet("{teamhistory:int}")]
-        public async Task<IActionResult> GetPlayerById(int teamId, int playerId, CancellationToken cancellationToken)
+        public async Task<IActionResult> GetHistoryById(int teamId, int playerId, CancellationToken cancellationToken)
         {
-            var playDto = await _serviceManager.PlayerService.GetByIdAsync(teamId, playerId, cancellationToken);
+            var playDto = await _serviceManager.TeamHistoryService.GetByIdAsync(teamId, playerId, cancellationToken);
 
             return Ok(playDto);
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateTeamHistory(int team, [FromBody] CreateTeamHistoryDto playerForCreationDto, CancellationToken cancellationToken)
+        public async Task<IActionResult> CreateTeamHistory(int team, [FromBody] CreateTeamHistoryDto historyForCreationDto, CancellationToken cancellationToken)
         {
-            var response = await _serviceManager.TeamHistoryService.CreateAsync(team, playerForCreationDto, cancellationToken);
+            var response = await _serviceManager.TeamHistoryService.CreateAsync(team, historyForCreationDto, cancellationToken);
 
-            return CreatedAtAction(nameof(GetPlayerById), new { ownerId = response.Team, playerId = response.TeamHistoryId}, response);
+            return CreatedAtAction(nameof(GetHistoryById), new { team = response.Team, playerId = response.TeamHistoryId}, response);
         }
 
         [HttpDelete("{teamhistory:int}")]
