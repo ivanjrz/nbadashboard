@@ -21,6 +21,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 // import { MatCard } from '@angular/material/card';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatCardModule } from '@angular/material/card';
+import { PredictionsComponent } from './predictions/predictions.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { MatCardModule } from '@angular/material/card';
     AddEditPlayerComponent,
     TeamHistoryComponent,
     ShowTeamHistoryComponent,
-    AddEditTeamHistoryComponent
+    AddEditTeamHistoryComponent,
+    PredictionsComponent
   ],
   imports: [
     BrowserModule,
