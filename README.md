@@ -35,10 +35,9 @@ ng build
 ```bash
 ng serve --open
 ```
-1. This will take us to our NBA dashbaord
+1. This will take us to NBAdashbaord's landing page
 
-1. ![NBADashboard](nba-predictions/images/dashboard.png "NBADashboard")
-NBA dashboard landing page
+![NBADashboard](nba-predictions/images/dashboard.png "NBADashboard")
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
