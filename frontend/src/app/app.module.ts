@@ -10,12 +10,18 @@ import { SharedService } from './shared.service';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { DashboardComponent } from './dashboard/dashboard.component';
 import { PlayerComponent } from './player/player.component';
-import { GameComponent } from './game/game.component';
+import { TeamHistoryComponent } from './teamhistory/teamhistory.component';
 import { ShowPlayerComponent } from './player/show-player/show-player.component';
 import { AddEditPlayerComponent } from './player/add-edit-player/add-edit-player.component';
-import { ShowGameComponent } from './game/show-game/show-game.component';
-import { AddEditGameComponent } from './game/add-edit-game/add-edit-game.component';
+import { ShowTeamHistoryComponent } from './teamhistory/show-teamhistory/show-teamhistory.component';
+import { AddEditTeamHistoryComponent } from './teamhistory/add-edit-teamhistory/add-edit-teamhistory.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+// import { MatCard } from '@angular/material/card';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatCardModule } from '@angular/material/card';
+import { PredictionsComponent } from './predictions/predictions.component';
 
 @NgModule({
   declarations: [
@@ -23,19 +29,24 @@ import { AddEditGameComponent } from './game/add-edit-game/add-edit-game.compone
     TeamComponent,
     ShowTeamComponent,
     AddEditTeamComponent,
+    DashboardComponent,
     PlayerComponent,
-    GameComponent,
     ShowPlayerComponent,
     AddEditPlayerComponent,
-    ShowGameComponent,
-    AddEditGameComponent
+    TeamHistoryComponent,
+    ShowTeamHistoryComponent,
+    AddEditTeamHistoryComponent,
+    PredictionsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NoopAnimationsModule,
+    MatSliderModule,
+    MatCardModule
   ],
   providers: [SharedService],
   bootstrap: [AppComponent]

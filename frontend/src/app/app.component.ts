@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatCard} from '@angular/material/card';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular10';
+  title = 'NBA Dashboard';
 }

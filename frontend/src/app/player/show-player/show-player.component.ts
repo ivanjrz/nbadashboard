@@ -1,14 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import {SharedService} from 'src/app/shared.service';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-show-player',
   templateUrl: './show-player.component.html',
-  styleUrls: ['./show-player.component.css']
+  styleUrls: ['./show-player.component.css'],
+  providers: [DatePipe]
 })
 export class ShowPlayerComponent implements OnInit {
 
-  constructor(private service:SharedService) { }
+  constructor(private service:SharedService, private datePipe: DatePipe) { }
 
   playerList:any=[];
 

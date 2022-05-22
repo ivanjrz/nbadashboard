@@ -1,19 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Serialization;
 using Microsoft.EntityFrameworkCore;
 using System.IO;
 using Microsoft.Extensions.FileProviders;
-using NBAapi.Models;
+using Domain.Repositories;
+using Services;
+using Persistence;
 
 namespace NBAapi
 {
@@ -50,7 +46,13 @@ namespace NBAapi
                 .AddNewtonsoftJson(options => options.SerializerSettings.ContractResolver
                 = new DefaultContractResolver());
 
-            services.AddControllers();
+            //services.AddControllers();
+            services.AddControllers()
+                .AddApplicationPart(typeof(Presentation.AssemblyReference).Assembly);
+
+            services.AddScoped<IServiceManager, ServiceManager>();
+            services.AddScoped<IRepositoryManager, RepositoryManager>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

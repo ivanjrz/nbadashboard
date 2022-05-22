@@ -33,8 +33,8 @@ data-backdrop="static" data-keyboard="false"
 <table class="table table-striped">
     <thead>
         <tr>
-            <th>PlayerId</th>
-            <th>Name</th>
+            <!-- <th>PlayerId</th> -->
+            <th>Player</th>
             <th>Team</th>
             <th>Joined</th>
             <th>Options</th>
@@ -42,10 +42,10 @@ data-backdrop="static" data-keyboard="false"
     </thead>
     <tbody>
         <tr *ngFor="let dataItem of playerList">
-            <td>{{dataItem.PlayerId}}</td>
+            <!-- <td>{{dataItem.PlayerId}}</td> -->
             <td>{{dataItem.Name}}</td>
             <td>{{dataItem.Team}}</td>
-            <td>{{dataItem.Joined}}</td>
+            <td>{{dataItem.Joined | date:"MMMM/yyyy"}}</td>
             <td>
                 <button type="button" class="btn btn-light mr-1"
                 data-toggle="modal" data-target="#exampleModal"
