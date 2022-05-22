@@ -442,7 +442,13 @@
 
       var _angular_material_card__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(
       /*! @angular/material/card */
-      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/card.js"); // import { MatCard } from '@angular/material/card';
+      "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/card.js");
+      /* harmony import */
+
+
+      var _predictions_predictions_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(
+      /*! ./predictions/predictions.component */
+      "./src/app/predictions/predictions.component.ts"); // import { MatCard } from '@angular/material/card';
 
 
       var AppModule = function AppModule() {
@@ -463,7 +469,7 @@
 
       (function () {
         (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AppModule, {
-          declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], _team_team_component__WEBPACK_IMPORTED_MODULE_4__["TeamComponent"], _team_show_team_show_team_component__WEBPACK_IMPORTED_MODULE_5__["ShowTeamComponent"], _team_add_edit_team_add_edit_team_component__WEBPACK_IMPORTED_MODULE_6__["AddEditTeamComponent"], _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_10__["DashboardComponent"], _player_player_component__WEBPACK_IMPORTED_MODULE_11__["PlayerComponent"], _player_show_player_show_player_component__WEBPACK_IMPORTED_MODULE_13__["ShowPlayerComponent"], _player_add_edit_player_add_edit_player_component__WEBPACK_IMPORTED_MODULE_14__["AddEditPlayerComponent"], _teamhistory_teamhistory_component__WEBPACK_IMPORTED_MODULE_12__["TeamHistoryComponent"], _teamhistory_show_teamhistory_show_teamhistory_component__WEBPACK_IMPORTED_MODULE_15__["ShowTeamHistoryComponent"], _teamhistory_add_edit_teamhistory_add_edit_teamhistory_component__WEBPACK_IMPORTED_MODULE_16__["AddEditTeamHistoryComponent"]],
+          declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], _team_team_component__WEBPACK_IMPORTED_MODULE_4__["TeamComponent"], _team_show_team_show_team_component__WEBPACK_IMPORTED_MODULE_5__["ShowTeamComponent"], _team_add_edit_team_add_edit_team_component__WEBPACK_IMPORTED_MODULE_6__["AddEditTeamComponent"], _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_10__["DashboardComponent"], _player_player_component__WEBPACK_IMPORTED_MODULE_11__["PlayerComponent"], _player_show_player_show_player_component__WEBPACK_IMPORTED_MODULE_13__["ShowPlayerComponent"], _player_add_edit_player_add_edit_player_component__WEBPACK_IMPORTED_MODULE_14__["AddEditPlayerComponent"], _teamhistory_teamhistory_component__WEBPACK_IMPORTED_MODULE_12__["TeamHistoryComponent"], _teamhistory_show_teamhistory_show_teamhistory_component__WEBPACK_IMPORTED_MODULE_15__["ShowTeamHistoryComponent"], _teamhistory_add_edit_teamhistory_add_edit_teamhistory_component__WEBPACK_IMPORTED_MODULE_16__["AddEditTeamHistoryComponent"], _predictions_predictions_component__WEBPACK_IMPORTED_MODULE_20__["PredictionsComponent"]],
           imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_8__["HttpClientModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["ReactiveFormsModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_17__["NoopAnimationsModule"], _angular_material_slider__WEBPACK_IMPORTED_MODULE_18__["MatSliderModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_19__["MatCardModule"]]
         });
       })();
@@ -474,7 +480,7 @@
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵsetClassMetadata"](AppModule, [{
           type: _angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"],
           args: [{
-            declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], _team_team_component__WEBPACK_IMPORTED_MODULE_4__["TeamComponent"], _team_show_team_show_team_component__WEBPACK_IMPORTED_MODULE_5__["ShowTeamComponent"], _team_add_edit_team_add_edit_team_component__WEBPACK_IMPORTED_MODULE_6__["AddEditTeamComponent"], _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_10__["DashboardComponent"], _player_player_component__WEBPACK_IMPORTED_MODULE_11__["PlayerComponent"], _player_show_player_show_player_component__WEBPACK_IMPORTED_MODULE_13__["ShowPlayerComponent"], _player_add_edit_player_add_edit_player_component__WEBPACK_IMPORTED_MODULE_14__["AddEditPlayerComponent"], _teamhistory_teamhistory_component__WEBPACK_IMPORTED_MODULE_12__["TeamHistoryComponent"], _teamhistory_show_teamhistory_show_teamhistory_component__WEBPACK_IMPORTED_MODULE_15__["ShowTeamHistoryComponent"], _teamhistory_add_edit_teamhistory_add_edit_teamhistory_component__WEBPACK_IMPORTED_MODULE_16__["AddEditTeamHistoryComponent"]],
+            declarations: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"], _team_team_component__WEBPACK_IMPORTED_MODULE_4__["TeamComponent"], _team_show_team_show_team_component__WEBPACK_IMPORTED_MODULE_5__["ShowTeamComponent"], _team_add_edit_team_add_edit_team_component__WEBPACK_IMPORTED_MODULE_6__["AddEditTeamComponent"], _dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_10__["DashboardComponent"], _player_player_component__WEBPACK_IMPORTED_MODULE_11__["PlayerComponent"], _player_show_player_show_player_component__WEBPACK_IMPORTED_MODULE_13__["ShowPlayerComponent"], _player_add_edit_player_add_edit_player_component__WEBPACK_IMPORTED_MODULE_14__["AddEditPlayerComponent"], _teamhistory_teamhistory_component__WEBPACK_IMPORTED_MODULE_12__["TeamHistoryComponent"], _teamhistory_show_teamhistory_show_teamhistory_component__WEBPACK_IMPORTED_MODULE_15__["ShowTeamHistoryComponent"], _teamhistory_add_edit_teamhistory_add_edit_teamhistory_component__WEBPACK_IMPORTED_MODULE_16__["AddEditTeamHistoryComponent"], _predictions_predictions_component__WEBPACK_IMPORTED_MODULE_20__["PredictionsComponent"]],
             imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"], _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"], _angular_common_http__WEBPACK_IMPORTED_MODULE_8__["HttpClientModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"], _angular_forms__WEBPACK_IMPORTED_MODULE_9__["ReactiveFormsModule"], _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_17__["NoopAnimationsModule"], _angular_material_slider__WEBPACK_IMPORTED_MODULE_18__["MatSliderModule"], _angular_material_card__WEBPACK_IMPORTED_MODULE_19__["MatCardModule"]],
             providers: [_shared_service__WEBPACK_IMPORTED_MODULE_7__["SharedService"]],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
@@ -1532,6 +1538,83 @@
           }, {
             type: _angular_common__WEBPACK_IMPORTED_MODULE_1__["DatePipe"]
           }];
+        }, null);
+      })();
+      /***/
+
+    },
+
+    /***/
+    "./src/app/predictions/predictions.component.ts":
+    /*!******************************************************!*\
+      !*** ./src/app/predictions/predictions.component.ts ***!
+      \******************************************************/
+
+    /*! exports provided: PredictionsComponent */
+
+    /***/
+    function srcAppPredictionsPredictionsComponentTs(module, __webpack_exports__, __webpack_require__) {
+      "use strict";
+
+      __webpack_require__.r(__webpack_exports__);
+      /* harmony export (binding) */
+
+
+      __webpack_require__.d(__webpack_exports__, "PredictionsComponent", function () {
+        return PredictionsComponent;
+      });
+      /* harmony import */
+
+
+      var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
+      /*! @angular/core */
+      "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+
+      var PredictionsComponent = /*#__PURE__*/function () {
+        function PredictionsComponent() {
+          _classCallCheck(this, PredictionsComponent);
+        }
+
+        _createClass(PredictionsComponent, [{
+          key: "ngOnInit",
+          value: function ngOnInit() {}
+        }]);
+
+        return PredictionsComponent;
+      }();
+
+      PredictionsComponent.ɵfac = function PredictionsComponent_Factory(t) {
+        return new (t || PredictionsComponent)();
+      };
+
+      PredictionsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
+        type: PredictionsComponent,
+        selectors: [["app-predictions"]],
+        decls: 2,
+        vars: 0,
+        template: function PredictionsComponent_Template(rf, ctx) {
+          if (rf & 1) {
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "predictions works!");
+
+            _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+          }
+        },
+        styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3ByZWRpY3Rpb25zL3ByZWRpY3Rpb25zLmNvbXBvbmVudC5jc3MifQ== */"]
+      });
+      /*@__PURE__*/
+
+      (function () {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](PredictionsComponent, [{
+          type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+          args: [{
+            selector: 'app-predictions',
+            templateUrl: './predictions.component.html',
+            styleUrls: ['./predictions.component.css']
+          }]
+        }], function () {
+          return [];
         }, null);
       })();
       /***/

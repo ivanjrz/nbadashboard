@@ -179,6 +179,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/__ivy_ngcc__/fesm2015/animations.js");
 /* harmony import */ var _angular_material_slider__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @angular/material/slider */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/slider.js");
 /* harmony import */ var _angular_material_card__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/material/card */ "./node_modules/@angular/material/__ivy_ngcc__/fesm2015/card.js");
+/* harmony import */ var _predictions_predictions_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./predictions/predictions.component */ "./src/app/predictions/predictions.component.ts");
 
 
 
@@ -198,6 +199,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // import { MatCard } from '@angular/material/card';
+
 
 
 
@@ -224,7 +226,8 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
         _player_add_edit_player_add_edit_player_component__WEBPACK_IMPORTED_MODULE_14__["AddEditPlayerComponent"],
         _teamhistory_teamhistory_component__WEBPACK_IMPORTED_MODULE_12__["TeamHistoryComponent"],
         _teamhistory_show_teamhistory_show_teamhistory_component__WEBPACK_IMPORTED_MODULE_15__["ShowTeamHistoryComponent"],
-        _teamhistory_add_edit_teamhistory_add_edit_teamhistory_component__WEBPACK_IMPORTED_MODULE_16__["AddEditTeamHistoryComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
+        _teamhistory_add_edit_teamhistory_add_edit_teamhistory_component__WEBPACK_IMPORTED_MODULE_16__["AddEditTeamHistoryComponent"],
+        _predictions_predictions_component__WEBPACK_IMPORTED_MODULE_20__["PredictionsComponent"]], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
         _app_routing_module__WEBPACK_IMPORTED_MODULE_2__["AppRoutingModule"],
         _angular_common_http__WEBPACK_IMPORTED_MODULE_8__["HttpClientModule"],
         _angular_forms__WEBPACK_IMPORTED_MODULE_9__["FormsModule"],
@@ -246,7 +249,8 @@ AppModule.ɵinj = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector
                     _player_add_edit_player_add_edit_player_component__WEBPACK_IMPORTED_MODULE_14__["AddEditPlayerComponent"],
                     _teamhistory_teamhistory_component__WEBPACK_IMPORTED_MODULE_12__["TeamHistoryComponent"],
                     _teamhistory_show_teamhistory_show_teamhistory_component__WEBPACK_IMPORTED_MODULE_15__["ShowTeamHistoryComponent"],
-                    _teamhistory_add_edit_teamhistory_add_edit_teamhistory_component__WEBPACK_IMPORTED_MODULE_16__["AddEditTeamHistoryComponent"]
+                    _teamhistory_add_edit_teamhistory_add_edit_teamhistory_component__WEBPACK_IMPORTED_MODULE_16__["AddEditTeamHistoryComponent"],
+                    _predictions_predictions_component__WEBPACK_IMPORTED_MODULE_20__["PredictionsComponent"]
                 ],
                 imports: [
                     _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -778,6 +782,42 @@ ShowPlayerComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefi
                 providers: [_angular_common__WEBPACK_IMPORTED_MODULE_1__["DatePipe"]]
             }]
     }], function () { return [{ type: src_app_shared_service__WEBPACK_IMPORTED_MODULE_2__["SharedService"] }, { type: _angular_common__WEBPACK_IMPORTED_MODULE_1__["DatePipe"] }]; }, null); })();
+
+
+/***/ }),
+
+/***/ "./src/app/predictions/predictions.component.ts":
+/*!******************************************************!*\
+  !*** ./src/app/predictions/predictions.component.ts ***!
+  \******************************************************/
+/*! exports provided: PredictionsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PredictionsComponent", function() { return PredictionsComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js");
+
+
+class PredictionsComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+}
+PredictionsComponent.ɵfac = function PredictionsComponent_Factory(t) { return new (t || PredictionsComponent)(); };
+PredictionsComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: PredictionsComponent, selectors: [["app-predictions"]], decls: 2, vars: 0, template: function PredictionsComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "predictions works!");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3ByZWRpY3Rpb25zL3ByZWRpY3Rpb25zLmNvbXBvbmVudC5jc3MifQ== */"] });
+/*@__PURE__*/ (function () { _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵsetClassMetadata"](PredictionsComponent, [{
+        type: _angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"],
+        args: [{
+                selector: 'app-predictions',
+                templateUrl: './predictions.component.html',
+                styleUrls: ['./predictions.component.css']
+            }]
+    }], function () { return []; }, null); })();
 
 
 /***/ }),
