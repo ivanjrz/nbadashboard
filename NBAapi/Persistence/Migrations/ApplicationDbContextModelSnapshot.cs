@@ -5,6 +5,8 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Persistence;
 
+#nullable disable
+
 namespace Persistence.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
@@ -13,8 +15,7 @@ namespace Persistence.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder
-                .HasAnnotation("ProductVersion", "5.0.6");
+            modelBuilder.HasAnnotation("ProductVersion", "6.0.0");
 
             modelBuilder.Entity("Domain.Entities.Player", b =>
                 {
@@ -47,7 +48,7 @@ namespace Persistence.Migrations
                         new
                         {
                             PlayerId = 1,
-                            Joined = new DateTime(2022, 4, 12, 1, 5, 53, 166, DateTimeKind.Local).AddTicks(5220),
+                            Joined = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(3990),
                             Name = "Trae Young",
                             PhotoPath = "/Photos/nba_anonymous.jpg",
                             Team = "Hawks"
@@ -55,7 +56,7 @@ namespace Persistence.Migrations
                         new
                         {
                             PlayerId = 2,
-                            Joined = new DateTime(2022, 4, 12, 1, 5, 53, 166, DateTimeKind.Local).AddTicks(8270),
+                            Joined = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(4140),
                             Name = "Jayson Tatum",
                             PhotoPath = "/Photos/nba_anonymous.jpg",
                             Team = "Celtics"
@@ -63,7 +64,7 @@ namespace Persistence.Migrations
                         new
                         {
                             PlayerId = 3,
-                            Joined = new DateTime(2022, 4, 12, 1, 5, 53, 166, DateTimeKind.Local).AddTicks(8860),
+                            Joined = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(4150),
                             Name = "Kevin Durant",
                             PhotoPath = "/Photos/nba_anonymous.jpg",
                             Team = "Nets"
@@ -71,7 +72,7 @@ namespace Persistence.Migrations
                         new
                         {
                             PlayerId = 4,
-                            Joined = new DateTime(2022, 4, 12, 1, 5, 53, 166, DateTimeKind.Local).AddTicks(8930),
+                            Joined = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(4160),
                             Name = "Stephen Curry",
                             PhotoPath = "/Photos/nba_anonymous.jpg",
                             Team = "Warriors"
@@ -79,7 +80,7 @@ namespace Persistence.Migrations
                         new
                         {
                             PlayerId = 5,
-                            Joined = new DateTime(2022, 4, 12, 1, 5, 53, 166, DateTimeKind.Local).AddTicks(8950),
+                            Joined = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(4170),
                             Name = "Zach LaVine",
                             PhotoPath = "/Photos/nba_anonymous.jpg",
                             Team = "Bulls"
@@ -87,7 +88,7 @@ namespace Persistence.Migrations
                         new
                         {
                             PlayerId = 6,
-                            Joined = new DateTime(2022, 4, 12, 1, 5, 53, 166, DateTimeKind.Local).AddTicks(8960),
+                            Joined = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(4190),
                             Name = "LeBron James",
                             PhotoPath = "/Photos/nba_anonymous.jpg",
                             Team = "Lakers"
@@ -95,7 +96,7 @@ namespace Persistence.Migrations
                         new
                         {
                             PlayerId = 7,
-                            Joined = new DateTime(2022, 4, 12, 1, 5, 53, 166, DateTimeKind.Local).AddTicks(8970),
+                            Joined = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(4200),
                             Name = "Anthony Davis",
                             PhotoPath = "/Photos/nba_anonymous.jpg",
                             Team = "Lakers"
@@ -103,7 +104,7 @@ namespace Persistence.Migrations
                         new
                         {
                             PlayerId = 8,
-                            Joined = new DateTime(2022, 4, 12, 1, 5, 53, 166, DateTimeKind.Local).AddTicks(8990),
+                            Joined = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(4210),
                             Name = "Julius Randle",
                             PhotoPath = "/Photos/nba_anonymous.jpg",
                             Team = "Knicks"
@@ -140,7 +141,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 1,
                             City = "Atlanta",
-                            DateFounded = new DateTime(2022, 4, 12, 1, 5, 53, 143, DateTimeKind.Local).AddTicks(5190),
+                            DateFounded = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(2170),
                             Name = "Hawks",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
                         },
@@ -148,7 +149,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 2,
                             City = "Boston",
-                            DateFounded = new DateTime(2022, 4, 12, 1, 5, 53, 164, DateTimeKind.Local).AddTicks(2000),
+                            DateFounded = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(2980),
                             Name = "Celtics",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
                         },
@@ -156,7 +157,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 3,
                             City = "Brooklyn",
-                            DateFounded = new DateTime(2022, 4, 12, 1, 5, 53, 164, DateTimeKind.Local).AddTicks(3120),
+                            DateFounded = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(3000),
                             Name = "Nets",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
                         },
@@ -164,7 +165,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 4,
                             City = "Charlotte",
-                            DateFounded = new DateTime(2022, 4, 12, 1, 5, 53, 164, DateTimeKind.Local).AddTicks(3200),
+                            DateFounded = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(3010),
                             Name = "Hornets",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
                         },
@@ -172,7 +173,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 5,
                             City = "Chicago",
-                            DateFounded = new DateTime(2022, 4, 12, 1, 5, 53, 164, DateTimeKind.Local).AddTicks(3220),
+                            DateFounded = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(3020),
                             Name = "Bulls",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
                         },
@@ -180,7 +181,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 6,
                             City = "Cleveland",
-                            DateFounded = new DateTime(2022, 4, 12, 1, 5, 53, 164, DateTimeKind.Local).AddTicks(3230),
+                            DateFounded = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(3030),
                             Name = "Cavaliers",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
                         },
@@ -188,7 +189,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 7,
                             City = "Dallas",
-                            DateFounded = new DateTime(2022, 4, 12, 1, 5, 53, 164, DateTimeKind.Local).AddTicks(3240),
+                            DateFounded = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(3040),
                             Name = "Mavericks",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
                         },
@@ -196,7 +197,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 8,
                             City = "Denver",
-                            DateFounded = new DateTime(2022, 4, 12, 1, 5, 53, 164, DateTimeKind.Local).AddTicks(3250),
+                            DateFounded = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(3050),
                             Name = "Nuggets",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
                         },
@@ -204,7 +205,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 9,
                             City = "Detroit",
-                            DateFounded = new DateTime(2022, 4, 12, 1, 5, 53, 164, DateTimeKind.Local).AddTicks(3270),
+                            DateFounded = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(3060),
                             Name = "Pistons",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
                         },
@@ -212,7 +213,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 10,
                             City = "Golden State",
-                            DateFounded = new DateTime(2022, 4, 12, 1, 5, 53, 164, DateTimeKind.Local).AddTicks(3280),
+                            DateFounded = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(3070),
                             Name = "Warriors",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
                         },
@@ -220,7 +221,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 11,
                             City = "Houston",
-                            DateFounded = new DateTime(2022, 4, 12, 1, 5, 53, 164, DateTimeKind.Local).AddTicks(3300),
+                            DateFounded = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(3080),
                             Name = "Rockets",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
                         },
@@ -228,7 +229,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 12,
                             City = "Indiana",
-                            DateFounded = new DateTime(2022, 4, 12, 1, 5, 53, 164, DateTimeKind.Local).AddTicks(4790),
+                            DateFounded = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(3100),
                             Name = "Pacers",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
                         },
@@ -236,7 +237,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 13,
                             City = "Los Angeles",
-                            DateFounded = new DateTime(2022, 4, 12, 1, 5, 53, 164, DateTimeKind.Local).AddTicks(4810),
+                            DateFounded = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(3110),
                             Name = "Clippers",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
                         },
@@ -244,7 +245,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 14,
                             City = "Los Angeles",
-                            DateFounded = new DateTime(2022, 4, 12, 1, 5, 53, 164, DateTimeKind.Local).AddTicks(4820),
+                            DateFounded = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(3120),
                             Name = "Lakers",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
                         },
@@ -252,7 +253,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 15,
                             City = "Memphis",
-                            DateFounded = new DateTime(2022, 4, 12, 1, 5, 53, 164, DateTimeKind.Local).AddTicks(4830),
+                            DateFounded = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(3130),
                             Name = "Grizzlies",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
                         },
@@ -260,7 +261,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 16,
                             City = "Miami",
-                            DateFounded = new DateTime(2022, 4, 12, 1, 5, 53, 164, DateTimeKind.Local).AddTicks(4840),
+                            DateFounded = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(3140),
                             Name = "Heat",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
                         },
@@ -268,7 +269,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 17,
                             City = "Milwaukee",
-                            DateFounded = new DateTime(2022, 4, 12, 1, 5, 53, 164, DateTimeKind.Local).AddTicks(4860),
+                            DateFounded = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(3150),
                             Name = "Bucks",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
                         },
@@ -276,7 +277,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 18,
                             City = "Minnesota",
-                            DateFounded = new DateTime(2022, 4, 12, 1, 5, 53, 164, DateTimeKind.Local).AddTicks(4870),
+                            DateFounded = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(3160),
                             Name = "Timberwolves",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
                         },
@@ -284,7 +285,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 19,
                             City = "New Orleans",
-                            DateFounded = new DateTime(2022, 4, 12, 1, 5, 53, 164, DateTimeKind.Local).AddTicks(4880),
+                            DateFounded = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(3170),
                             Name = "Pelicans",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
                         },
@@ -292,7 +293,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 20,
                             City = "New York",
-                            DateFounded = new DateTime(2022, 4, 12, 1, 5, 53, 164, DateTimeKind.Local).AddTicks(4890),
+                            DateFounded = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(3180),
                             Name = "Knicks",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
                         },
@@ -300,7 +301,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 21,
                             City = "Oklahoma City",
-                            DateFounded = new DateTime(2022, 4, 12, 1, 5, 53, 164, DateTimeKind.Local).AddTicks(4900),
+                            DateFounded = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(3190),
                             Name = "Thunder",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
                         },
@@ -308,7 +309,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 22,
                             City = "Orlando",
-                            DateFounded = new DateTime(2022, 4, 12, 1, 5, 53, 164, DateTimeKind.Local).AddTicks(4920),
+                            DateFounded = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(3200),
                             Name = "Magic",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
                         },
@@ -316,7 +317,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 23,
                             City = "Philadelphia",
-                            DateFounded = new DateTime(2022, 4, 12, 1, 5, 53, 164, DateTimeKind.Local).AddTicks(4930),
+                            DateFounded = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(3210),
                             Name = "76ers",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
                         },
@@ -324,7 +325,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 24,
                             City = "Phoenix",
-                            DateFounded = new DateTime(2022, 4, 12, 1, 5, 53, 164, DateTimeKind.Local).AddTicks(4940),
+                            DateFounded = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(3220),
                             Name = "Suns",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
                         },
@@ -332,7 +333,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 25,
                             City = "Portland",
-                            DateFounded = new DateTime(2022, 4, 12, 1, 5, 53, 164, DateTimeKind.Local).AddTicks(4950),
+                            DateFounded = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(3230),
                             Name = "Trail Blazers",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
                         },
@@ -340,7 +341,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 26,
                             City = "Sacramento",
-                            DateFounded = new DateTime(2022, 4, 12, 1, 5, 53, 164, DateTimeKind.Local).AddTicks(4960),
+                            DateFounded = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(3240),
                             Name = "Kings",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
                         },
@@ -348,7 +349,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 27,
                             City = "San Antonio",
-                            DateFounded = new DateTime(2022, 4, 12, 1, 5, 53, 164, DateTimeKind.Local).AddTicks(4970),
+                            DateFounded = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(3250),
                             Name = "Spurs",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
                         },
@@ -356,7 +357,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 28,
                             City = "Toronto",
-                            DateFounded = new DateTime(2022, 4, 12, 1, 5, 53, 164, DateTimeKind.Local).AddTicks(4990),
+                            DateFounded = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(3260),
                             Name = "Raptos",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
                         },
@@ -364,7 +365,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 29,
                             City = "Utah",
-                            DateFounded = new DateTime(2022, 4, 12, 1, 5, 53, 164, DateTimeKind.Local).AddTicks(5000),
+                            DateFounded = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(3270),
                             Name = "Jazz",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
                         },
@@ -372,7 +373,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 30,
                             City = "Washington",
-                            DateFounded = new DateTime(2022, 4, 12, 1, 5, 53, 164, DateTimeKind.Local).AddTicks(5010),
+                            DateFounded = new DateTime(2022, 5, 24, 23, 14, 22, 405, DateTimeKind.Local).AddTicks(3280),
                             Name = "Wizards",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
                         });
@@ -442,6 +443,576 @@ namespace Persistence.Migrations
                         new
                         {
                             TeamHistoryId = 1,
+                            DEFGPct = 0.52100000000000002,
+                            DRB = 0.0,
+                            DRTg = 106.09999999999999,
+                            FTr = 0.29799999999999999,
+                            LossRecord = 17,
+                            MOV = 8.4800000000000004,
+                            NRTg = 0.0,
+                            OEFGPct = 0.55100000000000005,
+                            ORB = 21.300000000000001,
+                            ORTg = 114.7,
+                            SOS = -0.27000000000000002,
+                            Season = "2017-2018",
+                            Team = "Rockets",
+                            ThreePAr = 0.502,
+                            WinRecord = 65
+                        },
+                        new
+                        {
+                            TeamHistoryId = 2,
+                            DEFGPct = 0.501,
+                            DRB = 0.0,
+                            DRTg = 105.90000000000001,
+                            FTr = 0.25,
+                            LossRecord = 23,
+                            MOV = 7.7800000000000002,
+                            NRTg = 0.0,
+                            OEFGPct = 0.53900000000000003,
+                            ORB = 23.0,
+                            ORTg = 113.8,
+                            SOS = -0.48999999999999999,
+                            Season = "2017-2018",
+                            Team = "Raptors",
+                            ThreePAr = 0.377,
+                            WinRecord = 59
+                        },
+                        new
+                        {
+                            TeamHistoryId = 3,
+                            DEFGPct = 0.504,
+                            DRB = 0.0,
+                            DRTg = 107.59999999999999,
+                            FTr = 0.23899999999999999,
+                            LossRecord = 24,
+                            MOV = 5.9800000000000004,
+                            NRTg = 0.0,
+                            OEFGPct = 0.56899999999999995,
+                            ORB = 21.0,
+                            ORTg = 113.59999999999999,
+                            SOS = -0.19,
+                            Season = "2017-2018",
+                            Team = "Warriors",
+                            ThreePAr = 0.33900000000000002,
+                            WinRecord = 58
+                        },
+                        new
+                        {
+                            TeamHistoryId = 4,
+                            DEFGPct = 0.50600000000000001,
+                            DRB = 0.0,
+                            DRTg = 103.90000000000001,
+                            FTr = 0.26000000000000001,
+                            LossRecord = 34,
+                            MOV = 4.2999999999999998,
+                            NRTg = 0.0,
+                            OEFGPct = 0.52700000000000002,
+                            ORB = 21.5,
+                            ORTg = 108.40000000000001,
+                            SOS = 0.17000000000000001,
+                            Season = "2017-2018",
+                            Team = "Jazz",
+                            ThreePAr = 0.35699999999999998,
+                            WinRecord = 48
+                        },
+                        new
+                        {
+                            TeamHistoryId = 5,
+                            DEFGPct = 0.49199999999999999,
+                            DRB = 0.0,
+                            DRTg = 105.0,
+                            FTr = 0.26300000000000001,
+                            LossRecord = 30,
+                            MOV = 4.5,
+                            NRTg = 0.0,
+                            OEFGPct = 0.53500000000000003,
+                            ORB = 25.300000000000001,
+                            ORTg = 109.5,
+                            SOS = -0.20000000000000001,
+                            Season = "2017-2018",
+                            Team = "76ers",
+                            ThreePAr = 0.34399999999999997,
+                            WinRecord = 52
+                        },
+                        new
+                        {
+                            TeamHistoryId = 6,
+                            DEFGPct = 0.495,
+                            DRB = 0.0,
+                            DRTg = 103.90000000000001,
+                            FTr = 0.24299999999999999,
+                            LossRecord = 27,
+                            MOV = 3.5899999999999999,
+                            NRTg = 0.0,
+                            OEFGPct = 0.51800000000000002,
+                            ORB = 21.5,
+                            ORTg = 107.59999999999999,
+                            SOS = -0.34999999999999998,
+                            Season = "2017-2018",
+                            Team = "Celtics",
+                            ThreePAr = 0.35699999999999998,
+                            WinRecord = 55
+                        },
+                        new
+                        {
+                            TeamHistoryId = 7,
+                            DEFGPct = 0.52500000000000002,
+                            DRB = 0.0,
+                            DRTg = 107.2,
+                            FTr = 0.27500000000000002,
+                            LossRecord = 34,
+                            MOV = 3.4100000000000001,
+                            NRTg = 0.0,
+                            OEFGPct = 0.51400000000000001,
+                            ORB = 27.699999999999999,
+                            ORTg = 110.7,
+                            SOS = 0.0,
+                            Season = "2017-2018",
+                            Team = "Thunder",
+                            ThreePAr = 0.34499999999999997,
+                            WinRecord = 48
+                        },
+                        new
+                        {
+                            TeamHistoryId = 8,
+                            DEFGPct = 0.50700000000000001,
+                            DRB = 0.0,
+                            DRTg = 104.8,
+                            FTr = 0.245,
+                            LossRecord = 35,
+                            MOV = 2.8900000000000001,
+                            NRTg = 0.0,
+                            OEFGPct = 0.50700000000000001,
+                            ORB = 23.699999999999999,
+                            ORTg = 107.90000000000001,
+                            SOS = 0.0,
+                            Season = "2017-2018",
+                            Team = "Spurs",
+                            ThreePAr = 0.28199999999999997,
+                            WinRecord = 47
+                        },
+                        new
+                        {
+                            TeamHistoryId = 9,
+                            DEFGPct = 0.503,
+                            DRB = 0.0,
+                            DRTg = 106.40000000000001,
+                            FTr = 0.23999999999999999,
+                            LossRecord = 33,
+                            MOV = 2.6000000000000001,
+                            NRTg = 0.0,
+                            OEFGPct = 0.51100000000000001,
+                            ORB = 23.300000000000001,
+                            ORTg = 109.09999999999999,
+                            SOS = 0.0,
+                            Season = "2017-2018",
+                            Team = "Trail Blazers",
+                            ThreePAr = 0.32400000000000001,
+                            WinRecord = 49
+                        },
+                        new
+                        {
+                            TeamHistoryId = 10,
+                            DEFGPct = 0.53900000000000003,
+                            DRB = 0.0,
+                            DRTg = 111.09999999999999,
+                            FTr = 0.28000000000000003,
+                            LossRecord = 35,
+                            MOV = 2.23,
+                            NRTg = 0.0,
+                            OEFGPct = 0.52300000000000002,
+                            ORB = 24.399999999999999,
+                            ORTg = 113.40000000000001,
+                            SOS = 0.12,
+                            Season = "2017-2018",
+                            Team = "Timberwolves",
+                            ThreePAr = 0.26100000000000001,
+                            WinRecord = 47
+                        },
+                        new
+                        {
+                            TeamHistoryId = 11,
+                            DEFGPct = 0.53900000000000003,
+                            DRB = 0.0,
+                            DRTg = 111.0,
+                            FTr = 0.25800000000000001,
+                            LossRecord = 36,
+                            MOV = 1.48,
+                            NRTg = 0.0,
+                            OEFGPct = 0.53600000000000003,
+                            ORB = 25.699999999999999,
+                            ORTg = 112.5,
+                            SOS = 0.089999999999999997,
+                            Season = "2017-2018",
+                            Team = "Nuggets",
+                            ThreePAr = 0.35699999999999998,
+                            WinRecord = 46
+                        },
+                        new
+                        {
+                            TeamHistoryId = 12,
+                            DEFGPct = 0.52700000000000002,
+                            DRB = 0.0,
+                            DRTg = 108.09999999999999,
+                            FTr = 0.222,
+                            LossRecord = 34,
+                            MOV = 1.3799999999999999,
+                            NRTg = 0.0,
+                            OEFGPct = 0.52500000000000002,
+                            ORB = 22.699999999999999,
+                            ORTg = 109.5,
+                            SOS = -0.20000000000000001,
+                            Season = "2017-2018",
+                            Team = "Pacers",
+                            ThreePAr = 0.28399999999999997,
+                            WinRecord = 48
+                        },
+                        new
+                        {
+                            TeamHistoryId = 13,
+                            DEFGPct = 0.51300000000000001,
+                            DRB = 0.0,
+                            DRTg = 108.3,
+                            FTr = 0.23699999999999999,
+                            LossRecord = 34,
+                            MOV = 1.3,
+                            NRTg = 0.0,
+                            OEFGPct = 0.54100000000000004,
+                            ORB = 20.0,
+                            ORTg = 109.59999999999999,
+                            SOS = 0.17999999999999999,
+                            Season = "2017-2018",
+                            Team = "Pelicans",
+                            ThreePAr = 0.31900000000000001,
+                            WinRecord = 48
+                        },
+                        new
+                        {
+                            TeamHistoryId = 14,
+                            DEFGPct = 0.54000000000000004,
+                            DRB = 0.0,
+                            DRTg = 111.90000000000001,
+                            FTr = 0.27500000000000002,
+                            LossRecord = 32,
+                            MOV = 0.93999999999999995,
+                            NRTg = 0.0,
+                            OEFGPct = 0.54700000000000004,
+                            ORB = 20.100000000000001,
+                            ORTg = 112.90000000000001,
+                            SOS = -0.34999999999999998,
+                            Season = "2017-2018",
+                            Team = "Cavaliers",
+                            ThreePAr = 0.379,
+                            WinRecord = 50
+                        },
+                        new
+                        {
+                            TeamHistoryId = 15,
+                            DEFGPct = 0.52200000000000002,
+                            DRB = 0.0,
+                            DRTg = 108.7,
+                            FTr = 0.254,
+                            LossRecord = 39,
+                            MOV = 0.58999999999999997,
+                            NRTg = 0.0,
+                            OEFGPct = 0.52500000000000002,
+                            ORB = 23.5,
+                            ORTg = 109.3,
+                            SOS = -0.059999999999999998,
+                            Season = "2017-2018",
+                            Team = "Wizards",
+                            ThreePAr = 0.31,
+                            WinRecord = 43
+                        },
+                        new
+                        {
+                            TeamHistoryId = 16,
+                            DEFGPct = 0.50700000000000001,
+                            DRB = 0.0,
+                            DRTg = 106.3,
+                            FTr = 0.22900000000000001,
+                            LossRecord = 38,
+                            MOV = 0.47999999999999998,
+                            NRTg = 0.0,
+                            OEFGPct = 0.52000000000000002,
+                            ORB = 21.5,
+                            ORTg = 106.8,
+                            SOS = -0.33000000000000002,
+                            Season = "2017-2018",
+                            Team = "Heat",
+                            ThreePAr = 0.35799999999999998,
+                            WinRecord = 44
+                        },
+                        new
+                        {
+                            TeamHistoryId = 17,
+                            DEFGPct = 0.53200000000000003,
+                            DRB = 0.0,
+                            DRTg = 109.09999999999999,
+                            FTr = 0.312,
+                            LossRecord = 46,
+                            MOV = 0.26000000000000001,
+                            NRTg = 0.0,
+                            OEFGPct = 0.50800000000000001,
+                            ORB = 22.199999999999999,
+                            ORTg = 109.40000000000001,
+                            SOS = -0.19,
+                            Season = "2017-2018",
+                            Team = "Hornets",
+                            ThreePAr = 0.314,
+                            WinRecord = 36
+                        },
+                        new
+                        {
+                            TeamHistoryId = 18,
+                            DEFGPct = 0.52000000000000002,
+                            DRB = 0.0,
+                            DRTg = 110.2,
+                            FTr = 0.29899999999999999,
+                            LossRecord = 40,
+                            MOV = 0.040000000000000001,
+                            NRTg = 0.0,
+                            OEFGPct = 0.52700000000000002,
+                            ORB = 23.5,
+                            ORTg = 110.3,
+                            SOS = 0.11,
+                            Season = "2017-2018",
+                            Team = "Clippers",
+                            ThreePAr = 0.314,
+                            WinRecord = 42
+                        },
+                        new
+                        {
+                            TeamHistoryId = 19,
+                            DEFGPct = 0.52400000000000002,
+                            DRB = 0.0,
+                            DRTg = 107.3,
+                            FTr = 0.22700000000000001,
+                            LossRecord = 43,
+                            MOV = -0.14999999999999999,
+                            NRTg = 0.0,
+                            OEFGPct = 0.51200000000000001,
+                            ORB = 22.699999999999999,
+                            ORTg = 107.2,
+                            SOS = -0.11,
+                            Season = "2017-2018",
+                            Team = "Pistons",
+                            ThreePAr = 0.33300000000000002,
+                            WinRecord = 39
+                        },
+                        new
+                        {
+                            TeamHistoryId = 20,
+                            DEFGPct = 0.52800000000000002,
+                            DRB = 0.0,
+                            DRTg = 110.09999999999999,
+                            FTr = 0.28100000000000003,
+                            LossRecord = 38,
+                            MOV = -0.29999999999999999,
+                            NRTg = 0.0,
+                            OEFGPct = 0.53100000000000003,
+                            ORB = 20.399999999999999,
+                            ORTg = 109.8,
+                            SOS = -0.14999999999999999,
+                            Season = "2017-2018",
+                            Team = "Bucks",
+                            ThreePAr = 0.29699999999999999,
+                            WinRecord = 44
+                        },
+                        new
+                        {
+                            TeamHistoryId = 21,
+                            DEFGPct = 0.51400000000000001,
+                            DRB = 0.0,
+                            DRTg = 108.0,
+                            FTr = 0.26400000000000001,
+                            LossRecord = 47,
+                            MOV = -1.55,
+                            NRTg = 0.0,
+                            OEFGPct = 0.51700000000000002,
+                            ORB = 23.600000000000001,
+                            ORTg = 106.5,
+                            SOS = 0.11,
+                            Season = "2017-2018",
+                            Team = "Lakers",
+                            ThreePAr = 0.32900000000000001,
+                            WinRecord = 35
+                        },
+                        new
+                        {
+                            TeamHistoryId = 22,
+                            DEFGPct = 0.53200000000000003,
+                            DRB = 0.0,
+                            DRTg = 109.5,
+                            FTr = 0.217,
+                            LossRecord = 58,
+                            MOV = -3.04,
+                            NRTg = 0.0,
+                            OEFGPct = 0.51300000000000001,
+                            ORB = 18.0,
+                            ORTg = 106.3,
+                            SOS = 0.34000000000000002,
+                            Season = "2017-2018",
+                            Team = "Mavericks",
+                            ThreePAr = 0.38200000000000001,
+                            WinRecord = 24
+                        },
+                        new
+                        {
+                            TeamHistoryId = 23,
+                            DEFGPct = 0.52200000000000002,
+                            DRB = 0.0,
+                            DRTg = 110.7,
+                            FTr = 0.216,
+                            LossRecord = 53,
+                            MOV = -3.5600000000000001,
+                            NRTg = 0.0,
+                            OEFGPct = 0.51000000000000001,
+                            ORB = 24.100000000000001,
+                            ORTg = 107.09999999999999,
+                            SOS = 0.029999999999999999,
+                            Season = "2017-2018",
+                            Team = "Knicks",
+                            ThreePAr = 0.26600000000000001,
+                            WinRecord = 29
+                        },
+                        new
+                        {
+                            TeamHistoryId = 24,
+                            DEFGPct = 0.51700000000000002,
+                            DRB = 0.0,
+                            DRTg = 110.59999999999999,
+                            FTr = 0.26000000000000001,
+                            LossRecord = 54,
+                            MOV = -3.7400000000000002,
+                            NRTg = 0.0,
+                            OEFGPct = 0.51400000000000001,
+                            ORB = 21.0,
+                            ORTg = 106.90000000000001,
+                            SOS = 0.070000000000000007,
+                            Season = "2017-2018",
+                            Team = "Nets",
+                            ThreePAr = 0.41099999999999998,
+                            WinRecord = 28
+                        },
+                        new
+                        {
+                            TeamHistoryId = 25,
+                            DEFGPct = 0.52500000000000002,
+                            DRB = 0.0,
+                            DRTg = 110.09999999999999,
+                            FTr = 0.23799999999999999,
+                            LossRecord = 57,
+                            MOV = -4.8200000000000003,
+                            NRTg = 0.0,
+                            OEFGPct = 0.51200000000000001,
+                            ORB = 20.0,
+                            ORTg = 105.2,
+                            SOS = -0.10000000000000001,
+                            Season = "2017-2018",
+                            Team = "Magic",
+                            ThreePAr = 0.34200000000000003,
+                            WinRecord = 25
+                        },
+                        new
+                        {
+                            TeamHistoryId = 26,
+                            DEFGPct = 0.53600000000000003,
+                            DRB = 0.0,
+                            DRTg = 110.59999999999999,
+                            FTr = 0.23599999999999999,
+                            LossRecord = 58,
+                            MOV = -5.4500000000000002,
+                            NRTg = 0.0,
+                            OEFGPct = 0.51200000000000001,
+                            ORB = 21.100000000000001,
+                            ORTg = 105.0,
+                            SOS = 0.14999999999999999,
+                            Season = "2017-2018",
+                            Team = "Hawks",
+                            ThreePAr = 0.36299999999999999,
+                            WinRecord = 24
+                        },
+                        new
+                        {
+                            TeamHistoryId = 27,
+                            DEFGPct = 0.52900000000000003,
+                            DRB = 0.0,
+                            DRTg = 111.0,
+                            FTr = 0.255,
+                            LossRecord = 60,
+                            MOV = -6.21,
+                            NRTg = 0.0,
+                            OEFGPct = 0.5,
+                            ORB = 22.399999999999999,
+                            ORTg = 104.5,
+                            SOS = 0.39000000000000001,
+                            Season = "2017-2018",
+                            Team = "Grizzlies",
+                            ThreePAr = 0.317,
+                            WinRecord = 22
+                        },
+                        new
+                        {
+                            TeamHistoryId = 28,
+                            DEFGPct = 0.54200000000000004,
+                            DRB = 0.0,
+                            DRTg = 110.90000000000001,
+                            FTr = 0.216,
+                            LossRecord = 55,
+                            MOV = -7.04,
+                            NRTg = 0.0,
+                            OEFGPct = 0.497,
+                            ORB = 20.600000000000001,
+                            ORTg = 103.8,
+                            SOS = 0.20000000000000001,
+                            Season = "2017-2018",
+                            Team = "Bulls",
+                            ThreePAr = 0.34999999999999998,
+                            WinRecord = 27
+                        },
+                        new
+                        {
+                            TeamHistoryId = 29,
+                            DEFGPct = 0.54200000000000004,
+                            DRB = 0.0,
+                            DRTg = 111.09999999999999,
+                            FTr = 0.19400000000000001,
+                            LossRecord = 55,
+                            MOV = -6.9900000000000002,
+                            NRTg = 0.0,
+                            OEFGPct = 0.502,
+                            ORB = 21.5,
+                            ORTg = 103.7,
+                            SOS = 0.39000000000000001,
+                            Season = "2017-2018",
+                            Team = "Kings",
+                            ThreePAr = 0.27800000000000002,
+                            WinRecord = 27
+                        },
+                        new
+                        {
+                            TeamHistoryId = 30,
+                            DEFGPct = 0.53300000000000003,
+                            DRB = 0.0,
+                            DRTg = 112.8,
+                            FTr = 0.27500000000000002,
+                            LossRecord = 61,
+                            MOV = -9.3699999999999992,
+                            NRTg = 0.0,
+                            OEFGPct = 0.495,
+                            ORB = 22.5,
+                            ORTg = 103.5,
+                            SOS = 0.56999999999999995,
+                            Season = "2017-2018",
+                            Team = "Suns",
+                            ThreePAr = 0.32000000000000001,
+                            WinRecord = 21
+                        },
+                        new
+                        {
+                            TeamHistoryId = 31,
                             DEFGPct = 0.503,
                             DRB = 0.0,
                             DRTg = 105.2,
@@ -460,7 +1031,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 2,
+                            TeamHistoryId = 32,
                             DEFGPct = 0.50800000000000001,
                             DRB = 0.0,
                             DRTg = 109.5,
@@ -479,7 +1050,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 3,
+                            TeamHistoryId = 33,
                             DEFGPct = 0.50900000000000001,
                             DRB = 0.0,
                             DRTg = 107.09999999999999,
@@ -498,7 +1069,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 4,
+                            TeamHistoryId = 34,
                             DEFGPct = 0.50700000000000001,
                             DRB = 0.0,
                             DRTg = 105.7,
@@ -517,7 +1088,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 5,
+                            TeamHistoryId = 35,
                             DEFGPct = 0.52500000000000002,
                             DRB = 0.0,
                             DRTg = 110.7,
@@ -536,7 +1107,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 6,
+                            TeamHistoryId = 36,
                             DEFGPct = 0.51400000000000001,
                             DRB = 0.0,
                             DRTg = 107.8,
@@ -555,7 +1126,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 7,
+                            TeamHistoryId = 37,
                             DEFGPct = 0.51600000000000001,
                             DRB = 0.0,
                             DRTg = 110.5,
@@ -574,7 +1145,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 8,
+                            TeamHistoryId = 38,
                             DEFGPct = 0.52100000000000002,
                             DRB = 0.0,
                             DRTg = 108.90000000000001,
@@ -593,7 +1164,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 9,
+                            TeamHistoryId = 39,
                             DEFGPct = 0.51600000000000001,
                             DRB = 0.0,
                             DRTg = 106.5,
@@ -612,7 +1183,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 10,
+                            TeamHistoryId = 40,
                             DEFGPct = 0.52300000000000002,
                             DRB = 0.0,
                             DRTg = 107.0,
@@ -631,7 +1202,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 11,
+                            TeamHistoryId = 41,
                             DEFGPct = 0.51200000000000001,
                             DRB = 0.0,
                             DRTg = 110.0,
@@ -650,7 +1221,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 12,
+                            TeamHistoryId = 42,
                             DEFGPct = 0.52800000000000002,
                             DRB = 0.0,
                             DRTg = 111.2,
@@ -669,7 +1240,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 13,
+                            TeamHistoryId = 43,
                             DEFGPct = 0.51400000000000001,
                             DRB = 0.0,
                             DRTg = 111.5,
@@ -688,7 +1259,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 14,
+                            TeamHistoryId = 44,
                             DEFGPct = 0.51500000000000001,
                             DRB = 0.0,
                             DRTg = 108.09999999999999,
@@ -707,7 +1278,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 15,
+                            TeamHistoryId = 45,
                             DEFGPct = 0.51200000000000001,
                             DRB = 0.0,
                             DRTg = 109.7,
@@ -726,7 +1297,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 16,
+                            TeamHistoryId = 46,
                             DEFGPct = 0.52600000000000002,
                             DRB = 0.0,
                             DRTg = 109.2,
@@ -745,7 +1316,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 17,
+                            TeamHistoryId = 47,
                             DEFGPct = 0.51000000000000001,
                             DRB = 0.0,
                             DRTg = 107.59999999999999,
@@ -764,7 +1335,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 18,
+                            TeamHistoryId = 48,
                             DEFGPct = 0.53300000000000003,
                             DRB = 0.0,
                             DRTg = 111.5,
@@ -783,7 +1354,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 19,
+                            TeamHistoryId = 49,
                             DEFGPct = 0.53800000000000003,
                             DRB = 0.0,
                             DRTg = 112.5,
@@ -802,7 +1373,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 20,
+                            TeamHistoryId = 50,
                             DEFGPct = 0.53200000000000003,
                             DRB = 0.0,
                             DRTg = 112.59999999999999,
@@ -821,7 +1392,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 21,
+                            TeamHistoryId = 51,
                             DEFGPct = 0.52200000000000002,
                             DRB = 0.0,
                             DRTg = 110.7,
@@ -840,7 +1411,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 22,
+                            TeamHistoryId = 52,
                             DEFGPct = 0.53800000000000003,
                             DRB = 0.0,
                             DRTg = 112.90000000000001,
@@ -859,7 +1430,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 23,
+                            TeamHistoryId = 53,
                             DEFGPct = 0.51600000000000001,
                             DRB = 0.0,
                             DRTg = 109.5,
@@ -878,7 +1449,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 24,
+                            TeamHistoryId = 54,
                             DEFGPct = 0.52100000000000002,
                             DRB = 0.0,
                             DRTg = 108.8,
@@ -897,7 +1468,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 25,
+                            TeamHistoryId = 55,
                             DEFGPct = 0.54600000000000004,
                             DRB = 0.0,
                             DRTg = 113.90000000000001,
@@ -916,7 +1487,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 26,
+                            TeamHistoryId = 56,
                             DEFGPct = 0.54100000000000004,
                             DRB = 0.0,
                             DRTg = 113.90000000000001,
@@ -935,7 +1506,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 27,
+                            TeamHistoryId = 57,
                             DEFGPct = 0.54100000000000004,
                             DRB = 0.0,
                             DRTg = 113.2,
@@ -954,7 +1525,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 28,
+                            TeamHistoryId = 58,
                             DEFGPct = 0.53300000000000003,
                             DRB = 0.0,
                             DRTg = 113.7,
@@ -973,7 +1544,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 29,
+                            TeamHistoryId = 59,
                             DEFGPct = 0.54500000000000004,
                             DRB = 0.0,
                             DRTg = 115.09999999999999,
@@ -992,7 +1563,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 30,
+                            TeamHistoryId = 60,
                             DEFGPct = 0.56399999999999995,
                             DRB = 0.0,
                             DRTg = 117.59999999999999,
@@ -1011,7 +1582,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 31,
+                            TeamHistoryId = 61,
                             DEFGPct = 0.48899999999999999,
                             DRB = 0.0,
                             DRTg = 102.90000000000001,
@@ -1030,7 +1601,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 32,
+                            TeamHistoryId = 62,
                             DEFGPct = 0.50900000000000001,
                             DRB = 0.0,
                             DRTg = 107.0,
@@ -1049,7 +1620,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 33,
+                            TeamHistoryId = 63,
                             DEFGPct = 0.50600000000000001,
                             DRB = 0.0,
                             DRTg = 107.59999999999999,
@@ -1068,7 +1639,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 34,
+                            TeamHistoryId = 64,
                             DEFGPct = 0.502,
                             DRB = 0.0,
                             DRTg = 105.0,
@@ -1087,7 +1658,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 35,
+                            TeamHistoryId = 65,
                             DEFGPct = 0.51500000000000001,
                             DRB = 0.0,
                             DRTg = 106.3,
@@ -1106,7 +1677,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 36,
+                            TeamHistoryId = 66,
                             DEFGPct = 0.52500000000000002,
                             DRB = 0.0,
                             DRTg = 111.7,
@@ -1125,7 +1696,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 37,
+                            TeamHistoryId = 67,
                             DEFGPct = 0.52300000000000002,
                             DRB = 0.0,
                             DRTg = 109.5,
@@ -1144,7 +1715,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 38,
+                            TeamHistoryId = 68,
                             DEFGPct = 0.52900000000000003,
                             DRB = 0.0,
                             DRTg = 110.09999999999999,
@@ -1163,7 +1734,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 39,
+                            TeamHistoryId = 69,
                             DEFGPct = 0.51800000000000002,
                             DRB = 0.0,
                             DRTg = 109.90000000000001,
@@ -1182,7 +1753,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 40,
+                            TeamHistoryId = 70,
                             DEFGPct = 0.52300000000000002,
                             DRB = 0.0,
                             DRTg = 109.0,
@@ -1201,7 +1772,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 41,
+                            TeamHistoryId = 71,
                             DEFGPct = 0.53300000000000003,
                             DRB = 0.0,
                             DRTg = 111.0,
@@ -1220,7 +1791,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 42,
+                            TeamHistoryId = 72,
                             DEFGPct = 0.51100000000000001,
                             DRB = 0.0,
                             DRTg = 108.0,
@@ -1239,7 +1810,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 43,
+                            TeamHistoryId = 73,
                             DEFGPct = 0.51800000000000002,
                             DRB = 0.0,
                             DRTg = 108.8,
@@ -1258,7 +1829,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 44,
+                            TeamHistoryId = 74,
                             DEFGPct = 0.53900000000000003,
                             DRB = 0.0,
                             DRTg = 111.40000000000001,
@@ -1277,7 +1848,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 45,
+                            TeamHistoryId = 75,
                             DEFGPct = 0.51100000000000001,
                             DRB = 0.0,
                             DRTg = 109.5,
@@ -1296,7 +1867,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 46,
+                            TeamHistoryId = 76,
                             DEFGPct = 0.53500000000000003,
                             DRB = 0.0,
                             DRTg = 109.5,
@@ -1315,7 +1886,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 47,
+                            TeamHistoryId = 77,
                             DEFGPct = 0.54200000000000004,
                             DRB = 0.0,
                             DRTg = 113.5,
@@ -1334,7 +1905,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 48,
+                            TeamHistoryId = 78,
                             DEFGPct = 0.52100000000000002,
                             DRB = 0.0,
                             DRTg = 110.3,
@@ -1353,7 +1924,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 49,
+                            TeamHistoryId = 79,
                             DEFGPct = 0.53000000000000003,
                             DRB = 0.0,
                             DRTg = 114.8,
@@ -1372,7 +1943,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 50,
+                            TeamHistoryId = 80,
                             DEFGPct = 0.53200000000000003,
                             DRB = 0.0,
                             DRTg = 111.90000000000001,
@@ -1391,7 +1962,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 51,
+                            TeamHistoryId = 81,
                             DEFGPct = 0.54300000000000004,
                             DRB = 0.0,
                             DRTg = 112.2,
@@ -1410,7 +1981,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 52,
+                            TeamHistoryId = 82,
                             DEFGPct = 0.54600000000000004,
                             DRB = 0.0,
                             DRTg = 109.8,
@@ -1429,7 +2000,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 53,
+                            TeamHistoryId = 83,
                             DEFGPct = 0.54100000000000004,
                             DRB = 0.0,
                             DRTg = 112.7,
@@ -1448,7 +2019,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 54,
+                            TeamHistoryId = 84,
                             DEFGPct = 0.54100000000000004,
                             DRB = 0.0,
                             DRTg = 112.2,
@@ -1467,7 +2038,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 55,
+                            TeamHistoryId = 85,
                             DEFGPct = 0.55800000000000005,
                             DRB = 0.0,
                             DRTg = 115.5,
@@ -1486,7 +2057,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 56,
+                            TeamHistoryId = 86,
                             DEFGPct = 0.54100000000000004,
                             DRB = 0.0,
                             DRTg = 113.0,
@@ -1505,7 +2076,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 57,
+                            TeamHistoryId = 87,
                             DEFGPct = 0.54600000000000004,
                             DRB = 0.0,
                             DRTg = 113.3,
@@ -1524,7 +2095,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 58,
+                            TeamHistoryId = 88,
                             DEFGPct = 0.54300000000000004,
                             DRB = 0.0,
                             DRTg = 114.8,
@@ -1543,7 +2114,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 59,
+                            TeamHistoryId = 89,
                             DEFGPct = 0.56000000000000005,
                             DRB = 0.0,
                             DRTg = 115.40000000000001,
@@ -1562,7 +2133,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 60,
+                            TeamHistoryId = 90,
                             DEFGPct = 0.55300000000000005,
                             DRB = 0.0,
                             DRTg = 113.8,
@@ -1581,7 +2152,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 61,
+                            TeamHistoryId = 91,
                             DEFGPct = 0.50700000000000001,
                             DRB = 0.0,
                             DRTg = 108.3,
@@ -1600,7 +2171,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 62,
+                            TeamHistoryId = 92,
                             DEFGPct = 0.53100000000000003,
                             DRB = 0.0,
                             DRTg = 111.2,
@@ -1619,7 +2190,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 63,
+                            TeamHistoryId = 93,
                             DEFGPct = 0.53400000000000003,
                             DRB = 0.0,
                             DRTg = 111.3,
@@ -1638,7 +2209,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 64,
+                            TeamHistoryId = 94,
                             DEFGPct = 0.53600000000000003,
                             DRB = 0.0,
                             DRTg = 111.40000000000001,
@@ -1657,7 +2228,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 65,
+                            TeamHistoryId = 95,
                             DEFGPct = 0.52100000000000002,
                             DRB = 0.0,
                             DRTg = 107.59999999999999,
@@ -1676,7 +2247,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 66,
+                            TeamHistoryId = 96,
                             DEFGPct = 0.54500000000000004,
                             DRB = 0.0,
                             DRTg = 112.09999999999999,
@@ -1695,7 +2266,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 67,
+                            TeamHistoryId = 97,
                             DEFGPct = 0.53100000000000003,
                             DRB = 0.0,
                             DRTg = 113.8,
@@ -1714,7 +2285,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 68,
+                            TeamHistoryId = 98,
                             DEFGPct = 0.52600000000000002,
                             DRB = 0.0,
                             DRTg = 107.09999999999999,
@@ -1733,7 +2304,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 69,
+                            TeamHistoryId = 99,
                             DEFGPct = 0.53400000000000003,
                             DRB = 0.0,
                             DRTg = 113.0,
@@ -1752,7 +2323,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 70,
+                            TeamHistoryId = 100,
                             DEFGPct = 0.50900000000000001,
                             DRB = 0.0,
                             DRTg = 108.2,
@@ -1771,7 +2342,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 71,
+                            TeamHistoryId = 101,
                             DEFGPct = 0.53000000000000003,
                             DRB = 0.0,
                             DRTg = 113.3,
@@ -1790,7 +2361,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 72,
+                            TeamHistoryId = 102,
                             DEFGPct = 0.54600000000000004,
                             DRB = 0.0,
                             DRTg = 116.0,
@@ -1809,7 +2380,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 73,
+                            TeamHistoryId = 103,
                             DEFGPct = 0.53900000000000003,
                             DRB = 0.0,
                             DRTg = 112.5,
@@ -1828,7 +2399,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 74,
+                            TeamHistoryId = 104,
                             DEFGPct = 0.52200000000000002,
                             DRB = 0.0,
                             DRTg = 110.09999999999999,
@@ -1847,7 +2418,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 75,
+                            TeamHistoryId = 105,
                             DEFGPct = 0.53500000000000003,
                             DRB = 0.0,
                             DRTg = 111.0,
@@ -1866,7 +2437,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 76,
+                            TeamHistoryId = 106,
                             DEFGPct = 0.54200000000000004,
                             DRB = 0.0,
                             DRTg = 111.2,
@@ -1885,7 +2456,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 77,
+                            TeamHistoryId = 107,
                             DEFGPct = 0.53100000000000003,
                             DRB = 0.0,
                             DRTg = 112.40000000000001,
@@ -1904,7 +2475,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 78,
+                            TeamHistoryId = 108,
                             DEFGPct = 0.55000000000000004,
                             DRB = 0.0,
                             DRTg = 113.8,
@@ -1923,7 +2494,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 79,
+                            TeamHistoryId = 109,
                             DEFGPct = 0.54300000000000004,
                             DRB = 0.0,
                             DRTg = 112.5,
@@ -1942,7 +2513,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 80,
+                            TeamHistoryId = 110,
                             DEFGPct = 0.53800000000000003,
                             DRB = 0.0,
                             DRTg = 112.0,
@@ -1961,7 +2532,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 81,
+                            TeamHistoryId = 111,
                             DEFGPct = 0.54100000000000004,
                             DRB = 0.0,
                             DRTg = 112.8,
@@ -1980,7 +2551,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 82,
+                            TeamHistoryId = 112,
                             DEFGPct = 0.53900000000000003,
                             DRB = 0.0,
                             DRTg = 113.0,
@@ -1999,7 +2570,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 83,
+                            TeamHistoryId = 113,
                             DEFGPct = 0.55000000000000004,
                             DRB = 0.0,
                             DRTg = 112.8,
@@ -2018,7 +2589,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 84,
+                            TeamHistoryId = 114,
                             DEFGPct = 0.55700000000000005,
                             DRB = 0.0,
                             DRTg = 117.2,
@@ -2037,7 +2608,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 85,
+                            TeamHistoryId = 115,
                             DEFGPct = 0.54100000000000004,
                             DRB = 0.0,
                             DRTg = 112.5,
@@ -2056,7 +2627,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 86,
+                            TeamHistoryId = 116,
                             DEFGPct = 0.55600000000000005,
                             DRB = 0.0,
                             DRTg = 115.0,
@@ -2075,7 +2646,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 87,
+                            TeamHistoryId = 117,
                             DEFGPct = 0.55500000000000005,
                             DRB = 0.0,
                             DRTg = 114.90000000000001,
@@ -2094,7 +2665,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 88,
+                            TeamHistoryId = 118,
                             DEFGPct = 0.55600000000000005,
                             DRB = 0.0,
                             DRTg = 114.40000000000001,
@@ -2113,7 +2684,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 89,
+                            TeamHistoryId = 119,
                             DEFGPct = 0.54700000000000004,
                             DRB = 0.0,
                             DRTg = 114.5,
@@ -2132,7 +2703,7 @@ namespace Persistence.Migrations
                         },
                         new
                         {
-                            TeamHistoryId = 90,
+                            TeamHistoryId = 120,
                             DEFGPct = 0.54700000000000004,
                             DRB = 0.0,
                             DRTg = 114.0,
@@ -2148,6 +2719,576 @@ namespace Persistence.Migrations
                             Team = "Thunder",
                             ThreePAr = 0.39900000000000002,
                             WinRecord = 22
+                        },
+                        new
+                        {
+                            TeamHistoryId = 121,
+                            DEFGPct = 0.502,
+                            DRB = 0.0,
+                            DRTg = 106.90000000000001,
+                            FTr = 0.23899999999999999,
+                            LossRecord = 31,
+                            MOV = 7.2800000000000002,
+                            NRTg = 0.0,
+                            OEFGPct = 0.54200000000000004,
+                            ORB = 24.0,
+                            ORTg = 114.40000000000001,
+                            SOS = -0.26000000000000001,
+                            Season = "2021-2022",
+                            Team = "Celtics",
+                            ThreePAr = 0.42499999999999999,
+                            WinRecord = 51
+                        },
+                        new
+                        {
+                            TeamHistoryId = 122,
+                            DEFGPct = 0.51000000000000001,
+                            DRB = 0.0,
+                            DRTg = 107.3,
+                            FTr = 0.221,
+                            LossRecord = 18,
+                            MOV = 7.5,
+                            NRTg = 0.0,
+                            OEFGPct = 0.54900000000000004,
+                            ORB = 22.300000000000001,
+                            ORTg = 114.8,
+                            SOS = -0.56000000000000005,
+                            Season = "2021-2022",
+                            Team = "Suns",
+                            ThreePAr = 0.35399999999999998,
+                            WinRecord = 64
+                        },
+                        new
+                        {
+                            TeamHistoryId = 123,
+                            DEFGPct = 0.52100000000000002,
+                            DRB = 0.0,
+                            DRTg = 110.5,
+                            FTr = 0.27100000000000002,
+                            LossRecord = 33,
+                            MOV = 6.04,
+                            NRTg = 0.0,
+                            OEFGPct = 0.55500000000000005,
+                            ORB = 25.399999999999999,
+                            ORTg = 116.7,
+                            SOS = -0.37,
+                            Season = "2021-2022",
+                            Team = "Jazz",
+                            ThreePAr = 0.46800000000000003,
+                            WinRecord = 49
+                        },
+                        new
+                        {
+                            TeamHistoryId = 124,
+                            DEFGPct = 0.52300000000000002,
+                            DRB = 0.0,
+                            DRTg = 109.0,
+                            FTr = 0.245,
+                            LossRecord = 26,
+                            MOV = 5.6799999999999997,
+                            NRTg = 0.0,
+                            OEFGPct = 0.52200000000000002,
+                            ORB = 30.0,
+                            ORTg = 114.59999999999999,
+                            SOS = -0.32000000000000001,
+                            Season = "2021-2022",
+                            Team = "Grizzlies",
+                            ThreePAr = 0.34599999999999997,
+                            WinRecord = 56
+                        },
+                        new
+                        {
+                            TeamHistoryId = 125,
+                            DEFGPct = 0.50900000000000001,
+                            DRB = 0.0,
+                            DRTg = 106.90000000000001,
+                            FTr = 0.23499999999999999,
+                            LossRecord = 29,
+                            MOV = 5.54,
+                            NRTg = 0.0,
+                            OEFGPct = 0.55200000000000005,
+                            ORB = 22.800000000000001,
+                            ORTg = 112.5,
+                            SOS = -0.02,
+                            Season = "2021-2022",
+                            Team = "Warriors",
+                            ThreePAr = 0.45600000000000002,
+                            WinRecord = 53
+                        },
+                        new
+                        {
+                            TeamHistoryId = 126,
+                            DEFGPct = 0.52400000000000002,
+                            DRB = 0.0,
+                            DRTg = 109.09999999999999,
+                            FTr = 0.252,
+                            LossRecord = 29,
+                            MOV = 4.4500000000000002,
+                            NRTg = 0.0,
+                            OEFGPct = 0.54700000000000004,
+                            ORB = 23.5,
+                            ORTg = 113.7,
+                            SOS = -0.22,
+                            Season = "2021-2022",
+                            Team = "Heat",
+                            ThreePAr = 0.42199999999999999,
+                            WinRecord = 53
+                        },
+                        new
+                        {
+                            TeamHistoryId = 127,
+                            DEFGPct = 0.52100000000000002,
+                            DRB = 0.0,
+                            DRTg = 109.40000000000001,
+                            FTr = 0.249,
+                            LossRecord = 30,
+                            MOV = 3.2999999999999998,
+                            NRTg = 0.0,
+                            OEFGPct = 0.53800000000000003,
+                            ORB = 21.300000000000001,
+                            ORTg = 112.8,
+                            SOS = -0.17999999999999999,
+                            Season = "2021-2022",
+                            Team = "Mavericks",
+                            ThreePAr = 0.439,
+                            WinRecord = 52
+                        },
+                        new
+                        {
+                            TeamHistoryId = 128,
+                            DEFGPct = 0.53600000000000003,
+                            DRB = 0.0,
+                            DRTg = 111.8,
+                            FTr = 0.25700000000000001,
+                            LossRecord = 31,
+                            MOV = 3.3500000000000001,
+                            NRTg = 0.0,
+                            OEFGPct = 0.54600000000000004,
+                            ORB = 23.0,
+                            ORTg = 115.09999999999999,
+                            SOS = -0.14000000000000001,
+                            Season = "2021-2022",
+                            Team = "Bucks",
+                            ThreePAr = 0.42999999999999999,
+                            WinRecord = 51
+                        },
+                        new
+                        {
+                            TeamHistoryId = 129,
+                            DEFGPct = 0.52400000000000002,
+                            DRB = 0.0,
+                            DRTg = 110.8,
+                            FTr = 0.28199999999999997,
+                            LossRecord = 31,
+                            MOV = 2.6099999999999999,
+                            NRTg = 0.0,
+                            OEFGPct = 0.53400000000000003,
+                            ORB = 20.100000000000001,
+                            ORTg = 113.5,
+                            SOS = -0.040000000000000001,
+                            Season = "2021-2022",
+                            Team = "76ers",
+                            ThreePAr = 0.376,
+                            WinRecord = 51
+                        },
+                        new
+                        {
+                            TeamHistoryId = 130,
+                            DEFGPct = 0.53500000000000003,
+                            DRB = 0.0,
+                            DRTg = 111.7,
+                            FTr = 0.254,
+                            LossRecord = 36,
+                            MOV = 2.6299999999999999,
+                            NRTg = 0.0,
+                            OEFGPct = 0.53900000000000003,
+                            ORB = 24.399999999999999,
+                            ORTg = 114.3,
+                            SOS = -0.10000000000000001,
+                            Season = "2021-2022",
+                            Team = "Timberwolves",
+                            ThreePAr = 0.45400000000000001,
+                            WinRecord = 46
+                        },
+                        new
+                        {
+                            TeamHistoryId = 131,
+                            DEFGPct = 0.53700000000000003,
+                            DRB = 0.0,
+                            DRTg = 112.09999999999999,
+                            FTr = 0.24399999999999999,
+                            LossRecord = 34,
+                            MOV = 2.2999999999999998,
+                            NRTg = 0.0,
+                            OEFGPct = 0.55600000000000005,
+                            ORB = 21.899999999999999,
+                            ORTg = 114.5,
+                            SOS = -0.14999999999999999,
+                            Season = "2021-2022",
+                            Team = "Nuggets",
+                            ThreePAr = 0.41599999999999998,
+                            WinRecord = 48
+                        },
+                        new
+                        {
+                            TeamHistoryId = 132,
+                            DEFGPct = 0.53500000000000003,
+                            DRB = 0.0,
+                            DRTg = 110.5,
+                            FTr = 0.23400000000000001,
+                            LossRecord = 34,
+                            MOV = 2.29,
+                            NRTg = 0.0,
+                            OEFGPct = 0.51000000000000001,
+                            ORB = 28.399999999999999,
+                            ORTg = 112.90000000000001,
+                            SOS = 0.080000000000000002,
+                            Season = "2021-2022",
+                            Team = "Raptors",
+                            ThreePAr = 0.375,
+                            WinRecord = 48
+                        },
+                        new
+                        {
+                            TeamHistoryId = 133,
+                            DEFGPct = 0.52000000000000002,
+                            DRB = 0.0,
+                            DRTg = 109.7,
+                            FTr = 0.26100000000000001,
+                            LossRecord = 38,
+                            MOV = 2.1200000000000001,
+                            NRTg = 0.0,
+                            OEFGPct = 0.53800000000000003,
+                            ORB = 24.0,
+                            ORTg = 111.90000000000001,
+                            SOS = -0.080000000000000002,
+                            Season = "2021-2022",
+                            Team = "Cavaliers",
+                            ThreePAr = 0.38700000000000001,
+                            WinRecord = 44
+                        },
+                        new
+                        {
+                            TeamHistoryId = 134,
+                            DEFGPct = 0.54300000000000004,
+                            DRB = 0.0,
+                            DRTg = 114.90000000000001,
+                            FTr = 0.253,
+                            LossRecord = 39,
+                            MOV = 1.5600000000000001,
+                            NRTg = 0.0,
+                            OEFGPct = 0.54300000000000004,
+                            ORB = 23.0,
+                            ORTg = 116.5,
+                            SOS = -0.01,
+                            Season = "2021-2022",
+                            Team = "Atlanta Hawks",
+                            ThreePAr = 0.39000000000000001,
+                            WinRecord = 43
+                        },
+                        new
+                        {
+                            TeamHistoryId = 135,
+                            DEFGPct = 0.52100000000000002,
+                            DRB = 0.0,
+                            DRTg = 112.8,
+                            FTr = 0.246,
+                            LossRecord = 38,
+                            MOV = 0.78000000000000003,
+                            NRTg = 0.0,
+                            OEFGPct = 0.54000000000000004,
+                            ORB = 23.899999999999999,
+                            ORTg = 113.59999999999999,
+                            SOS = 0.040000000000000001,
+                            Season = "2021-2022",
+                            Team = "Nets",
+                            ThreePAr = 0.35899999999999999,
+                            WinRecord = 44
+                        },
+                        new
+                        {
+                            TeamHistoryId = 136,
+                            DEFGPct = 0.54400000000000004,
+                            DRB = 0.0,
+                            DRTg = 113.7,
+                            FTr = 0.23400000000000001,
+                            LossRecord = 39,
+                            MOV = 0.44,
+                            NRTg = 0.0,
+                            OEFGPct = 0.54400000000000004,
+                            ORB = 23.300000000000001,
+                            ORTg = 114.09999999999999,
+                            SOS = 0.089999999999999997,
+                            Season = "2021-2022",
+                            Team = "Hornets",
+                            ThreePAr = 0.41799999999999998,
+                            WinRecord = 43
+                        },
+                        new
+                        {
+                            TeamHistoryId = 137,
+                            DEFGPct = 0.53200000000000003,
+                            DRB = 0.0,
+                            DRTg = 112.3,
+                            FTr = 0.22,
+                            LossRecord = 48,
+                            MOV = 0.12,
+                            NRTg = 0.0,
+                            OEFGPct = 0.52700000000000002,
+                            ORB = 23.699999999999999,
+                            ORTg = 112.40000000000001,
+                            SOS = -0.10000000000000001,
+                            Season = "2021-2022",
+                            Team = "Spurs",
+                            ThreePAr = 0.34499999999999997,
+                            WinRecord = 34
+                        },
+                        new
+                        {
+                            TeamHistoryId = 138,
+                            DEFGPct = 0.51400000000000001,
+                            DRB = 0.0,
+                            DRTg = 110.09999999999999,
+                            FTr = 0.224,
+                            LossRecord = 40,
+                            MOV = 0.02,
+                            NRTg = 0.0,
+                            OEFGPct = 0.53100000000000003,
+                            ORB = 20.600000000000001,
+                            ORTg = 110.09999999999999,
+                            SOS = 0.059999999999999998,
+                            Season = "2021-2022",
+                            Team = "Clippers",
+                            ThreePAr = 0.39100000000000001,
+                            WinRecord = 42
+                        },
+                        new
+                        {
+                            TeamHistoryId = 139,
+                            DEFGPct = 0.52100000000000002,
+                            DRB = 0.0,
+                            DRTg = 110.5,
+                            FTr = 0.28000000000000003,
+                            LossRecord = 45,
+                            MOV = -0.12,
+                            NRTg = 0.0,
+                            OEFGPct = 0.51300000000000001,
+                            ORB = 25.100000000000001,
+                            ORTg = 110.40000000000001,
+                            SOS = 0.11,
+                            Season = "2021-2022",
+                            Team = "Knicks",
+                            ThreePAr = 0.42799999999999999,
+                            WinRecord = 37
+                        },
+                        new
+                        {
+                            TeamHistoryId = 140,
+                            DEFGPct = 0.54100000000000004,
+                            DRB = 0.0,
+                            DRTg = 113.59999999999999,
+                            FTr = 0.248,
+                            LossRecord = 36,
+                            MOV = -0.39000000000000001,
+                            NRTg = 0.0,
+                            OEFGPct = 0.54100000000000004,
+                            ORB = 20.399999999999999,
+                            ORTg = 113.2,
+                            SOS = 0.02,
+                            Season = "2021-2022",
+                            Team = "Bulls",
+                            ThreePAr = 0.33200000000000002,
+                            WinRecord = 46
+                        },
+                        new
+                        {
+                            TeamHistoryId = 141,
+                            DEFGPct = 0.54700000000000004,
+                            DRB = 0.0,
+                            DRTg = 113.0,
+                            FTr = 0.26400000000000001,
+                            LossRecord = 46,
+                            MOV = -0.98999999999999999,
+                            NRTg = 0.0,
+                            OEFGPct = 0.51700000000000002,
+                            ORB = 26.899999999999999,
+                            ORTg = 112.0,
+                            SOS = 0.14999999999999999,
+                            Season = "2021-2022",
+                            Team = "Pelicans",
+                            ThreePAr = 0.36499999999999999,
+                            WinRecord = 36
+                        },
+                        new
+                        {
+                            TeamHistoryId = 142,
+                            DEFGPct = 0.54000000000000004,
+                            DRB = 0.0,
+                            DRTg = 113.3,
+                            FTr = 0.25900000000000001,
+                            LossRecord = 49,
+                            MOV = -3.0499999999999998,
+                            NRTg = 0.0,
+                            OEFGPct = 0.53700000000000003,
+                            ORB = 21.100000000000001,
+                            ORTg = 110.3,
+                            SOS = -0.029999999999999999,
+                            Season = "2021-2022",
+                            Team = "Lakers",
+                            ThreePAr = 0.38800000000000001,
+                            WinRecord = 33
+                        },
+                        new
+                        {
+                            TeamHistoryId = 143,
+                            DEFGPct = 0.52900000000000003,
+                            DRB = 0.0,
+                            DRTg = 114.5,
+                            FTr = 0.252,
+                            LossRecord = 47,
+                            MOV = -3.3799999999999999,
+                            NRTg = 0.0,
+                            OEFGPct = 0.53200000000000003,
+                            ORB = 20.899999999999999,
+                            ORTg = 111.09999999999999,
+                            SOS = 0.14999999999999999,
+                            Season = "2021-2022",
+                            Team = "Wizards",
+                            ThreePAr = 0.35599999999999998,
+                            WinRecord = 35
+                        },
+                        new
+                        {
+                            TeamHistoryId = 144,
+                            DEFGPct = 0.55200000000000005,
+                            DRB = 0.0,
+                            DRTg = 116.09999999999999,
+                            FTr = 0.23899999999999999,
+                            LossRecord = 57,
+                            MOV = -3.48,
+                            NRTg = 0.0,
+                            OEFGPct = 0.53100000000000003,
+                            ORB = 25.5,
+                            ORTg = 112.59999999999999,
+                            SOS = 0.22,
+                            Season = "2021-2022",
+                            Team = "Pacers",
+                            ThreePAr = 0.39500000000000002,
+                            WinRecord = 25
+                        },
+                        new
+                        {
+                            TeamHistoryId = 145,
+                            DEFGPct = 0.55100000000000005,
+                            DRB = 0.0,
+                            DRTg = 115.3,
+                            FTr = 0.26400000000000001,
+                            LossRecord = 52,
+                            MOV = -5.46,
+                            NRTg = 0.0,
+                            OEFGPct = 0.52500000000000002,
+                            ORB = 21.300000000000001,
+                            ORTg = 109.90000000000001,
+                            SOS = 0.20000000000000001,
+                            Season = "2021-2022",
+                            Team = "Kings",
+                            ThreePAr = 0.377,
+                            WinRecord = 30
+                        },
+                        new
+                        {
+                            TeamHistoryId = 146,
+                            DEFGPct = 0.54100000000000004,
+                            DRB = 0.0,
+                            DRTg = 113.8,
+                            FTr = 0.249,
+                            LossRecord = 59,
+                            MOV = -7.7199999999999998,
+                            NRTg = 0.0,
+                            OEFGPct = 0.49399999999999999,
+                            ORB = 23.399999999999999,
+                            ORTg = 106.0,
+                            SOS = 0.37,
+                            Season = "2021-2022",
+                            Team = "Pistons",
+                            ThreePAr = 0.39100000000000001,
+                            WinRecord = 23
+                        },
+                        new
+                        {
+                            TeamHistoryId = 147,
+                            DEFGPct = 0.53200000000000003,
+                            DRB = 0.0,
+                            DRTg = 112.5,
+                            FTr = 0.223,
+                            LossRecord = 60,
+                            MOV = -8.0,
+                            NRTg = 0.0,
+                            OEFGPct = 0.503,
+                            ORB = 19.800000000000001,
+                            ORTg = 104.5,
+                            SOS = 0.33000000000000002,
+                            Season = "2021-2022",
+                            Team = "Magic",
+                            ThreePAr = 0.41699999999999998,
+                            WinRecord = 22
+                        },
+                        new
+                        {
+                            TeamHistoryId = 148,
+                            DEFGPct = 0.53300000000000003,
+                            DRB = 0.0,
+                            DRTg = 112.8,
+                            FTr = 0.223,
+                            LossRecord = 58,
+                            MOV = -8.0999999999999996,
+                            NRTg = 0.0,
+                            OEFGPct = 0.497,
+                            ORB = 21.800000000000001,
+                            ORTg = 104.59999999999999,
+                            SOS = 0.20000000000000001,
+                            Season = "2021-2022",
+                            Team = "Thunder",
+                            ThreePAr = 0.41899999999999998,
+                            WinRecord = 24
+                        },
+                        new
+                        {
+                            TeamHistoryId = 149,
+                            DEFGPct = 0.55400000000000005,
+                            DRB = 0.0,
+                            DRTg = 116.7,
+                            FTr = 0.28399999999999997,
+                            LossRecord = 62,
+                            MOV = -8.4800000000000004,
+                            NRTg = 0.0,
+                            OEFGPct = 0.53400000000000003,
+                            ORB = 21.699999999999999,
+                            ORTg = 108.40000000000001,
+                            SOS = 0.22,
+                            Season = "2021-2022",
+                            Team = "Rockets",
+                            ThreePAr = 0.44800000000000001,
+                            WinRecord = 20
+                        },
+                        new
+                        {
+                            TeamHistoryId = 150,
+                            DEFGPct = 0.55900000000000005,
+                            DRB = 0.0,
+                            DRTg = 116.90000000000001,
+                            FTr = 0.248,
+                            LossRecord = 55,
+                            MOV = -8.8800000000000008,
+                            NRTg = 0.0,
+                            OEFGPct = 0.51500000000000001,
+                            ORB = 22.899999999999999,
+                            ORTg = 107.8,
+                            SOS = 0.33000000000000002,
+                            Season = "2021-2022",
+                            Team = "Trail Blazers",
+                            ThreePAr = 0.42199999999999999,
+                            WinRecord = 27
                         });
                 });
 

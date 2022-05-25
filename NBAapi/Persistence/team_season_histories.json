@@ -1,6 +1,516 @@
 [
     {
         "TeamHistoryId": 1,
+        "Team": "Rockets",
+        "Season": "2017-2018",
+        "WinRecord": 65,
+        "LossRecord": 17,
+        "MOV": 8.48,
+        "SOS": -0.27,
+        "ORtg": 114.7,
+        "DRtg": 106.1,
+        "FTr": 0.298,
+        "ThreePAr": 0.502,
+        "OEFGPct": 0.551,
+        "ORB": 21.3,
+        "DEFGPct": 0.521,
+        "RDB": 79.9
+    },
+    {
+        "TeamHistoryId": 2,
+        "Team": "Raptors",
+        "Season": "2017-2018",
+        "WinRecord": 59,
+        "LossRecord": 23,
+        "MOV": 7.78,
+        "SOS": -0.49,
+        "ORtg": 113.8,
+        "DRtg": 105.9,
+        "FTr": 0.25,
+        "ThreePAr": 0.377,
+        "OEFGPct": 0.539,
+        "ORB": 23,
+        "DEFGPct": 0.501,
+        "RDB": 77.7
+    },
+    {
+        "TeamHistoryId": 3,
+        "Team": "Warriors",
+        "Season": "2017-2018",
+        "WinRecord": 58,
+        "LossRecord": 24,
+        "MOV": 5.98,
+        "SOS": -0.19,
+        "ORtg": 113.6,
+        "DRtg": 107.6,
+        "FTr": 0.239,
+        "ThreePAr": 0.339,
+        "OEFGPct": 0.569,
+        "ORB": 21,
+        "DEFGPct": 0.504,
+        "RDB": 76.3
+    },
+    {
+        "TeamHistoryId": 4,
+        "Team": "Jazz",
+        "Season": "2017-2018",
+        "WinRecord": 48,
+        "LossRecord": 34,
+        "MOV": 4.3,
+        "SOS": 0.17,
+        "ORtg": 108.4,
+        "DRtg": 103.9,
+        "FTr": 0.26,
+        "ThreePAr": 0.357,
+        "OEFGPct": 0.527,
+        "ORB": 21.5,
+        "DEFGPct": 0.506,
+        "RDB": 79.8
+    },
+    {
+        "TeamHistoryId": 5,
+        "Team": "76ers",
+        "Season": "2017-2018",
+        "WinRecord": 52,
+        "LossRecord": 30,
+        "MOV": 4.5,
+        "SOS": -0.2,
+        "ORtg": 109.5,
+        "DRtg": 105,
+        "FTr": 0.263,
+        "ThreePAr": 0.344,
+        "OEFGPct": 0.535,
+        "ORB": 25.3,
+        "DEFGPct": 0.492,
+        "RDB": 78.6
+    },
+    {
+        "TeamHistoryId": 6,
+        "Team": "Celtics",
+        "Season": "2017-2018",
+        "WinRecord": 55,
+        "LossRecord": 27,
+        "MOV": 3.59,
+        "SOS": -0.35,
+        "ORtg": 107.6,
+        "DRtg": 103.9,
+        "FTr": 0.243,
+        "ThreePAr": 0.357,
+        "OEFGPct": 0.518,
+        "ORB": 21.5,
+        "DEFGPct": 0.495,
+        "RDB": 78.4
+    },
+    {
+        "TeamHistoryId": 7,
+        "Team": "Thunder",
+        "Season": "2017-2018",
+        "WinRecord": 48,
+        "LossRecord": 34,
+        "MOV": 3.41,
+        "SOS": 0,
+        "ORtg": 110.7,
+        "DRtg": 107.2,
+        "FTr": 0.275,
+        "ThreePAr": 0.345,
+        "OEFGPct": 0.514,
+        "ORB": 27.7,
+        "DEFGPct": 0.525,
+        "RDB": 77.4
+    },
+    {
+        "TeamHistoryId": 8,
+        "Team": "Spurs",
+        "Season": "2017-2018",
+        "WinRecord": 47,
+        "LossRecord": 35,
+        "MOV": 2.89,
+        "SOS": 0,
+        "ORtg": 107.9,
+        "DRtg": 104.8,
+        "FTr": 0.245,
+        "ThreePAr": 0.282,
+        "OEFGPct": 0.507,
+        "ORB": 23.7,
+        "DEFGPct": 0.507,
+        "RDB": 78.6
+    },
+    {
+        "TeamHistoryId": 9,
+        "Team": "Trail Blazers",
+        "Season": "2017-2018",
+        "WinRecord": 49,
+        "LossRecord": 33,
+        "MOV": 2.6,
+        "SOS": 0,
+        "ORtg": 109.1,
+        "DRtg": 106.4,
+        "FTr": 0.24,
+        "ThreePAr": 0.324,
+        "OEFGPct": 0.511,
+        "ORB": 23.3,
+        "DEFGPct": 0.503,
+        "RDB": 79.1
+    },
+    {
+        "TeamHistoryId": 10,
+        "Team": "Timberwolves",
+        "Season": "2017-2018",
+        "WinRecord": 47,
+        "LossRecord": 35,
+        "MOV": 2.23,
+        "SOS": 0.12,
+        "ORtg": 113.4,
+        "DRtg": 111.1,
+        "FTr": 0.28,
+        "ThreePAr": 0.261,
+        "OEFGPct": 0.523,
+        "ORB": 24.4,
+        "DEFGPct": 0.539,
+        "RDB": 76.4
+    },
+    {
+        "TeamHistoryId": 11,
+        "Team": "Nuggets",
+        "Season": "2017-2018",
+        "WinRecord": 46,
+        "LossRecord": 36,
+        "MOV": 1.48,
+        "SOS": 0.09,
+        "ORtg": 112.5,
+        "DRtg": 111,
+        "FTr": 0.258,
+        "ThreePAr": 0.357,
+        "OEFGPct": 0.536,
+        "ORB": 25.7,
+        "DEFGPct": 0.539,
+        "RDB": 77.5
+    },
+    {
+        "TeamHistoryId": 12,
+        "Team": "Pacers",
+        "Season": "2017-2018",
+        "WinRecord": 48,
+        "LossRecord": 34,
+        "MOV": 1.38,
+        "SOS": -0.2,
+        "ORtg": 109.5,
+        "DRtg": 108.1,
+        "FTr": 0.222,
+        "ThreePAr": 0.284,
+        "OEFGPct": 0.525,
+        "ORB": 22.7,
+        "DEFGPct": 0.527,
+        "RDB": 76.2
+    },
+    {
+        "TeamHistoryId": 13,
+        "Team": "Pelicans",
+        "Season": "2017-2018",
+        "WinRecord": 48,
+        "LossRecord": 34,
+        "MOV": 1.3,
+        "SOS": 0.18,
+        "ORtg": 109.6,
+        "DRtg": 108.3,
+        "FTr": 0.237,
+        "ThreePAr": 0.319,
+        "OEFGPct": 0.541,
+        "ORB": 20,
+        "DEFGPct": 0.513,
+        "RDB": 76.7
+    },
+    {
+        "TeamHistoryId": 14,
+        "Team": "Cavaliers",
+        "Season": "2017-2018",
+        "WinRecord": 50,
+        "LossRecord": 32,
+        "MOV": 0.94,
+        "SOS": -0.35,
+        "ORtg": 112.9,
+        "DRtg": 111.9,
+        "FTr": 0.275,
+        "ThreePAr": 0.379,
+        "OEFGPct": 0.547,
+        "ORB": 20.1,
+        "DEFGPct": 0.54,
+        "RDB": 77.3
+    },
+    {
+        "TeamHistoryId": 15,
+        "Team": "Wizards",
+        "Season": "2017-2018",
+        "WinRecord": 43,
+        "LossRecord": 39,
+        "MOV": 0.59,
+        "SOS": -0.06,
+        "ORtg": 109.3,
+        "DRtg": 108.7,
+        "FTr": 0.254,
+        "ThreePAr": 0.31,
+        "OEFGPct": 0.525,
+        "ORB": 23.5,
+        "DEFGPct": 0.522,
+        "RDB": 77.1
+    },
+    {
+        "TeamHistoryId": 16,
+        "Team": "Heat",
+        "Season": "2017-2018",
+        "WinRecord": 44,
+        "LossRecord": 38,
+        "MOV": 0.48,
+        "SOS": -0.33,
+        "ORtg": 106.8,
+        "DRtg": 106.3,
+        "FTr": 0.229,
+        "ThreePAr": 0.358,
+        "OEFGPct": 0.52,
+        "ORB": 21.5,
+        "DEFGPct": 0.507,
+        "RDB": 79
+    },
+    {
+        "TeamHistoryId": 17,
+        "Team": "Hornets",
+        "Season": "2017-2018",
+        "WinRecord": 36,
+        "LossRecord": 46,
+        "MOV": 0.26,
+        "SOS": -0.19,
+        "ORtg": 109.4,
+        "DRtg": 109.1,
+        "FTr": 0.312,
+        "ThreePAr": 0.314,
+        "OEFGPct": 0.508,
+        "ORB": 22.2,
+        "DEFGPct": 0.532,
+        "RDB": 80.7
+    },
+    {
+        "TeamHistoryId": 18,
+        "Team": "Clippers",
+        "Season": "2017-2018",
+        "WinRecord": 42,
+        "LossRecord": 40,
+        "MOV": 0.04,
+        "SOS": 0.11,
+        "ORtg": 110.3,
+        "DRtg": 110.2,
+        "FTr": 0.299,
+        "ThreePAr": 0.314,
+        "OEFGPct": 0.527,
+        "ORB": 23.5,
+        "DEFGPct": 0.52,
+        "RDB": 76.1
+    },
+    {
+        "TeamHistoryId": 19,
+        "Team": "Pistons",
+        "Season": "2017-2018",
+        "WinRecord": 39,
+        "LossRecord": 43,
+        "MOV": -0.15,
+        "SOS": -0.11,
+        "ORtg": 107.2,
+        "DRtg": 107.3,
+        "FTr": 0.227,
+        "ThreePAr": 0.333,
+        "OEFGPct": 0.512,
+        "ORB": 22.7,
+        "DEFGPct": 0.524,
+        "RDB": 78.5
+    },
+    {
+        "TeamHistoryId": 20,
+        "Team": "Bucks",
+        "Season": "2017-2018",
+        "WinRecord": 44,
+        "LossRecord": 38,
+        "MOV": -0.3,
+        "SOS": -0.15,
+        "ORtg": 109.8,
+        "DRtg": 110.1,
+        "FTr": 0.281,
+        "ThreePAr": 0.297,
+        "OEFGPct": 0.531,
+        "ORB": 20.4,
+        "DEFGPct": 0.528,
+        "RDB": 75.9
+    },
+    {
+        "TeamHistoryId": 21,
+        "Team": "Lakers",
+        "Season": "2017-2018",
+        "WinRecord": 35,
+        "LossRecord": 47,
+        "MOV": -1.55,
+        "SOS": 0.11,
+        "ORtg": 106.5,
+        "DRtg": 108,
+        "FTr": 0.264,
+        "ThreePAr": 0.329,
+        "OEFGPct": 0.517,
+        "ORB": 23.6,
+        "DEFGPct": 0.514,
+        "RDB": 77.7
+    },
+    {
+        "TeamHistoryId": 22,
+        "Team": "Mavericks",
+        "Season": "2017-2018",
+        "WinRecord": 24,
+        "LossRecord": 58,
+        "MOV": -3.04,
+        "SOS": 0.34,
+        "ORtg": 106.3,
+        "DRtg": 109.5,
+        "FTr": 0.217,
+        "ThreePAr": 0.382,
+        "OEFGPct": 0.513,
+        "ORB": 18,
+        "DEFGPct": 0.532,
+        "RDB": 78.9
+    },
+    {
+        "TeamHistoryId": 23,
+        "Team": "Knicks",
+        "Season": "2017-2018",
+        "WinRecord": 29,
+        "LossRecord": 53,
+        "MOV": -3.56,
+        "SOS": 0.03,
+        "ORtg": 107.1,
+        "DRtg": 110.7,
+        "FTr": 0.216,
+        "ThreePAr": 0.266,
+        "OEFGPct": 0.51,
+        "ORB": 24.1,
+        "DEFGPct": 0.522,
+        "RDB": 76.7
+    },
+    {
+        "TeamHistoryId": 24,
+        "Team": "Nets",
+        "Season": "2017-2018",
+        "WinRecord": 28,
+        "LossRecord": 54,
+        "MOV": -3.74,
+        "SOS": 0.07,
+        "ORtg": 106.9,
+        "DRtg": 110.6,
+        "FTr": 0.26,
+        "ThreePAr": 0.411,
+        "OEFGPct": 0.514,
+        "ORB": 21,
+        "DEFGPct": 0.517,
+        "RDB": 77
+    },
+    {
+        "TeamHistoryId": 25,
+        "Team": "Magic",
+        "Season": "2017-2018",
+        "WinRecord": 25,
+        "LossRecord": 57,
+        "MOV": -4.82,
+        "SOS": -0.1,
+        "ORtg": 105.2,
+        "DRtg": 110.1,
+        "FTr": 0.238,
+        "ThreePAr": 0.342,
+        "OEFGPct": 0.512,
+        "ORB": 20,
+        "DEFGPct": 0.525,
+        "RDB": 75.6
+    },
+    {
+        "TeamHistoryId": 26,
+        "Team": "Hawks",
+        "Season": "2017-2018",
+        "WinRecord": 24,
+        "LossRecord": 58,
+        "MOV": -5.45,
+        "SOS": 0.15,
+        "ORtg": 105,
+        "DRtg": 110.6,
+        "FTr": 0.236,
+        "ThreePAr": 0.363,
+        "OEFGPct": 0.512,
+        "ORB": 21.1,
+        "DEFGPct": 0.536,
+        "RDB": 76.2
+    },
+    {
+        "TeamHistoryId": 27,
+        "Team": "Grizzlies",
+        "Season": "2017-2018",
+        "WinRecord": 22,
+        "LossRecord": 60,
+        "MOV": -6.21,
+        "SOS": 0.39,
+        "ORtg": 104.5,
+        "DRtg": 111,
+        "FTr": 0.255,
+        "ThreePAr": 0.317,
+        "OEFGPct": 0.5,
+        "ORB": 22.4,
+        "DEFGPct": 0.529,
+        "RDB": 76.5
+    },
+    {
+        "TeamHistoryId": 28,
+        "Team": "Bulls",
+        "Season": "2017-2018",
+        "WinRecord": 27,
+        "LossRecord": 55,
+        "MOV": -7.04,
+        "SOS": 0.2,
+        "ORtg": 103.8,
+        "DRtg": 110.9,
+        "FTr": 0.216,
+        "ThreePAr": 0.35,
+        "OEFGPct": 0.497,
+        "ORB": 20.6,
+        "DEFGPct": 0.542,
+        "RDB": 80.6
+    },
+    {
+        "TeamHistoryId": 29,
+        "Team": "Kings",
+        "Season": "2017-2018",
+        "WinRecord": 27,
+        "LossRecord": 55,
+        "MOV": -6.99,
+        "SOS": 0.39,
+        "ORtg": 103.7,
+        "DRtg": 111.1,
+        "FTr": 0.194,
+        "ThreePAr": 0.278,
+        "OEFGPct": 0.502,
+        "ORB": 21.5,
+        "DEFGPct": 0.542,
+        "RDB": 77.6
+    },
+    {
+        "TeamHistoryId": 30,
+        "Team": "Suns",
+        "Season": "2017-2018",
+        "WinRecord": 21,
+        "LossRecord": 61,
+        "MOV": -9.37,
+        "SOS": 0.57,
+        "ORtg": 103.5,
+        "DRtg": 112.8,
+        "FTr": 0.275,
+        "ThreePAr": 0.32,
+        "OEFGPct": 0.495,
+        "ORB": 22.5,
+        "DEFGPct": 0.533,
+        "RDB": 76.5
+    },
+    {
+        "TeamHistoryId": 31,
         "Team": "Bucks",
         "Season": "2018-2019",
         "WinRecord": 60,
@@ -17,7 +527,7 @@
         "RDB": 80.3
     },
     {
-        "TeamHistoryId": 2,
+        "TeamHistoryId": 32,
         "Team": "Warriors",
         "Season": "2018-2019",
         "WinRecord": 57,
@@ -34,7 +544,7 @@
         "RDB": 77.1
     },
     {
-        "TeamHistoryId": 3,
+        "TeamHistoryId": 33,
         "Team": "Raptors",
         "Season": "2018-2019",
         "WinRecord": 58,
@@ -51,7 +561,7 @@
         "RDB": 77.1
     },
     {
-        "TeamHistoryId": 4,
+        "TeamHistoryId": 34,
         "Team": "Jazz",
         "Season": "2018-2019",
         "WinRecord": 50,
@@ -68,7 +578,7 @@
         "RDB": 80.3
     },
     {
-        "TeamHistoryId": 5,
+        "TeamHistoryId": 35,
         "Team": "Rockets",
         "Season": "2018-2019",
         "WinRecord": 53,
@@ -85,7 +595,7 @@
         "RDB": 74.4
     },
     {
-        "TeamHistoryId": 6,
+        "TeamHistoryId": 36,
         "Team": "Celtics",
         "Season": "2018-2019",
         "WinRecord": 49,
@@ -102,7 +612,7 @@
         "RDB": 77
     },
     {
-        "TeamHistoryId": 7,
+        "TeamHistoryId": 37,
         "Team": "Trail Blazers",
         "Season": "2018-2019",
         "WinRecord": 53,
@@ -119,7 +629,7 @@
         "RDB": 77.9
     },
     {
-        "TeamHistoryId": 8,
+        "TeamHistoryId": 38,
         "Team": "Nuggets",
         "Season": "2018-2019",
         "WinRecord": 54,
@@ -136,7 +646,7 @@
         "RDB": 78
     },
     {
-        "TeamHistoryId": 9,
+        "TeamHistoryId": 39,
         "Team": "Pacers",
         "Season": "2018-2019",
         "WinRecord": 48,
@@ -153,7 +663,7 @@
         "RDB": 76.2
     },
     {
-        "TeamHistoryId": 10,
+        "TeamHistoryId": 40,
         "Team": "Thunder",
         "Season": "2018-2019",
         "WinRecord": 49,
@@ -170,7 +680,7 @@
         "RDB": 78.2
     },
     {
-        "TeamHistoryId": 11,
+        "TeamHistoryId": 41,
         "Team": "76ers",
         "Season": "2018-2019",
         "WinRecord": 51,
@@ -187,7 +697,7 @@
         "RDB": 78.6
     },
     {
-        "TeamHistoryId": 12,
+        "TeamHistoryId": 42,
         "Team": "Spurs",
         "Season": "2018-2019",
         "WinRecord": 48,
@@ -204,7 +714,7 @@
         "RDB": 79.4
     },
     {
-        "TeamHistoryId": 13,
+        "TeamHistoryId": 43,
         "Team": "Clippers",
         "Season": "2018-2019",
         "WinRecord": 48,
@@ -221,7 +731,7 @@
         "RDB": 76
     },
     {
-        "TeamHistoryId": 14,
+        "TeamHistoryId": 44,
         "Team": "Magic",
         "Season": "2018-2019",
         "WinRecord": 42,
@@ -238,7 +748,7 @@
         "RDB": 79.7
     },
     {
-        "TeamHistoryId": 15,
+        "TeamHistoryId": 45,
         "Team": "Nets",
         "Season": "2018-2019",
         "WinRecord": 42,
@@ -255,7 +765,7 @@
         "RDB": 76.4
     },
     {
-        "TeamHistoryId": 16,
+        "TeamHistoryId": 46,
         "Team": "Pistons",
         "Season": "2018-2019",
         "WinRecord": 41,
@@ -272,7 +782,7 @@
         "RDB": 78.7
     },
     {
-        "TeamHistoryId": 17,
+        "TeamHistoryId": 47,
         "Team": "Heat",
         "Season": "2018-2019",
         "WinRecord": 39,
@@ -289,7 +799,7 @@
         "RDB": 77.6
     },
     {
-        "TeamHistoryId": 18,
+        "TeamHistoryId": 48,
         "Team": "Kings",
         "Season": "2018-2019",
         "WinRecord": 39,
@@ -306,7 +816,7 @@
         "RDB": 75.5
     },
     {
-        "TeamHistoryId": 19,
+        "TeamHistoryId": 49,
         "Team": "Hornets",
         "Season": "2018-2019",
         "WinRecord": 39,
@@ -323,7 +833,7 @@
         "RDB": 77.1
     },
     {
-        "TeamHistoryId": 20,
+        "TeamHistoryId": 50,
         "Team": "Pelicans",
         "Season": "2018-2019",
         "WinRecord": 33,
@@ -340,7 +850,7 @@
         "RDB": 76.8
     },
     {
-        "TeamHistoryId": 21,
+        "TeamHistoryId": 51,
         "Team": "Mavericks",
         "Season": "2018-2019",
         "WinRecord": 33,
@@ -357,7 +867,7 @@
         "RDB": 77.5
     },
     {
-        "TeamHistoryId": 22,
+        "TeamHistoryId": 52,
         "Team": "Timberwolves",
         "Season": "2018-2019",
         "WinRecord": 36,
@@ -374,7 +884,7 @@
         "RDB": 74.9
     },
     {
-        "TeamHistoryId": 23,
+        "TeamHistoryId": 53,
         "Team": "Lakers",
         "Season": "2018-2019",
         "WinRecord": 37,
@@ -391,7 +901,7 @@
         "RDB": 76.4
     },
     {
-        "TeamHistoryId": 24,
+        "TeamHistoryId": 54,
         "Team": "Grizzlies",
         "Season": "2018-2019",
         "WinRecord": 33,
@@ -408,7 +918,7 @@
         "RDB": 77.6
     },
     {
-        "TeamHistoryId": 25,
+        "TeamHistoryId": 55,
         "Team": "Wizards",
         "Season": "2018-2019",
         "WinRecord": 32,
@@ -425,7 +935,7 @@
         "RDB": 74.1
     },
     {
-        "TeamHistoryId": 26,
+        "TeamHistoryId": 56,
         "Team": "Hawks",
         "Season": "2018-2019",
         "WinRecord": 29,
@@ -442,7 +952,7 @@
         "RDB": 76.4
     },
     {
-        "TeamHistoryId": 27,
+        "TeamHistoryId": 57,
         "Team": "Bulls",
         "Season": "2018-2019",
         "WinRecord": 22,
@@ -459,7 +969,7 @@
         "RDB": 77.3
     },
     {
-        "TeamHistoryId": 28,
+        "TeamHistoryId": 58,
         "Team": "Knicks",
         "Season": "2018-2019",
         "WinRecord": 17,
@@ -476,7 +986,7 @@
         "RDB": 76.1
     },
     {
-        "TeamHistoryId": 29,
+        "TeamHistoryId": 59,
         "Team": "Suns",
         "Season": "2018-2019",
         "WinRecord": 19,
@@ -493,7 +1003,7 @@
         "RDB": 72.5
     },
     {
-        "TeamHistoryId": 30,
+        "TeamHistoryId": 60,
         "Team": "Cavaliers",
         "Season": "2018-2019",
         "WinRecord": 19,
@@ -510,7 +1020,7 @@
         "RDB": 77
     },
     {
-        "TeamHistoryId": 31,
+        "TeamHistoryId": 61,
         "Team": "Bucks",
         "Season": "2019-2020",
         "WinRecord": 56,
@@ -527,7 +1037,7 @@
         "RDB": 81.6
     },
     {
-        "TeamHistoryId": 32,
+        "TeamHistoryId": 62,
         "Team": "Celtics",
         "Season": "2019-2020",
         "WinRecord": 48,
@@ -544,7 +1054,7 @@
         "RDB": 77.4
     },
     {
-        "TeamHistoryId": 33,
+        "TeamHistoryId": 63,
         "Team": "Clippers",
         "Season": "2019-2020",
         "WinRecord": 49,
@@ -561,7 +1071,7 @@
         "RDB": 77.6
     },
     {
-        "TeamHistoryId": 34,
+        "TeamHistoryId": 64,
         "Team": "Raptors",
         "Season": "2019-2020",
         "WinRecord": 53,
@@ -578,7 +1088,7 @@
         "RDB": 76.7
     },
     {
-        "TeamHistoryId": 35,
+        "TeamHistoryId": 65,
         "Team": "Lakers",
         "Season": "2019-2020",
         "WinRecord": 52,
@@ -595,7 +1105,7 @@
         "RDB": 78.8
     },
     {
-        "TeamHistoryId": 36,
+        "TeamHistoryId": 66,
         "Team": "Mavericks",
         "Season": "2019-2020",
         "WinRecord": 43,
@@ -612,7 +1122,7 @@
         "RDB": 77.7
     },
     {
-        "TeamHistoryId": 37,
+        "TeamHistoryId": 67,
         "Team": "Heat",
         "Season": "2019-2020",
         "WinRecord": 44,
@@ -629,7 +1139,7 @@
         "RDB": 79.5
     },
     {
-        "TeamHistoryId": 38,
+        "TeamHistoryId": 68,
         "Team": "Rockets",
         "Season": "2019-2020",
         "WinRecord": 44,
@@ -646,7 +1156,7 @@
         "RDB": 75.6
     },
     {
-        "TeamHistoryId": 39,
+        "TeamHistoryId": 69,
         "Team": "Jazz",
         "Season": "2019-2020",
         "WinRecord": 44,
@@ -663,7 +1173,7 @@
         "RDB": 78.9
     },
     {
-        "TeamHistoryId": 40,
+        "TeamHistoryId": 70,
         "Team": "76ers",
         "Season": "2019-2020",
         "WinRecord": 43,
@@ -680,7 +1190,7 @@
         "RDB": 80.3
     },
     {
-        "TeamHistoryId": 41,
+        "TeamHistoryId": 71,
         "Team": "Nuggets",
         "Season": "2019-2020",
         "WinRecord": 46,
@@ -697,7 +1207,7 @@
         "RDB": 76.8
     },
     {
-        "TeamHistoryId": 42,
+        "TeamHistoryId": 72,
         "Team": "Pacers",
         "Season": "2019-2020",
         "WinRecord": 45,
@@ -714,7 +1224,7 @@
         "RDB": 76.7
     },
     {
-        "TeamHistoryId": 43,
+        "TeamHistoryId": 73,
         "Team": "Thuder",
         "Season": "2019-2020",
         "WinRecord": 44,
@@ -731,7 +1241,7 @@
         "RDB": 76.8
     },
     {
-        "TeamHistoryId": 44,
+        "TeamHistoryId": 74,
         "Team": "Suns",
         "Season": "2019-2020",
         "WinRecord": 34,
@@ -748,7 +1258,7 @@
         "RDB": 78.8
     },
     {
-        "TeamHistoryId": 45,
+        "TeamHistoryId": 75,
         "Team": "Nets",
         "Season": "2019-2020",
         "WinRecord": 35,
@@ -765,7 +1275,7 @@
         "RDB": 77.8
     },
     {
-        "TeamHistoryId": 46,
+        "TeamHistoryId": 76,
         "Team": "Magic",
         "Season": "2019-2020",
         "WinRecord": 33,
@@ -782,7 +1292,7 @@
         "RDB": 79.1
     },
     {
-        "TeamHistoryId": 47,
+        "TeamHistoryId": 77,
         "Team": "Spurs",
         "Season": "2019-2020",
         "WinRecord": 32,
@@ -799,7 +1309,7 @@
         "RDB": 79.2
     },
     {
-        "TeamHistoryId": 48,
+        "TeamHistoryId": 78,
         "Team": "Grizzlies",
         "Season": "2019-2020",
         "WinRecord": 34,
@@ -816,7 +1326,7 @@
         "RDB": 77.8
     },
     {
-        "TeamHistoryId": 49,
+        "TeamHistoryId": 79,
         "Team": "Trail Blazers",
         "Season": "2019-2020",
         "WinRecord": 35,
@@ -833,7 +1343,7 @@
         "RDB": 75.3
     },
     {
-        "TeamHistoryId": 50,
+        "TeamHistoryId": 80,
         "Team": "Pelicans",
         "Season": "2019-2020",
         "WinRecord": 30,
@@ -850,7 +1360,7 @@
         "RDB": 77.8
     },
     {
-        "TeamHistoryId": 51,
+        "TeamHistoryId": 81,
         "Team": "Kings",
         "Season": "2019-2020",
         "WinRecord": 31,
@@ -867,7 +1377,7 @@
         "RDB": 78.4
     },
     {
-        "TeamHistoryId": 52,
+        "TeamHistoryId": 82,
         "Team": "Bulls",
         "Season": "2019-2020",
         "WinRecord": 22,
@@ -884,7 +1394,7 @@
         "RDB": 75.6
     },
     {
-        "TeamHistoryId": 53,
+        "TeamHistoryId": 83,
         "Team": "Pistons",
         "Season": "2019-2020",
         "WinRecord": 20,
@@ -901,7 +1411,7 @@
         "RDB": 75.9
     },
     {
-        "TeamHistoryId": 54,
+        "TeamHistoryId": 84,
         "Team": "Timberwolves",
         "Season": "2019-2020",
         "WinRecord": 19,
@@ -918,7 +1428,7 @@
         "RDB": 77.2
     },
     {
-        "TeamHistoryId": 55,
+        "TeamHistoryId": 85,
         "Team": "Wizards",
         "Season": "2019-2020",
         "WinRecord": 25,
@@ -935,7 +1445,7 @@
         "RDB": 75.3
     },
     {
-        "TeamHistoryId": 56,
+        "TeamHistoryId": 86,
         "Team": "Knicks",
         "Season": "2019-2020",
         "WinRecord": 21,
@@ -952,7 +1462,7 @@
         "RDB": 78.3
     },
     {
-        "TeamHistoryId": 57,
+        "TeamHistoryId": 87,
         "Team": "Hornets",
         "Season": "2019-2020",
         "WinRecord": 23,
@@ -969,7 +1479,7 @@
         "RDB": 74.4
     },
     {
-        "TeamHistoryId": 58,
+        "TeamHistoryId": 88,
         "Team": "Hawks",
         "Season": "2019-2020",
         "WinRecord": 20,
@@ -986,7 +1496,7 @@
         "RDB": 74.9
     },
     {
-        "TeamHistoryId": 59,
+        "TeamHistoryId": 89,
         "Team": "Cavaliers",
         "Season": "2019-2020",
         "WinRecord": 19,
@@ -1003,7 +1513,7 @@
         "RDB": 77.4
     },
     {
-        "TeamHistoryId": 60,
+        "TeamHistoryId": 90,
         "Team": "Warriors",
         "Season": "2019-2020",
         "WinRecord": 15,
@@ -1020,7 +1530,7 @@
         "RDB": 76.4
     },
     {
-        "TeamHistoryId": 61,
+        "TeamHistoryId": 91,
         "Team": "Jazz",
         "Season": "2020-2021",
         "WinRecord": 52,
@@ -1037,7 +1547,7 @@
         "RDB": 79.3
     },
     {
-        "TeamHistoryId": 62,
+        "TeamHistoryId": 92,
         "Team": "Clippers",
         "Season": "2020-2021",
         "WinRecord": 47,
@@ -1054,7 +1564,7 @@
         "RDB": 79.1
     },
     {
-        "TeamHistoryId": 63,
+        "TeamHistoryId": 93,
         "Team": "Suns",
         "Season": "2020-2021",
         "WinRecord": 51,
@@ -1071,7 +1581,7 @@
         "RDB": 78.5
     },
     {
-        "TeamHistoryId": 64,
+        "TeamHistoryId": 94,
         "Team": "Bucks",
         "Season": "2020-2021",
         "WinRecord": 46,
@@ -1088,7 +1598,7 @@
         "RDB": 79.7
     },
     {
-        "TeamHistoryId": 65,
+        "TeamHistoryId": 95,
         "Team": "76ers",
         "Season": "2020-2021",
         "WinRecord": 49,
@@ -1105,7 +1615,7 @@
         "RDB": 78.2
     },
     {
-        "TeamHistoryId": 66,
+        "TeamHistoryId": 96,
         "Team": "Nuggets",
         "Season": "2020-2021",
         "WinRecord": 47,
@@ -1122,7 +1632,7 @@
         "RDB": 78.9
     },
     {
-        "TeamHistoryId": 67,
+        "TeamHistoryId": 97,
         "Team": "Nets",
         "Season": "2020-2021",
         "WinRecord": 48,
@@ -1139,7 +1649,7 @@
         "RDB": 77.3
     },
     {
-        "TeamHistoryId": 68,
+        "TeamHistoryId": 98,
         "Team": "Lakers",
         "Season": "2020-2021",
         "WinRecord": 42,
@@ -1156,7 +1666,7 @@
         "RDB": 79.7
     },
     {
-        "TeamHistoryId": 69,
+        "TeamHistoryId": 99,
         "Team": "Mavericks",
         "Season": "2020-2021",
         "WinRecord": 42,
@@ -1173,7 +1683,7 @@
         "RDB": 77.8
     },
     {
-        "TeamHistoryId": 70,
+        "TeamHistoryId": 100,
         "Team": "Knicks",
         "Season": "2020-2021",
         "WinRecord": 41,
@@ -1190,7 +1700,7 @@
         "RDB": 78.6
     },
     {
-        "TeamHistoryId": 71,
+        "TeamHistoryId": 101,
         "Team": "Hawks",
         "Season": "2020-2021",
         "WinRecord": 41,
@@ -1207,7 +1717,7 @@
         "RDB": 77.8
     },
     {
-        "TeamHistoryId": 72,
+        "TeamHistoryId": 102,
         "Team": "Trail Blazers",
         "Season": "2020-2021",
         "WinRecord": 42,
@@ -1224,7 +1734,7 @@
         "RDB": 77.5
     },
     {
-        "TeamHistoryId": 73,
+        "TeamHistoryId": 103,
         "Team": "Celtics",
         "Season": "2020-2021",
         "WinRecord": 36,
@@ -1241,7 +1751,7 @@
         "RDB": 78.1
     },
     {
-        "TeamHistoryId": 74,
+        "TeamHistoryId": 104,
         "Team": "Warriors",
         "Season": "2020-2021",
         "WinRecord": 39,
@@ -1258,7 +1768,7 @@
         "RDB": 76.6
     },
     {
-        "TeamHistoryId": 75,
+        "TeamHistoryId": 105,
         "Team": "Grizzlies",
         "Season": "2020-2021",
         "WinRecord": 38,
@@ -1275,7 +1785,7 @@
         "RDB": 78.3
     },
     {
-        "TeamHistoryId": 76,
+        "TeamHistoryId": 106,
         "Team": "Heat",
         "Season": "2020-2021",
         "WinRecord": 40,
@@ -1292,7 +1802,7 @@
         "RDB": 77.9
     },
     {
-        "TeamHistoryId": 77,
+        "TeamHistoryId": 107,
         "Team": "Pacers",
         "Season": "2020-2021",
         "WinRecord": 34,
@@ -1309,7 +1819,7 @@
         "RDB": 74.9
     },
     {
-        "TeamHistoryId": 78,
+        "TeamHistoryId": 108,
         "Team": "Pelicans",
         "Season": "2020-2021",
         "WinRecord": 31,
@@ -1326,7 +1836,7 @@
         "RDB": 80
     },
     {
-        "TeamHistoryId": 79,
+        "TeamHistoryId": 109,
         "Team": "Raptors",
         "Season": "2020-2021",
         "WinRecord": 27,
@@ -1343,7 +1853,7 @@
         "RDB": 76.3
     },
     {
-        "TeamHistoryId": 80,
+        "TeamHistoryId": 110,
         "Team": "Bulls",
         "Season": "2020-2021",
         "WinRecord": 31,
@@ -1360,7 +1870,7 @@
         "RDB": 80.3
     },
     {
-        "TeamHistoryId": 81,
+        "TeamHistoryId": 111,
         "Team": "Spurs",
         "Season": "2020-2021",
         "WinRecord": 33,
@@ -1377,7 +1887,7 @@
         "RDB": 77.3
     },
     {
-        "TeamHistoryId": 82,
+        "TeamHistoryId": 112,
         "Team": "Wizards",
         "Season": "2020-2021",
         "WinRecord": 34,
@@ -1394,7 +1904,7 @@
         "RDB": 77.6
     },
     {
-        "TeamHistoryId": 83,
+        "TeamHistoryId": 113,
         "Team": "Hornets",
         "Season": "2020-2021",
         "WinRecord": 33,
@@ -1411,7 +1921,7 @@
         "RDB": 75.7
     },
     {
-        "TeamHistoryId": 84,
+        "TeamHistoryId": 114,
         "Team": "Kings",
         "Season": "2020-2021",
         "WinRecord": 31,
@@ -1428,7 +1938,7 @@
         "RDB": 75
     },
     {
-        "TeamHistoryId": 85,
+        "TeamHistoryId": 115,
         "Team": "Pistons",
         "Season": "2020-2021",
         "WinRecord": 20,
@@ -1445,7 +1955,7 @@
         "RDB": 76.9
     },
     {
-        "TeamHistoryId": 86,
+        "TeamHistoryId": 116,
         "Team": "Timberwolves",
         "Season": "2020-2021",
         "WinRecord": 23,
@@ -1462,7 +1972,7 @@
         "RDB": 76.8
     },
     {
-        "TeamHistoryId": 87,
+        "TeamHistoryId": 117,
         "Team": "Rockets",
         "Season": "2020-2021",
         "WinRecord": 17,
@@ -1479,7 +1989,7 @@
         "RDB": 77.1
     },
     {
-        "TeamHistoryId": 88,
+        "TeamHistoryId": 118,
         "Team": "Cavaliers",
         "Season": "2020-2021",
         "WinRecord": 22,
@@ -1496,7 +2006,7 @@
         "RDB": 76.6
     },
     {
-        "TeamHistoryId": 89,
+        "TeamHistoryId": 119,
         "Team": "Magic",
         "Season": "2020-2021",
         "WinRecord": 21,
@@ -1513,7 +2023,7 @@
         "RDB": 78.2
     },
     {
-        "TeamHistoryId": 90,
+        "TeamHistoryId": 120,
         "Team": "Thunder",
         "Season": "2020-2021",
         "WinRecord": 22,
@@ -1530,7 +2040,7 @@
         "RDB": 77.9
     },
     {
-        "TeamHistoryId": 91,
+        "TeamHistoryId": 121,
         "Team": "Celtics",
         "Season": "2021-2022",
         "WinRecord": 51,
@@ -1547,7 +2057,7 @@
         "RDB": 77.3
     },
     {
-        "TeamHistoryId": 92,
+        "TeamHistoryId": 122,
         "Team": "Suns",
         "Season": "2021-2022",
         "WinRecord": 64,
@@ -1564,7 +2074,7 @@
         "RDB": 77.1
     },
     {
-        "TeamHistoryId": 93,
+        "TeamHistoryId": 123,
         "Team": "Jazz",
         "Season": "2021-2022",
         "WinRecord": 49,
@@ -1581,7 +2091,7 @@
         "RDB": 78.3
     },
     {
-        "TeamHistoryId": 94,
+        "TeamHistoryId": 124,
         "Team": "Grizzlies",
         "Season": "2021-2022",
         "WinRecord": 56,
@@ -1598,7 +2108,7 @@
         "RDB": 77.8
     },
     {
-        "TeamHistoryId": 95,
+        "TeamHistoryId": 125,
         "Team": "Warriors",
         "Season": "2021-2022",
         "WinRecord": 53,
@@ -1615,7 +2125,7 @@
         "RDB": 78.7
     },
     {
-        "TeamHistoryId": 96,
+        "TeamHistoryId": 126,
         "Team": "Heat",
         "Season": "2021-2022",
         "WinRecord": 53,
@@ -1632,7 +2142,7 @@
         "RDB": 78
     },
     {
-        "TeamHistoryId": 97,
+        "TeamHistoryId": 127,
         "Team": "Mavericks",
         "Season": "2021-2022",
         "WinRecord": 52,
@@ -1649,7 +2159,7 @@
         "RDB": 78
     },
     {
-        "TeamHistoryId": 98,
+        "TeamHistoryId": 128,
         "Team": "Bucks",
         "Season": "2021-2022",
         "WinRecord": 51,
@@ -1666,7 +2176,7 @@
         "RDB": 78.6
     },
     {
-        "TeamHistoryId": 99,
+        "TeamHistoryId": 129,
         "Team": "76ers",
         "Season": "2021-2022",
         "WinRecord": 51,
@@ -1683,7 +2193,7 @@
         "RDB": 76.8
     },
     {
-        "TeamHistoryId": 100,
+        "TeamHistoryId": 130,
         "Team": "Timberwolves",
         "Season": "2021-2022",
         "WinRecord": 46,
@@ -1700,7 +2210,7 @@
         "RDB": 74.9
     },
     {
-        "TeamHistoryId": 101,
+        "TeamHistoryId": 131,
         "Team": "Nuggets",
         "Season": "2021-2022",
         "WinRecord": 48,
@@ -1717,7 +2227,7 @@
         "RDB": 78.3
     },
     {
-        "TeamHistoryId": 102,
+        "TeamHistoryId": 132,
         "Team": "Raptors",
         "Season": "2021-2022",
         "WinRecord": 48,
@@ -1734,7 +2244,7 @@
         "RDB": 75.6
     },
     {
-        "TeamHistoryId": 103,
+        "TeamHistoryId": 133,
         "Team": "Cavaliers",
         "Season": "2021-2022",
         "WinRecord": 44,
@@ -1751,7 +2261,7 @@
         "RDB": 76.5
     },
     {
-        "TeamHistoryId": 104,
+        "TeamHistoryId": 134,
         "Team": "Atlanta Hawks",
         "Season": "2021-2022",
         "WinRecord": 43,
@@ -1768,7 +2278,7 @@
         "RDB": 76.9
     },
     {
-        "TeamHistoryId": 105,
+        "TeamHistoryId": 135,
         "Team": "Nets",
         "Season": "2021-2022",
         "WinRecord": 44,
@@ -1785,7 +2295,7 @@
         "RDB": 75.1
     },
     {
-        "TeamHistoryId": 106,
+        "TeamHistoryId": 136,
         "Team": "Hornets",
         "Season": "2021-2022",
         "WinRecord": 43,
@@ -1802,7 +2312,7 @@
         "RDB": 74.8
     },
     {
-        "TeamHistoryId": 107,
+        "TeamHistoryId": 137,
         "Team": "Spurs",
         "Season": "2021-2022",
         "WinRecord": 34,
@@ -1819,7 +2329,7 @@
         "RDB": 75.1
     },
     {
-        "TeamHistoryId": 108,
+        "TeamHistoryId": 138,
         "Team": "Clippers",
         "Season": "2021-2022",
         "WinRecord": 42,
@@ -1836,7 +2346,7 @@
         "RDB": 74.4
     },
     {
-        "TeamHistoryId": 109,
+        "TeamHistoryId": 139,
         "Team": "Knicks",
         "Season": "2021-2022",
         "WinRecord": 37,
@@ -1853,7 +2363,7 @@
         "RDB": 78.8
     },
     {
-        "TeamHistoryId": 110,
+        "TeamHistoryId": 140,
         "Team": "Bulls",
         "Season": "2021-2022",
         "WinRecord": 46,
@@ -1870,7 +2380,7 @@
         "RDB": 78.3
     },
     {
-        "TeamHistoryId": 111,
+        "TeamHistoryId": 141,
         "Team": "Pelicans",
         "Season": "2021-2022",
         "WinRecord": 36,
@@ -1887,7 +2397,7 @@
         "RDB": 78.2
     },
     {
-        "TeamHistoryId": 112,
+        "TeamHistoryId": 142,
         "Team": "Lakers",
         "Season": "2021-2022",
         "WinRecord": 33,
@@ -1904,7 +2414,7 @@
         "RDB": 75.8
     },
     {
-        "TeamHistoryId": 113,
+        "TeamHistoryId": 143,
         "Team": "Wizards",
         "Season": "2021-2022",
         "WinRecord": 35,
@@ -1921,7 +2431,7 @@
         "RDB": 76.9
     },
     {
-        "TeamHistoryId": 114,
+        "TeamHistoryId": 144,
         "Team": "Pacers",
         "Season": "2021-2022",
         "WinRecord": 25,
@@ -1938,7 +2448,7 @@
         "RDB": 76.2
     },
     {
-        "TeamHistoryId": 115,
+        "TeamHistoryId": 145,
         "Team": "Kings",
         "Season": "2021-2022",
         "WinRecord": 30,
@@ -1955,7 +2465,7 @@
         "RDB": 76
     },
     {
-        "TeamHistoryId": 116,
+        "TeamHistoryId": 146,
         "Team": "Pistons",
         "Season": "2021-2022",
         "WinRecord": 23,
@@ -1972,7 +2482,7 @@
         "RDB": 75.6
     },
     {
-        "TeamHistoryId": 117,
+        "TeamHistoryId": 147,
         "Team": "Magic",
         "Season": "2021-2022",
         "WinRecord": 22,
@@ -1989,7 +2499,7 @@
         "RDB": 77.2
     },
     {
-        "TeamHistoryId": 118,
+        "TeamHistoryId": 148,
         "Team": "Thunder",
         "Season": "2021-2022",
         "WinRecord": 24,
@@ -2006,7 +2516,7 @@
         "RDB": 76.1
     },
     {
-        "TeamHistoryId": 119,
+        "TeamHistoryId": 149,
         "Team": "Rockets",
         "Season": "2021-2022",
         "WinRecord": 20,
@@ -2023,7 +2533,7 @@
         "RDB": 74.4
     },
     {
-        "TeamHistoryId": 120,
+        "TeamHistoryId": 150,
         "Team": "Trail Blazers",
         "Season": "2021-2022",
         "WinRecord": 27,
@@ -2040,5 +2550,3 @@
         "RDB": 76.9
     }
 ]
-
-    
