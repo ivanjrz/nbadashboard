@@ -28,7 +28,7 @@ namespace Persistence.Configurations
             builder.Property(account => account.OEFGPct).IsRequired();
             builder.Property(account => account.DEFGPct).IsRequired();
             builder.Property(account => account.ORTg).IsRequired();
-            builder.Property(account => account.DRB).IsRequired();
+            builder.Property(account => account.RDB).IsRequired();
     }
     }
 }

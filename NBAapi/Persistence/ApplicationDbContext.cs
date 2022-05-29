@@ -14,6 +14,8 @@ namespace Persistence
         public DbSet<Team> Team { get; set; }
         public DbSet<Player> Player { get; set; }
         public DbSet<TeamHistory> TeamHistory { get; set; }
+        public DbSet<GameBoxScore> GameBoxScore { get; set; }
+        public DbSet<GameBoxScorePerPlayer> GameBoxScorePerPlayer { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
@@ -37,7 +39,8 @@ namespace Persistence
                     Name = "Hawks",
                     City = "Atlanta",
                     DateFounded = DateTime.Now,
-                    PhotoPath = "/Photos/nba_anonymous.jpg"
+                    PhotoPath = "/Photos/nba_anonymous.jpg",
+                    NBA_API_TeamId = 1610612737
                 },
                 new Team
                 {
@@ -45,7 +48,8 @@ namespace Persistence
                     Name = "Celtics",
                     City = "Boston",
                     DateFounded = DateTime.Now,
-                    PhotoPath = "/Photos/nba_anonymous.jpg"
+                    PhotoPath = "/Photos/nba_anonymous.jpg",
+                    NBA_API_TeamId = 1610612738
                 },
                 new Team
                 {
@@ -53,7 +57,8 @@ namespace Persistence
                     Name = "Nets",
                     City = "Brooklyn",
                     DateFounded = DateTime.Now,
-                    PhotoPath = "/Photos/nba_anonymous.jpg"
+                    PhotoPath = "/Photos/nba_anonymous.jpg",
+                    NBA_API_TeamId = 1610612751
                 },
                 new Team
                 {
@@ -61,7 +66,8 @@ namespace Persistence
                     Name = "Hornets",
                     City = "Charlotte",
                     DateFounded = DateTime.Now,
-                    PhotoPath = "/Photos/nba_anonymous.jpg"
+                    PhotoPath = "/Photos/nba_anonymous.jpg",
+                    NBA_API_TeamId = 1610612766
                 },
                 new Team
                 {
@@ -69,7 +75,8 @@ namespace Persistence
                     Name = "Bulls",
                     City = "Chicago",
                     DateFounded = DateTime.Now,
-                    PhotoPath = "/Photos/nba_anonymous.jpg"
+                    PhotoPath = "/Photos/nba_anonymous.jpg",
+                    NBA_API_TeamId = 1610612741
                 },
                 new Team
                 {
@@ -77,7 +84,8 @@ namespace Persistence
                     Name = "Cavaliers",
                     City = "Cleveland",
                     DateFounded = DateTime.Now,
-                    PhotoPath = "/Photos/nba_anonymous.jpg"
+                    PhotoPath = "/Photos/nba_anonymous.jpg",
+                    NBA_API_TeamId = 1610612739
                 },
                 new Team
                 {
@@ -85,7 +93,8 @@ namespace Persistence
                     Name = "Mavericks",
                     City = "Dallas",
                     DateFounded = DateTime.Now,
-                    PhotoPath = "/Photos/nba_anonymous.jpg"
+                    PhotoPath = "/Photos/nba_anonymous.jpg",
+                    NBA_API_TeamId = 1610612742
                 },
 
                 new Team
@@ -94,7 +103,8 @@ namespace Persistence
                     Name = "Nuggets",
                     City = "Denver",
                     DateFounded = DateTime.Now,
-                    PhotoPath = "/Photos/nba_anonymous.jpg"
+                    PhotoPath = "/Photos/nba_anonymous.jpg",
+                    NBA_API_TeamId = 1610612743
                 },
                 new Team
                 {
@@ -102,7 +112,8 @@ namespace Persistence
                     Name = "Pistons",
                     City = "Detroit",
                     DateFounded = DateTime.Now,
-                    PhotoPath = "/Photos/nba_anonymous.jpg"
+                    PhotoPath = "/Photos/nba_anonymous.jpg",
+                    NBA_API_TeamId = 1610612765
                 },
                 new Team
                 {
@@ -110,7 +121,8 @@ namespace Persistence
                     Name = "Warriors",
                     City = "Golden State",
                     DateFounded = DateTime.Now,
-                    PhotoPath = "/Photos/nba_anonymous.jpg"
+                    PhotoPath = "/Photos/nba_anonymous.jpg",
+                    NBA_API_TeamId = 1610612744
                 },
                 new Team
                 {
@@ -118,7 +130,8 @@ namespace Persistence
                     Name = "Rockets",
                     City = "Houston",
                     DateFounded = DateTime.Now,
-                    PhotoPath = "/Photos/nba_anonymous.jpg"
+                    PhotoPath = "/Photos/nba_anonymous.jpg",
+                    NBA_API_TeamId = 1610612745
                 },
                 new Team
                 {
@@ -126,7 +139,8 @@ namespace Persistence
                     Name = "Pacers",
                     City = "Indiana",
                     DateFounded = DateTime.Now,
-                    PhotoPath = "/Photos/nba_anonymous.jpg"
+                    PhotoPath = "/Photos/nba_anonymous.jpg",
+                    NBA_API_TeamId = 1610612754
                 },
 
                 new Team
@@ -135,7 +149,8 @@ namespace Persistence
                     Name = "Clippers",
                     City = "Los Angeles",
                     DateFounded = DateTime.Now,
-                    PhotoPath = "/Photos/nba_anonymous.jpg"
+                    PhotoPath = "/Photos/nba_anonymous.jpg",
+                    NBA_API_TeamId = 1610612746
                 },
                 new Team
                 {
@@ -143,7 +158,8 @@ namespace Persistence
                     Name = "Lakers",
                     City = "Los Angeles",
                     DateFounded = DateTime.Now,
-                    PhotoPath = "/Photos/nba_anonymous.jpg"
+                    PhotoPath = "/Photos/nba_anonymous.jpg",
+                    NBA_API_TeamId = 1610612747
                 },
                 new Team
                 {
@@ -151,7 +167,8 @@ namespace Persistence
                     Name = "Grizzlies",
                     City = "Memphis",
                     DateFounded = DateTime.Now,
-                    PhotoPath = "/Photos/nba_anonymous.jpg"
+                    PhotoPath = "/Photos/nba_anonymous.jpg",
+                    NBA_API_TeamId = 1610612763
                 },
                 new Team
                 {
@@ -159,7 +176,8 @@ namespace Persistence
                     Name = "Heat",
                     City = "Miami",
                     DateFounded = DateTime.Now,
-                    PhotoPath = "/Photos/nba_anonymous.jpg"
+                    PhotoPath = "/Photos/nba_anonymous.jpg",
+                    NBA_API_TeamId = 1610612748
                 },
                 new Team
                 {
@@ -167,7 +185,8 @@ namespace Persistence
                     Name = "Bucks",
                     City = "Milwaukee",
                     DateFounded = DateTime.Now,
-                    PhotoPath = "/Photos/nba_anonymous.jpg"
+                    PhotoPath = "/Photos/nba_anonymous.jpg",
+                    NBA_API_TeamId = 1610612749
                 },
                 new Team
                 {
@@ -175,7 +194,8 @@ namespace Persistence
                     Name = "Timberwolves",
                     City = "Minnesota",
                     DateFounded = DateTime.Now,
-                    PhotoPath = "/Photos/nba_anonymous.jpg"
+                    PhotoPath = "/Photos/nba_anonymous.jpg",
+                    NBA_API_TeamId = 1610612750
                 },
                 new Team
                 {
@@ -183,7 +203,8 @@ namespace Persistence
                     Name = "Pelicans",
                     City = "New Orleans",
                     DateFounded = DateTime.Now,
-                    PhotoPath = "/Photos/nba_anonymous.jpg"
+                    PhotoPath = "/Photos/nba_anonymous.jpg",
+                    NBA_API_TeamId = 1610612740
                 },
                 new Team
                 {
@@ -191,7 +212,8 @@ namespace Persistence
                     Name = "Knicks",
                     City = "New York",
                     DateFounded = DateTime.Now,
-                    PhotoPath = "/Photos/nba_anonymous.jpg"
+                    PhotoPath = "/Photos/nba_anonymous.jpg",
+                    NBA_API_TeamId = 1610612752
                 },
                 new Team
                 {
@@ -199,7 +221,8 @@ namespace Persistence
                     Name = "Thunder",
                     City = "Oklahoma City",
                     DateFounded = DateTime.Now,
-                    PhotoPath = "/Photos/nba_anonymous.jpg"
+                    PhotoPath = "/Photos/nba_anonymous.jpg",
+                    NBA_API_TeamId = 1610612760
                 },
                 new Team
                 {
@@ -207,7 +230,8 @@ namespace Persistence
                     Name = "Magic",
                     City = "Orlando",
                     DateFounded = DateTime.Now,
-                    PhotoPath = "/Photos/nba_anonymous.jpg"
+                    PhotoPath = "/Photos/nba_anonymous.jpg",
+                    NBA_API_TeamId = 1610612753
                 },
                 new Team
                 {
@@ -215,7 +239,8 @@ namespace Persistence
                     Name = "76ers",
                     City = "Philadelphia",
                     DateFounded = DateTime.Now,
-                    PhotoPath = "/Photos/nba_anonymous.jpg"
+                    PhotoPath = "/Photos/nba_anonymous.jpg",
+                    NBA_API_TeamId = 1610612755
                 },
                 new Team
                 {
@@ -223,7 +248,8 @@ namespace Persistence
                     Name = "Suns",
                     City = "Phoenix",
                     DateFounded = DateTime.Now,
-                    PhotoPath = "/Photos/nba_anonymous.jpg"
+                    PhotoPath = "/Photos/nba_anonymous.jpg",
+                    NBA_API_TeamId = 1610612756
                 },
                 new Team
                 {
@@ -231,7 +257,8 @@ namespace Persistence
                     Name = "Trail Blazers",
                     City = "Portland",
                     DateFounded = DateTime.Now,
-                    PhotoPath = "/Photos/nba_anonymous.jpg"
+                    PhotoPath = "/Photos/nba_anonymous.jpg",
+                    NBA_API_TeamId = 1610612757
                 },
                 new Team
                 {
@@ -239,7 +266,8 @@ namespace Persistence
                     Name = "Kings",
                     City = "Sacramento",
                     DateFounded = DateTime.Now,
-                    PhotoPath = "/Photos/nba_anonymous.jpg"
+                    PhotoPath = "/Photos/nba_anonymous.jpg",
+                    NBA_API_TeamId = 1610612758
                 },
                 new Team
                 {
@@ -247,7 +275,8 @@ namespace Persistence
                     Name = "Spurs",
                     City = "San Antonio",
                     DateFounded = DateTime.Now,
-                    PhotoPath = "/Photos/nba_anonymous.jpg"
+                    PhotoPath = "/Photos/nba_anonymous.jpg",
+                    NBA_API_TeamId = 1610612759
                 },
                 new Team
                 {
@@ -255,7 +284,8 @@ namespace Persistence
                     Name = "Raptos",
                     City = "Toronto",
                     DateFounded = DateTime.Now,
-                    PhotoPath = "/Photos/nba_anonymous.jpg"
+                    PhotoPath = "/Photos/nba_anonymous.jpg",
+                    NBA_API_TeamId = 1610612761
                 },
                 new Team
                 {
@@ -263,7 +293,8 @@ namespace Persistence
                     Name = "Jazz",
                     City = "Utah",
                     DateFounded = DateTime.Now,
-                    PhotoPath = "/Photos/nba_anonymous.jpg"
+                    PhotoPath = "/Photos/nba_anonymous.jpg",
+                    NBA_API_TeamId = 1610612762
                 },
                 new Team
                 {
@@ -271,7 +302,8 @@ namespace Persistence
                     Name = "Wizards",
                     City = "Washington",
                     DateFounded = DateTime.Now,
-                    PhotoPath = "/Photos/nba_anonymous.jpg"
+                    PhotoPath = "/Photos/nba_anonymous.jpg",
+                    NBA_API_TeamId = 1610612764
                 }
                 );
             #endregion Team Initializer
@@ -348,24 +380,40 @@ namespace Persistence
 
             //Team history intializer
             modelBuilder.Entity<TeamHistory>().HasData(JsonSeasonHistory());
+            modelBuilder.Entity<GameBoxScore>().HasData(JsonGameBoxScore());
 
-            
+
         }
+        #endregion Model initializers
+        #region Seeders
         /// <summary>
-        /// Returns list of TeamHistory entities for initial data seeding
+        /// Returns list of TeamHistory objects for initial  seeding
         /// </summary>
         /// <returns></returns>
         public List<TeamHistory> JsonSeasonHistory()
         {
             var values = new List<TeamHistory>();
-            using (StreamReader r = new StreamReader(@"../Persistence/team_season_histories.json"))
+            using (StreamReader r = new StreamReader(@"../Persistence/teamhistory.json"))
             {
                 string json = r.ReadToEnd();
                 values = JsonConvert.DeserializeObject<List<TeamHistory>>(json);
             }
             return values;
         }
-
-        #endregion Model initializers
+        /// <summary>
+        /// Returns list of GameBoxScore objects for initial  seeding
+        /// </summary>
+        /// <returns></returns>
+        public List<GameBoxScore> JsonGameBoxScore()
+        {
+            var values = new List<GameBoxScore>();
+            using (StreamReader r = new StreamReader(@"../Persistence/gameboxscore.json"))
+            {
+                string json = r.ReadToEnd();
+                values = JsonConvert.DeserializeObject<List<GameBoxScore>>(json);
+            }
+            return values;
+        }
+        #endregion Seeders
     }
 }
