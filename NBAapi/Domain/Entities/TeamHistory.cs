@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
+
 namespace Domain.Entities
 {
     /// <summary>
@@ -7,6 +9,7 @@ namespace Domain.Entities
     /// </summary>
     public class TeamHistory
     {
+        [Key]
         public int TeamHistoryId { get; set; }
         public string Team { get; set; }
 
@@ -25,6 +28,6 @@ namespace Domain.Entities
         public double OEFGPct { get; set; }
         public double DEFGPct { get; set; }
         public double ORB { get; set; }
-        public double DRB { get; set; }
+        public double RDB { get; set; }
     }
 }

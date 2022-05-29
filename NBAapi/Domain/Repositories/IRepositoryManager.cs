@@ -9,6 +9,8 @@ namespace Domain.Repositories
 
         ITeamHistoryRepository TeamHistoryRepository { get; }
 
+        IGameBoxScoreRepository GameBoxScoreRepository { get; }
+
         IUnitOfWork UnitOfWork { get; }
     }
 }
