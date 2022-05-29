@@ -8,5 +8,7 @@ namespace Services
         IPlayerService PlayerService { get; }
 
         ITeamHistoryService TeamHistoryService { get; }
+
+        IGameBoxScoreService GameBoxScoreService { get; }
     }
 }
