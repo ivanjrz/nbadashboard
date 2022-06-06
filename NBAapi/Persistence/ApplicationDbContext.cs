@@ -16,6 +16,8 @@ namespace Persistence
         public DbSet<TeamHistory> TeamHistory { get; set; }
         public DbSet<GameBoxScore> GameBoxScore { get; set; }
         public DbSet<GameBoxScorePerPlayer> GameBoxScorePerPlayer { get; set; }
+        public DbSet<SeriesPredictionSummary> SeriesPredictionSummary { get; set; }
+        public DbSet<SinglePrediction> SinglePrediction { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
