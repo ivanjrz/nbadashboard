@@ -9,8 +9,8 @@ namespace Persistence
         private readonly Lazy<ITeamHistoryRepository> _lazyTeamHistoryRepository;
         private readonly Lazy<IPlayerRepository> _lazyPlayerRepository;
         private readonly Lazy<IGameBoxScoreRepository> _gbsRepository;
-        private readonly Lazy<ISinglePredictionRepository> _singlePredictionRepository;
-        private readonly Lazy<ISeriesPredictionSummaryRepository> _seriesPredictionRepository;
+        private readonly Lazy<ISinglePredictionRepository> _lazySinglePredictionRepository;
+        private readonly Lazy<ISeriesPredictionSummaryRepository> _lazySeriesPredictionRepository;
 
         private readonly Lazy<IUnitOfWork> _lazyUnitOfWork;
 
@@ -20,8 +20,8 @@ namespace Persistence
             _lazyTeamHistoryRepository = new Lazy<ITeamHistoryRepository>(() => new TeamHistoryRepository(dbContext));
             _lazyPlayerRepository = new Lazy<IPlayerRepository>(() => new PlayerRepository(dbContext));
             _gbsRepository = new Lazy<IGameBoxScoreRepository>(() => new GameBoxScoreRepository(dbContext));
-            _singlePredictionRepository = new Lazy<ISinglePredictionRepository>(() => new SinglePredictionRepository(dbContext));
-            _seriesPredictionRepository = new Lazy<ISeriesPredictionSummaryRepository>(() => new SeriesPredictionSummaryRepository(dbContext));
+            _lazySinglePredictionRepository = new Lazy<ISinglePredictionRepository>(() => new SinglePredictionRepository(dbContext));
+            _lazySeriesPredictionRepository = new Lazy<ISeriesPredictionSummaryRepository>(() => new SeriesPredictionSummaryRepository(dbContext));
             _lazyUnitOfWork = new Lazy<IUnitOfWork>(() => new UnitOfWork(dbContext));
         }
 
@@ -33,10 +33,11 @@ namespace Persistence
 
         public IGameBoxScoreRepository GameBoxScoreRepository => _gbsRepository.Value;
 
-        public ISinglePredictionRepository SinglePredictionRepository => _singlePredictionRepository.Value;
+        public ISeriesPredictionSummaryRepository SeriesPredictionSummaryRepository => _lazySeriesPredictionRepository.Value;
 
-        public ISeriesPredictionSummaryRepository SeriesPredictionRepository => _seriesPredictionRepository.Value;
+        public ISinglePredictionRepository SinglePredictionRepository => _lazySinglePredictionRepository.Value;
 
         public IUnitOfWork UnitOfWork => _lazyUnitOfWork.Value;
+
     }
 }

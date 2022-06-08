@@ -7,7 +7,9 @@ namespace Contracts
     {
         public int SinglePredictionId { get; set; }
         public string TeamId { get; set; }
-        public double NBA_API_PlayerId { get; set; }
+        public double NBA_API_TeamId { get; set; }
+        public string Label { get; set; }
         public int Win { get; set; }
+        public int SeriesPredictionSummaryId { get; set; }
     }
 }

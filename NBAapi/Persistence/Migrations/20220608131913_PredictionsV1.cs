@@ -5,602 +5,585 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Persistence.Migrations
 {
-    public partial class AddedPredictionsV2 : Migration
+    public partial class PredictionsV1 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
-                name: "SeriesPredictionSummary",
-                columns: table => new
-                {
-                    SeriesPredictionSummaryId = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    DateAdded = table.Column<DateTime>(type: "TEXT", nullable: false),
-                    Features = table.Column<int>(type: "INTEGER", nullable: false),
-                    Loss = table.Column<double>(type: "REAL", nullable: false),
-                    Accuracy = table.Column<double>(type: "REAL", nullable: false),
-                    Recall = table.Column<double>(type: "REAL", nullable: false),
-                    Optimizer = table.Column<string>(type: "TEXT", nullable: true),
-                    Epochs = table.Column<int>(type: "INTEGER", nullable: false),
-                    TrainSize = table.Column<int>(type: "INTEGER", nullable: false),
-                    TestSize = table.Column<int>(type: "INTEGER", nullable: false),
-                    Technique = table.Column<string>(type: "TEXT", nullable: true),
-                    Comments = table.Column<string>(type: "TEXT", maxLength: 255, nullable: true),
-                    Team = table.Column<string>(type: "TEXT", nullable: true),
-                    TeamId = table.Column<int>(type: "INTEGER", nullable: false),
-                    NBA_API_TeamId = table.Column<double>(type: "REAL", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_SeriesPredictionSummary", x => x.SeriesPredictionSummaryId);
-                });
+            migrationBuilder.DropForeignKey(
+                name: "FK_SinglePrediction_SeriesPredictionSummary_SeriesPredictionSummaryId",
+                table: "SinglePrediction");
 
-            migrationBuilder.CreateTable(
-                name: "SinglePrediction",
-                columns: table => new
-                {
-                    SinglePredictionId = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    TeamId = table.Column<int>(type: "INTEGER", nullable: false),
-                    NBA_API_PlayerId = table.Column<double>(type: "REAL", nullable: false),
-                    Win = table.Column<int>(type: "INTEGER", nullable: false),
-                    SeriesPredictionSummaryId = table.Column<int>(type: "INTEGER", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_SinglePrediction", x => x.SinglePredictionId);
-                    table.ForeignKey(
-                        name: "FK_SinglePrediction_SeriesPredictionSummary_SeriesPredictionSummaryId",
-                        column: x => x.SeriesPredictionSummaryId,
-                        principalTable: "SeriesPredictionSummary",
-                        principalColumn: "SeriesPredictionSummaryId");
-                });
+            migrationBuilder.AlterColumn<int>(
+                name: "SeriesPredictionSummaryId",
+                table: "SinglePrediction",
+                type: "INTEGER",
+                nullable: false,
+                defaultValue: 0,
+                oldClrType: typeof(int),
+                oldType: "INTEGER",
+                oldNullable: true);
 
             migrationBuilder.UpdateData(
                 table: "Player",
                 keyColumn: "PlayerId",
                 keyValue: 1,
                 column: "Joined",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(2730));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(5970));
 
             migrationBuilder.UpdateData(
                 table: "Player",
                 keyColumn: "PlayerId",
                 keyValue: 2,
                 column: "Joined",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(2940));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(6150));
 
             migrationBuilder.UpdateData(
                 table: "Player",
                 keyColumn: "PlayerId",
                 keyValue: 3,
                 column: "Joined",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(2950));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(6160));
 
             migrationBuilder.UpdateData(
                 table: "Player",
                 keyColumn: "PlayerId",
                 keyValue: 4,
                 column: "Joined",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(2960));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(6170));
 
             migrationBuilder.UpdateData(
                 table: "Player",
                 keyColumn: "PlayerId",
                 keyValue: 5,
                 column: "Joined",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(2980));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(6190));
 
             migrationBuilder.UpdateData(
                 table: "Player",
                 keyColumn: "PlayerId",
                 keyValue: 6,
                 column: "Joined",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(2990));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(6200));
 
             migrationBuilder.UpdateData(
                 table: "Player",
                 keyColumn: "PlayerId",
                 keyValue: 7,
                 column: "Joined",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(3000));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(6210));
 
             migrationBuilder.UpdateData(
                 table: "Player",
                 keyColumn: "PlayerId",
                 keyValue: 8,
                 column: "Joined",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(3010));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(6230));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 1,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 267, DateTimeKind.Local).AddTicks(7480));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(1880));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 2,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(80));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(2890));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 3,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(100));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(2910));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 4,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(140));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(2950));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 5,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(210));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(2960));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 6,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(230));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(2990));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 7,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(240));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3000));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 8,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(260));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3010));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 9,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(270));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3030));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 10,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(280));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3040));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 11,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(320));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3070));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 12,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(340));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3100));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 13,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(350));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3110));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 14,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(360));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3200));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 15,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(380));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3220));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 16,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(410));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3250));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 17,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(420));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3260));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 18,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(440));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3280));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 19,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(460));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3300));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 20,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(470));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3310));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 21,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(490));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3330));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 22,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(500));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3340));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 23,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(510));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3350));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 24,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(530));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3360));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 25,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(540));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3380));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 26,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(550));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3390));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 27,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(560));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3400));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 28,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(570));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3410));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 29,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(600));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3430));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 30,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 22, 13, 34, 268, DateTimeKind.Local).AddTicks(610));
+                value: new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3440));
 
-            migrationBuilder.CreateIndex(
-                name: "IX_SinglePrediction_SeriesPredictionSummaryId",
+            migrationBuilder.AddForeignKey(
+                name: "FK_SinglePrediction_SeriesPredictionSummary_SeriesPredictionSummaryId",
                 table: "SinglePrediction",
-                column: "SeriesPredictionSummaryId");
+                column: "SeriesPredictionSummaryId",
+                principalTable: "SeriesPredictionSummary",
+                principalColumn: "SeriesPredictionSummaryId",
+                onDelete: ReferentialAction.Cascade);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "SinglePrediction");
+            migrationBuilder.DropForeignKey(
+                name: "FK_SinglePrediction_SeriesPredictionSummary_SeriesPredictionSummaryId",
+                table: "SinglePrediction");
 
-            migrationBuilder.DropTable(
-                name: "SeriesPredictionSummary");
+            migrationBuilder.AlterColumn<int>(
+                name: "SeriesPredictionSummaryId",
+                table: "SinglePrediction",
+                type: "INTEGER",
+                nullable: true,
+                oldClrType: typeof(int),
+                oldType: "INTEGER");
 
             migrationBuilder.UpdateData(
                 table: "Player",
                 keyColumn: "PlayerId",
                 keyValue: 1,
                 column: "Joined",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(2840));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 473, DateTimeKind.Local).AddTicks(1330));
 
             migrationBuilder.UpdateData(
                 table: "Player",
                 keyColumn: "PlayerId",
                 keyValue: 2,
                 column: "Joined",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(3000));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 473, DateTimeKind.Local).AddTicks(1550));
 
             migrationBuilder.UpdateData(
                 table: "Player",
                 keyColumn: "PlayerId",
                 keyValue: 3,
                 column: "Joined",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(3020));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 473, DateTimeKind.Local).AddTicks(1560));
 
             migrationBuilder.UpdateData(
                 table: "Player",
                 keyColumn: "PlayerId",
                 keyValue: 4,
                 column: "Joined",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(3030));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 473, DateTimeKind.Local).AddTicks(1580));
 
             migrationBuilder.UpdateData(
                 table: "Player",
                 keyColumn: "PlayerId",
                 keyValue: 5,
                 column: "Joined",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(3040));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 473, DateTimeKind.Local).AddTicks(1590));
 
             migrationBuilder.UpdateData(
                 table: "Player",
                 keyColumn: "PlayerId",
                 keyValue: 6,
                 column: "Joined",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(3050));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 473, DateTimeKind.Local).AddTicks(1600));
 
             migrationBuilder.UpdateData(
                 table: "Player",
                 keyColumn: "PlayerId",
                 keyValue: 7,
                 column: "Joined",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(3060));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 473, DateTimeKind.Local).AddTicks(1610));
 
             migrationBuilder.UpdateData(
                 table: "Player",
                 keyColumn: "PlayerId",
                 keyValue: 8,
                 column: "Joined",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(3070));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 473, DateTimeKind.Local).AddTicks(1620));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 1,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(830));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 472, DateTimeKind.Local).AddTicks(4860));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 2,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(1740));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 472, DateTimeKind.Local).AddTicks(7940));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 3,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(1760));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 472, DateTimeKind.Local).AddTicks(7970));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 4,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(1780));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 472, DateTimeKind.Local).AddTicks(8030));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 5,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(1790));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 472, DateTimeKind.Local).AddTicks(8040));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 6,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(1800));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 472, DateTimeKind.Local).AddTicks(8080));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 7,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(1820));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 472, DateTimeKind.Local).AddTicks(8090));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 8,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(1830));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 472, DateTimeKind.Local).AddTicks(8100));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 9,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(1840));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 472, DateTimeKind.Local).AddTicks(8120));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 10,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(1850));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 472, DateTimeKind.Local).AddTicks(8130));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 11,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(1870));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 472, DateTimeKind.Local).AddTicks(8180));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 12,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(1880));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 472, DateTimeKind.Local).AddTicks(8210));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 13,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(1890));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 472, DateTimeKind.Local).AddTicks(8230));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 14,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(1910));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 472, DateTimeKind.Local).AddTicks(8300));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 15,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(1920));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 472, DateTimeKind.Local).AddTicks(8330));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 16,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(1930));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 472, DateTimeKind.Local).AddTicks(8370));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 17,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(1940));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 472, DateTimeKind.Local).AddTicks(8380));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 18,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(1960));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 472, DateTimeKind.Local).AddTicks(8400));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 19,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(1970));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 472, DateTimeKind.Local).AddTicks(8420));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 20,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(1980));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 472, DateTimeKind.Local).AddTicks(8440));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 21,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(1990));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 472, DateTimeKind.Local).AddTicks(8450));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 22,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(2000));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 472, DateTimeKind.Local).AddTicks(8460));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 23,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(2010));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 472, DateTimeKind.Local).AddTicks(8470));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 24,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(2030));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 472, DateTimeKind.Local).AddTicks(8490));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 25,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(2040));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 472, DateTimeKind.Local).AddTicks(8500));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 26,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(2060));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 472, DateTimeKind.Local).AddTicks(8510));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 27,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(2070));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 472, DateTimeKind.Local).AddTicks(8520));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 28,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(2080));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 472, DateTimeKind.Local).AddTicks(8540));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 29,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(2100));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 472, DateTimeKind.Local).AddTicks(8590));
 
             migrationBuilder.UpdateData(
                 table: "Team",
                 keyColumn: "TeamId",
                 keyValue: 30,
                 column: "DateFounded",
-                value: new DateTime(2022, 6, 4, 21, 43, 51, 404, DateTimeKind.Local).AddTicks(2110));
+                value: new DateTime(2022, 6, 7, 0, 4, 8, 472, DateTimeKind.Local).AddTicks(8610));
+
+            migrationBuilder.AddForeignKey(
+                name: "FK_SinglePrediction_SeriesPredictionSummary_SeriesPredictionSummaryId",
+                table: "SinglePrediction",
+                column: "SeriesPredictionSummaryId",
+                principalTable: "SeriesPredictionSummary",
+                principalColumn: "SeriesPredictionSummaryId");
         }
     }
 }

@@ -8,11 +8,7 @@ namespace Domain.Repositories
 {
     public interface ISinglePredictionRepository
     {
-        Task<IEnumerable<SinglePrediction>> GetAllBySeriesAsync(int seriesId, CancellationToken cancellationToken = default);
         Task<IEnumerable<SinglePrediction>> GetAllAsync(CancellationToken cancellationToken = default);
-        Task<SinglePrediction> GetByIdAsync(int singlePredictionId, CancellationToken cancellationToken = default);
-
-        void Insert(SinglePrediction single);
-        void Remove(SinglePrediction single);
+        Task<IEnumerable<SinglePrediction>> GetAllBySeriesIdAsync(int seriesId, CancellationToken cancellationToken = default);
     }
 }

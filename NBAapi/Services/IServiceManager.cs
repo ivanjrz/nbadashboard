@@ -10,5 +10,9 @@ namespace Services
         ITeamHistoryService TeamHistoryService { get; }
 
         IGameBoxScoreService GameBoxScoreService { get; }
+
+        ISeriesPredictionSummaryService SeriesPredictionSummaryService { get; }
+
+        ISinglePredictionService SinglePredictionService { get; }
     }
 }

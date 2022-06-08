@@ -11,6 +11,10 @@ namespace Domain.Repositories
 
         IGameBoxScoreRepository GameBoxScoreRepository { get; }
 
+        ISeriesPredictionSummaryRepository SeriesPredictionSummaryRepository { get; }
+
+        ISinglePredictionRepository SinglePredictionRepository { get; }
+
         IUnitOfWork UnitOfWork { get; }
     }
 }

@@ -15,17 +15,11 @@ namespace Persistence
 
         public SinglePredictionRepository(ApplicationDbContext dbContext) => _dbContext = dbContext;
 
-        public async Task<IEnumerable<SinglePrediction>> GetAllBySeriesAsync(int teamId, CancellationToken cancellationToken = default) =>
-            await _dbContext.SinglePrediction.Where(x => x.TeamId == teamId).ToListAsync(cancellationToken);
-
         public async Task<IEnumerable<SinglePrediction>> GetAllAsync(CancellationToken cancellationToken = default) =>
             await _dbContext.SinglePrediction.ToListAsync(cancellationToken);
 
-        public async Task<SinglePrediction> GetByIdAsync(int singleId, CancellationToken cancellationToken = default) =>
-            await _dbContext.SinglePrediction.FirstOrDefaultAsync(x => x.SinglePredictionId == singleId, cancellationToken);
+        public async Task<IEnumerable<SinglePrediction>> GetAllBySeriesIdAsync(int seriesId, CancellationToken cancellationToken = default) =>
 
-        public void Insert(SinglePrediction single) => _dbContext.SinglePrediction.Add(single);
-
-        public void Remove(SinglePrediction single) => _dbContext.SinglePrediction.Remove(single);
+            await _dbContext.SinglePrediction.Where(x => x.SeriesPredictionSummaryId == seriesId).ToListAsync(cancellationToken);
     }
 }
