@@ -19,6 +19,8 @@
     <None Remove="System.Data.SqlClient" />
     <None Remove="Configurations\" />
     <None Remove="Newtonsoft.Json" />
+    <None Remove="app.db-shm" />
+    <None Remove="app.db-wal" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="EntityFramework" Version="6.4.4" />
