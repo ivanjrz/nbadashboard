@@ -10,8 +10,9 @@ Data for games, box scores, all player and head-to-head stats, were scraped from
 ## Pre-requisites
 
 * [.NET 6](https://dotnet.microsoft.com/en-us/download)
-* [npm](https://nodejs.org/en/download/) or [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable) for packet management
+* [npm](https://nodejs.org/en/download/) or [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable) for package management
 * [use npm/yarn CLI to install Angular](https://angular.io/guide/setup-local)**
+* Junyper notebook enabled IDE/editor, environment configured preferably with [conda](https://docs.conda.io/en/latest/)
 
 ** Frontend runs Angular 10
 
