@@ -1,7 +1,8 @@
 # NBA Dashboard
 
-NBA Dashboard is a regular season game predictor based on papers found in [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S2210832717301485) and [IJERT](https://www.ijert.org/prediction-of-winning-team-using-machine-learning)
+NBA Dashboard is a game predictor based on papers found in [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S2210832717301485) and [IJERT](https://www.ijert.org/prediction-of-winning-team-using-machine-learning)
 
+Data for games, box scores, all player and head-to-head stats, were scraped from [Basketball-Reference](http://basketball-reference.com), also possible thanks to [swar NBA api client](https://github.com/swar/nba_api)
   
 ![2021 NBA Finals - Bucks vs Suns](nba-predictions/images/bucks-suns-2021.JPG "2021 NBA Finals")
 [Image courtesy of ESPN](https://www.espn.com/nba/story/_/id/31803541/nba-finals-2021-milwaukee-bucks-waste-another-legendary-performance-giannis-antetokounmpo)
@@ -16,7 +17,7 @@ NBA Dashboard is a regular season game predictor based on papers found in [Scien
 
 <br>
 
-## How to start NBA Dashboard
+## How to (install, build, run)
 
 Either using dotnet CLI or Visual Studio 2022/Visual Studio Code
 
