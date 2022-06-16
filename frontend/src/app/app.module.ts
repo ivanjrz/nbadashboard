@@ -17,11 +17,15 @@ import { ShowPlayerComponent } from './player/show-player/show-player.component'
 import { AddEditPlayerComponent } from './player/add-edit-player/add-edit-player.component';
 import { ShowTeamHistoryComponent } from './teamhistory/show-teamhistory/show-teamhistory.component';
 import { AddEditTeamHistoryComponent } from './teamhistory/add-edit-teamhistory/add-edit-teamhistory.component';
+import { ShowSeriesPredictionsComponent } from './predictions/show-series-predictions/show-series-predictions.component';
+import { PredictionsComponent } from './predictions/predictions.component';
+import { ShowPredictionsSummaryComponent } from './predictions/show-summary/show-summary.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+
 // import { MatCard } from '@angular/material/card';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatCardModule } from '@angular/material/card';
-import { PredictionsComponent } from './predictions/predictions.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +40,10 @@ import { PredictionsComponent } from './predictions/predictions.component';
     TeamHistoryComponent,
     ShowTeamHistoryComponent,
     AddEditTeamHistoryComponent,
-    PredictionsComponent
+    PredictionsComponent,
+    ShowPredictionsSummaryComponent,
+    ShowSeriesPredictionsComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

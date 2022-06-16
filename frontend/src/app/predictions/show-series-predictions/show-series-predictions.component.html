@@ -1,0 +1,18 @@
+<mat-card>
+<h3>{{teamName}}  {{result}}</h3>
+<hr>
+<table>
+  <tr>
+    <th>Game</th>
+    <th>Result</th> 
+  </tr>
+  <tr *ngFor = "let row of winArray;let iterator=index;">
+    <td>
+      #{{iterator+1}}
+    </td>
+    <td>
+      {{row}}
+    </td>
+  </tr>
+</table>
+</mat-card>

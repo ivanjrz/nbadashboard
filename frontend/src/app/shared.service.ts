@@ -57,4 +57,12 @@ readonly PhotoUrl = "http://localhost:53535/Photos/";
     return this.http.get<any>(this.APIUrl+'/TeamHistory');
   }
 
+  getPredictionSummaryList():Observable<any[]>{
+    return this.http.get<any>(this.APIUrl+'/seriesprediction');
+  }
+
+  getPredictionListById(val:any){
+    return this.http.get<any>(this.APIUrl+'/prediction/'+val);
+  }
+  
 }
