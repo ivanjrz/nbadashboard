@@ -5,6 +5,7 @@ NBA Dashboard is a game predictor based on papers found in [ScienceDirect](https
 Data for games, box scores, all player and head-to-head stats, were scraped from [Basketball-Reference](http://basketball-reference.com), also possible thanks to [swar NBA api client](https://github.com/swar/nba_api)
   
 ![2021 NBA Finals - Bucks vs Suns](nba-predictions/images/2022finals.png "2022 NBA Finals")
+
 [Image courtesy of Sporting News](https://www.sportingnews.com/us)
 
 <br>
