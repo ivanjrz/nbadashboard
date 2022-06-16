@@ -11,8 +11,8 @@ using Persistence;
 namespace Persistence.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220608131913_PredictionsV1")]
-    partial class PredictionsV1
+    [Migration("20220613052955_PredictionsV2")]
+    partial class PredictionsV2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -73848,7 +73848,7 @@ namespace Persistence.Migrations
                         new
                         {
                             PlayerId = 1,
-                            Joined = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(5970),
+                            Joined = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(3120),
                             NBA_API_PlayerId = 0.0,
                             Name = "Trae Young",
                             PhotoPath = "/Photos/nba_anonymous.jpg",
@@ -73857,7 +73857,7 @@ namespace Persistence.Migrations
                         new
                         {
                             PlayerId = 2,
-                            Joined = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(6150),
+                            Joined = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(3280),
                             NBA_API_PlayerId = 0.0,
                             Name = "Jayson Tatum",
                             PhotoPath = "/Photos/nba_anonymous.jpg",
@@ -73866,7 +73866,7 @@ namespace Persistence.Migrations
                         new
                         {
                             PlayerId = 3,
-                            Joined = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(6160),
+                            Joined = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(3290),
                             NBA_API_PlayerId = 0.0,
                             Name = "Kevin Durant",
                             PhotoPath = "/Photos/nba_anonymous.jpg",
@@ -73875,7 +73875,7 @@ namespace Persistence.Migrations
                         new
                         {
                             PlayerId = 4,
-                            Joined = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(6170),
+                            Joined = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(3300),
                             NBA_API_PlayerId = 0.0,
                             Name = "Stephen Curry",
                             PhotoPath = "/Photos/nba_anonymous.jpg",
@@ -73884,7 +73884,7 @@ namespace Persistence.Migrations
                         new
                         {
                             PlayerId = 5,
-                            Joined = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(6190),
+                            Joined = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(3310),
                             NBA_API_PlayerId = 0.0,
                             Name = "Zach LaVine",
                             PhotoPath = "/Photos/nba_anonymous.jpg",
@@ -73893,7 +73893,7 @@ namespace Persistence.Migrations
                         new
                         {
                             PlayerId = 6,
-                            Joined = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(6200),
+                            Joined = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(3320),
                             NBA_API_PlayerId = 0.0,
                             Name = "LeBron James",
                             PhotoPath = "/Photos/nba_anonymous.jpg",
@@ -73902,7 +73902,7 @@ namespace Persistence.Migrations
                         new
                         {
                             PlayerId = 7,
-                            Joined = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(6210),
+                            Joined = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(3340),
                             NBA_API_PlayerId = 0.0,
                             Name = "Anthony Davis",
                             PhotoPath = "/Photos/nba_anonymous.jpg",
@@ -73911,7 +73911,7 @@ namespace Persistence.Migrations
                         new
                         {
                             PlayerId = 8,
-                            Joined = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(6230),
+                            Joined = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(3350),
                             NBA_API_PlayerId = 0.0,
                             Name = "Julius Randle",
                             PhotoPath = "/Photos/nba_anonymous.jpg",
@@ -74034,7 +74034,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 1,
                             City = "Atlanta",
-                            DateFounded = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(1880),
+                            DateFounded = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(770),
                             NBA_API_TeamId = 1610612737.0,
                             Name = "Hawks",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
@@ -74043,7 +74043,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 2,
                             City = "Boston",
-                            DateFounded = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(2890),
+                            DateFounded = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(1770),
                             NBA_API_TeamId = 1610612738.0,
                             Name = "Celtics",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
@@ -74052,7 +74052,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 3,
                             City = "Brooklyn",
-                            DateFounded = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(2910),
+                            DateFounded = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(1790),
                             NBA_API_TeamId = 1610612751.0,
                             Name = "Nets",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
@@ -74061,7 +74061,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 4,
                             City = "Charlotte",
-                            DateFounded = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(2950),
+                            DateFounded = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(1800),
                             NBA_API_TeamId = 1610612766.0,
                             Name = "Hornets",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
@@ -74070,7 +74070,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 5,
                             City = "Chicago",
-                            DateFounded = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(2960),
+                            DateFounded = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(1820),
                             NBA_API_TeamId = 1610612741.0,
                             Name = "Bulls",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
@@ -74079,7 +74079,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 6,
                             City = "Cleveland",
-                            DateFounded = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(2990),
+                            DateFounded = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(1830),
                             NBA_API_TeamId = 1610612739.0,
                             Name = "Cavaliers",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
@@ -74088,7 +74088,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 7,
                             City = "Dallas",
-                            DateFounded = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3000),
+                            DateFounded = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(1840),
                             NBA_API_TeamId = 1610612742.0,
                             Name = "Mavericks",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
@@ -74097,7 +74097,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 8,
                             City = "Denver",
-                            DateFounded = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3010),
+                            DateFounded = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(1860),
                             NBA_API_TeamId = 1610612743.0,
                             Name = "Nuggets",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
@@ -74106,7 +74106,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 9,
                             City = "Detroit",
-                            DateFounded = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3030),
+                            DateFounded = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(1870),
                             NBA_API_TeamId = 1610612765.0,
                             Name = "Pistons",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
@@ -74115,7 +74115,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 10,
                             City = "Golden State",
-                            DateFounded = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3040),
+                            DateFounded = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(1880),
                             NBA_API_TeamId = 1610612744.0,
                             Name = "Warriors",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
@@ -74124,7 +74124,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 11,
                             City = "Houston",
-                            DateFounded = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3070),
+                            DateFounded = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(2010),
                             NBA_API_TeamId = 1610612745.0,
                             Name = "Rockets",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
@@ -74133,7 +74133,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 12,
                             City = "Indiana",
-                            DateFounded = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3100),
+                            DateFounded = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(2020),
                             NBA_API_TeamId = 1610612754.0,
                             Name = "Pacers",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
@@ -74142,7 +74142,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 13,
                             City = "Los Angeles",
-                            DateFounded = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3110),
+                            DateFounded = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(2030),
                             NBA_API_TeamId = 1610612746.0,
                             Name = "Clippers",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
@@ -74151,7 +74151,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 14,
                             City = "Los Angeles",
-                            DateFounded = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3200),
+                            DateFounded = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(2100),
                             NBA_API_TeamId = 1610612747.0,
                             Name = "Lakers",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
@@ -74160,7 +74160,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 15,
                             City = "Memphis",
-                            DateFounded = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3220),
+                            DateFounded = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(2120),
                             NBA_API_TeamId = 1610612763.0,
                             Name = "Grizzlies",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
@@ -74169,7 +74169,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 16,
                             City = "Miami",
-                            DateFounded = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3250),
+                            DateFounded = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(2130),
                             NBA_API_TeamId = 1610612748.0,
                             Name = "Heat",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
@@ -74178,7 +74178,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 17,
                             City = "Milwaukee",
-                            DateFounded = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3260),
+                            DateFounded = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(2140),
                             NBA_API_TeamId = 1610612749.0,
                             Name = "Bucks",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
@@ -74187,7 +74187,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 18,
                             City = "Minnesota",
-                            DateFounded = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3280),
+                            DateFounded = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(2160),
                             NBA_API_TeamId = 1610612750.0,
                             Name = "Timberwolves",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
@@ -74196,7 +74196,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 19,
                             City = "New Orleans",
-                            DateFounded = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3300),
+                            DateFounded = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(2170),
                             NBA_API_TeamId = 1610612740.0,
                             Name = "Pelicans",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
@@ -74205,7 +74205,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 20,
                             City = "New York",
-                            DateFounded = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3310),
+                            DateFounded = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(2180),
                             NBA_API_TeamId = 1610612752.0,
                             Name = "Knicks",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
@@ -74214,7 +74214,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 21,
                             City = "Oklahoma City",
-                            DateFounded = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3330),
+                            DateFounded = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(2200),
                             NBA_API_TeamId = 1610612760.0,
                             Name = "Thunder",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
@@ -74223,7 +74223,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 22,
                             City = "Orlando",
-                            DateFounded = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3340),
+                            DateFounded = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(2210),
                             NBA_API_TeamId = 1610612753.0,
                             Name = "Magic",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
@@ -74232,7 +74232,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 23,
                             City = "Philadelphia",
-                            DateFounded = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3350),
+                            DateFounded = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(2220),
                             NBA_API_TeamId = 1610612755.0,
                             Name = "76ers",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
@@ -74241,7 +74241,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 24,
                             City = "Phoenix",
-                            DateFounded = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3360),
+                            DateFounded = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(2230),
                             NBA_API_TeamId = 1610612756.0,
                             Name = "Suns",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
@@ -74250,7 +74250,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 25,
                             City = "Portland",
-                            DateFounded = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3380),
+                            DateFounded = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(2250),
                             NBA_API_TeamId = 1610612757.0,
                             Name = "Trail Blazers",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
@@ -74259,7 +74259,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 26,
                             City = "Sacramento",
-                            DateFounded = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3390),
+                            DateFounded = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(2260),
                             NBA_API_TeamId = 1610612758.0,
                             Name = "Kings",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
@@ -74268,7 +74268,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 27,
                             City = "San Antonio",
-                            DateFounded = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3400),
+                            DateFounded = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(2280),
                             NBA_API_TeamId = 1610612759.0,
                             Name = "Spurs",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
@@ -74277,7 +74277,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 28,
                             City = "Toronto",
-                            DateFounded = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3410),
+                            DateFounded = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(2290),
                             NBA_API_TeamId = 1610612761.0,
                             Name = "Raptos",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
@@ -74286,7 +74286,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 29,
                             City = "Utah",
-                            DateFounded = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3430),
+                            DateFounded = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(2300),
                             NBA_API_TeamId = 1610612762.0,
                             Name = "Jazz",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
@@ -74295,7 +74295,7 @@ namespace Persistence.Migrations
                         {
                             TeamId = 30,
                             City = "Washington",
-                            DateFounded = new DateTime(2022, 6, 8, 6, 19, 9, 952, DateTimeKind.Local).AddTicks(3440),
+                            DateFounded = new DateTime(2022, 6, 12, 22, 29, 51, 61, DateTimeKind.Local).AddTicks(2310),
                             NBA_API_TeamId = 1610612764.0,
                             Name = "Wizards",
                             PhotoPath = "/Photos/nba_anonymous.jpg"
