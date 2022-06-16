@@ -5,7 +5,7 @@ namespace Contracts
 {
     public class SeriesPredictionSummaryDto
     {
-        public int PredictionSummaryId { get; set; }
+        public int SeriesPredictionSummaryId { get; set; }
         public DateTime DateAdded { get; set; }
 
         //Algorithm specific values
@@ -21,6 +21,7 @@ namespace Contracts
 
         public string Comments { get; set; }
         public int TeamId { get; set; }
+        public string Team { get; set; }
         public double NBA_API_TeamId { get; set; }
         public IEnumerable<SinglePredictionDto> Predictions { get; set; }
     }
