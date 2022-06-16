@@ -4,8 +4,9 @@ NBA Dashboard is a game predictor based on papers found in [ScienceDirect](https
 
 Data for games, box scores, all player and head-to-head stats, were scraped from [Basketball-Reference](http://basketball-reference.com), also possible thanks to [swar NBA api client](https://github.com/swar/nba_api)
   
-![2021 NBA Finals - Bucks vs Suns](nba-predictions/images/bucks-suns-2021.JPG "2021 NBA Finals")
-[Image courtesy of ESPN](https://www.espn.com/nba/story/_/id/31803541/nba-finals-2021-milwaukee-bucks-waste-another-legendary-performance-giannis-antetokounmpo)
+![2021 NBA Finals - Bucks vs Suns](nba-predictions/images/2022finals.png "2022 NBA Finals")
+[Image courtesy of Sporting News](https://www.sportingnews.com/us)
+
 <br>
 ## Pre-requisites
 
@@ -43,6 +44,21 @@ ng serve --open
 6. This will take us to NBAdashbaord's landing page
 
 ![NBADashboard](nba-predictions/images/dashboard.png "NBADashboard")
+
+## Roadmap 
+### **Stage 1** [WE'RE HERE] 
+##### Simple CRUD application where we can manage teams, players, games, and box scores.
+ * Binary classification predictions using CNNs.
+
+##### **Stage 2**
+##### Improving prediction model.
+  * Adding player per game stats to training sets.
+  * Adding Data visualization
+  * Improving data scraping and data collection
+
+##### **Stage 3**
+ * Migrate to cloud (azure/aws)
+ * Compare ML.NET against current pyhon powered models.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
