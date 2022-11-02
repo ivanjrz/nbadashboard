@@ -1,22 +1,26 @@
 # NBA Dashboard
 
-NBA Dashboard is a regular season game predictor based on papers found in [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S2210832717301485) and [IJERT](https://www.ijert.org/prediction-of-winning-team-using-machine-learning)
+NBA Dashboard is a game predictor based on papers found in [ScienceDirect](https://www.sciencedirect.com/science/article/pii/S2210832717301485) and [IJERT](https://www.ijert.org/prediction-of-winning-team-using-machine-learning)
 
+Data for games, box scores, all player and team stats, were obtained from [Basketball-Reference](http://basketball-reference.com) and [NBA.COM](https://www.nba.com)
   
-![2021 NBA Finals - Bucks vs Suns](nba-predictions/images/bucks-suns-2021.JPG "2021 NBA Finals")
-[Image courtesy of ESPN](https://www.espn.com/nba/story/_/id/31803541/nba-finals-2021-milwaukee-bucks-waste-another-legendary-performance-giannis-antetokounmpo)
+![2021 NBA Finals - Bucks vs Suns](nba-predictions/images/2022finals.png "2022 NBA Finals")
+
+[Image courtesy of Sporting News](https://www.sportingnews.com/us)
+
 <br>
 ## Pre-requisites
 
 * [.NET 6](https://dotnet.microsoft.com/en-us/download)
-* [npm](https://nodejs.org/en/download/) or [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable) for packet management
+* [npm](https://nodejs.org/en/download/) or [yarn](https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable) for package management
 * [use npm/yarn CLI to install Angular](https://angular.io/guide/setup-local)**
+* Junyper notebook enabled IDE/editor, environment configured preferably with [conda](https://docs.conda.io/en/latest/)
 
 ** Frontend runs Angular 10
 
 <br>
 
-## How to start NBA Dashboard
+## How to (install, build, run)
 
 Either using dotnet CLI or Visual Studio 2022/Visual Studio Code
 
@@ -41,6 +45,21 @@ ng serve --open
 6. This will take us to NBAdashbaord's landing page
 
 ![NBADashboard](nba-predictions/images/dashboard.png "NBADashboard")
+
+## Roadmap 
+### **Stage 1** [WE'RE HERE] 
+##### Simple CRUD application where we can manage teams, players, games, and box scores.
+ * Binary classification predictions using CNNs.
+
+##### **Stage 2**
+##### Improving prediction model.
+  * Adding player per game stats to training sets.
+  * Adding Data visualization
+  * Improving data scraping and data collection
+
+##### **Stage 3**
+ * Migrate to cloud (azure/aws)
+ * Compare ML.NET against current pyhon powered models.
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
